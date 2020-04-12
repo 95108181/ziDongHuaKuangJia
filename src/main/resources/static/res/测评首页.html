@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="css/base.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+    <title>测评首页</title>
+</head>
+<body class="bg_fff">
+    <!--公共头部-->
+    <div class="com_header">
+        <div class="logo">
+            <svg width="179" height="60">
+                <image xlink:href="images/logo_pagtitle.svg" src="images/logo_pagtitle.png" width="179" height="60" />
+            </svg>
+        </div>
+        <div class="right">
+            <div class="zs">
+                <p>测评状态：<span>未完成</span></p>
+                <p>开始时间：<i>2018年04月20日 16:00</i></p>
+            </div>
+            <a href="" class="btn">退出</a>
+        </div>
+    </div>
+    <div class="w12">
+        <div class="main1">
+            <div class="title">
+                <a href="">心理测验</a> <span> > 测评首页</span>
+            </div>
+            <div class="name">
+                <h3>用户个人测评历史 <span>HISTORY</span></h3>
+                <p>该图表展示的是当前用户已完成的心理测试，点击查看报告即可查看所属心理测试报告。</p>
+            </div>
+            <div class="list">
+                <ul>
+                    <li>
+                        <div class="n1">序号</div>
+                        <div class="n2">完成日期</div>
+                        <div class="n3">使用码</div>
+                        <div class="n4">操作</div>
+                    </li>
+                    <li>
+                        <div class="n1">1</div>
+                        <div class="n2">2018-04-22 <span>12:00</span></div>
+                        <div class="n3">dr012334</div>
+                        <div class="n4"><a href="">查看报告</a></div>
+                    </li>
+                    <li>
+                        <div class="n1">2</div>
+                        <div class="n2">2018-03-02 <span>21:46</span></div>
+                        <div class="n3">ac564367</div>
+                        <div class="n4"><a href="">查看报告</a></div>
+                    </li>
+                </ul>
+                <a href="javascript:void(0)" class="ks">开始新测试</a>
+            </div>
+        </div>
+    </div>
+    <!--公共底部-->
+    <div class="h70"></div>
+    <div class="com_footer ">
+        <div class="w12">
+            <p class="p1">成都渡仁心理咨询有限公司</p>
+            <p class="p2">技术支持：奇点闪耀</p>
+        </div>
+    </div>
+    <!--弹层-->
+    <div class="pop none">
+        <div class="pop_tc">
+            <div class="close">X</div>
+            <div class="write">
+                <span>请输入新的使用码:</span> 
+                <p><input type="text"/></p>
+            </div>
+            <a class="sure" href="">确定添加</a>
+        </div>
+    </div>
+    <script src="js/comm.js"> </script>
+    <script>
+        $(".main1 .list .ks").click(function(){
+            $(".pop").show();
+        })
+        $(".pop .pop_tc .close").click(function(){
+            $(".pop").hide();
+        })
+    </script>
+</body>
+</html>

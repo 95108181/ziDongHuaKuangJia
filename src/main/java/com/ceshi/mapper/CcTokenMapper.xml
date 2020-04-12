@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ceshi.dao.CcTokenMapper">
+  <resultMap id="BaseResultMap" type="com.ceshi.entity.CcToken">
+    <!--@mbg.generated-->
+    <!--@Table cc_token-->
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="token" jdbcType="VARCHAR" property="token" />
+    <result column="system_code" jdbcType="VARCHAR" property="systemCode" />
+    <result column="creation_time" jdbcType="TIMESTAMP" property="creationTime" />
+    <result column="delete" jdbcType="VARCHAR" property="delete" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    id, token, system_code, creation_time, `delete`
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    <!--@mbg.generated-->
+    select 
+    <include refid="Base_Column_List" />
+    from cc_token
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    <!--@mbg.generated-->
+    delete from cc_token
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" keyColumn="id" keyProperty="id" parameterType="com.ceshi.entity.CcToken" useGeneratedKeys="true">
+    <!--@mbg.generated-->
+    insert into cc_token (token, system_code, creation_time, 
+      `delete`)
+    values (#{token,jdbcType=VARCHAR}, #{systemCode,jdbcType=VARCHAR}, #{creationTime,jdbcType=TIMESTAMP}, 
+      #{delete,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" keyColumn="id" keyProperty="id" parameterType="com.ceshi.entity.CcToken" useGeneratedKeys="true">
+    <!--@mbg.generated-->
+    insert into cc_token
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="token != null">
+        token,
+      </if>
+      <if test="systemCode != null">
+        system_code,
+      </if>
+      <if test="creationTime != null">
+        creation_time,
+      </if>
+      <if test="delete != null">
+        `delete`,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="token != null">
+        #{token,jdbcType=VARCHAR},
+      </if>
+      <if test="systemCode != null">
+        #{systemCode,jdbcType=VARCHAR},
+      </if>
+      <if test="creationTime != null">
+        #{creationTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="delete != null">
+        #{delete,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.ceshi.entity.CcToken">
+    <!--@mbg.generated-->
+    update cc_token
+    <set>
+      <if test="token != null">
+        token = #{token,jdbcType=VARCHAR},
+      </if>
+      <if test="systemCode != null">
+        system_code = #{systemCode,jdbcType=VARCHAR},
+      </if>
+      <if test="creationTime != null">
+        creation_time = #{creationTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="delete != null">
+        `delete` = #{delete,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.ceshi.entity.CcToken">
+    <!--@mbg.generated-->
+    update cc_token
+    set token = #{token,jdbcType=VARCHAR},
+      system_code = #{systemCode,jdbcType=VARCHAR},
+      creation_time = #{creationTime,jdbcType=TIMESTAMP},
+      `delete` = #{delete,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="css/base.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+    <title>登录</title>
+</head>
+<body class="Login_back">
+    <div class="w12">
+        <div class="login">
+            <div class="logo">
+                <svg width="268" height="91">
+                    <image xlink:href="images/logo_login.svg" src="svg.png" width="268" height="91" />
+                </svg>
+            </div>
+            <div class="title">
+                <span>用户登录</span><i>LOGIN</i>
+            </div>
+            <div class="form">
+                <form action="">
+                    <ul>
+                        <li>
+                            <b>手机号:</b>
+                            <p class="red"><input type="text"/></p>
+                        </li>
+                        <li>
+                            <b>验证码:</b>
+                            <p><input class="m" type="text"/></p>
+                            <div class="yzm">
+                                <span class="a1 ">获取验证码</span>
+                                <span class="a2 none">60S后重新获取</span>
+                                <span class="a3 none">重新获取</span>
+                            </div>
+                        </li>
+                        <li>
+                            <b>使用码:</b>
+                            <p><input type="text"/></p>
+                        </li>
+                    </ul>
+                    <!--当上面严重错误的时候分别不同提示：手机号码错误、验证码错误、使用码错误-->
+                    <div class="tip none">手机号错误</div>
+                    <a href="">登录</a>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script>
+        //验证码倒计时
+        var Time_,LocalTime=60;
+        function STime(){
+            Time_=  setInterval  (function(){
+                LocalTime --;
+                $(".a2").text(LocalTime+"S后重新获取");
+                if(LocalTime ==1){
+                    clearInterval  (Time_);
+                    LocalTime=60;
+                    $(".a3").show();
+                    $(".a2").hide();
+                    $(".a2").text("60S后重新获取");
+                }
+            },1000);
+        }
+        $(function(){
+            $(".a1,.a3").click(function(){
+                $(this).hide();
+                $(".a2").show();
+                STime();
+            });
+        })
+
+    </script>
+</body>
+</html>

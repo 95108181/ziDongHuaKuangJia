@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Suite" verbose="1">
+
+
+	<!--设置监听器，后续文章详解-->
+	<listeners>
+		<listener class-name="test.util.TestResult"/>
+	</listeners>
+
+	<test name="TestNG1">
+		<!--类-->
+		<classes>
+			<class name="test.controller.TestOwner"/>
+		</classes>
+	</test> <!-- TestNG -->
+
+
+</suite> 

@@ -1,0 +1,2358 @@
+/****************通用样式*****************************/
+@font-face {
+    font-family: 微软雅黑11;
+    src: url('../fonts/SF-UI-Text-Regular.otf'),url('../fonts/SF-UI-Display-Bold.otf');
+}
+html, body, div, span, object, iframe,
+p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+h1,h2,h3,h4,h5,h6,em,i {
+    font-weight: 100;
+    font-style: normal
+}
+ul,ol,li {
+    list-style-type: none
+}
+a {
+    color: #666;
+    text-decoration: none;
+    outline: 0
+}
+a:hover {
+    text-decoration: none
+}
+ul {
+    padding-left: 0;
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: #707070;
+}
+a:hover ,a:focus {
+    text-decoration: none;
+}
+div:before ,ul:before ,p:before{
+    content: '';
+    display: table;
+}
+div:after , ul:after , p:after{
+    content: '';
+    display: block;
+    clear: both;
+}
+p {
+    color: #707070;
+}
+h4 {
+    color: #707070;
+    font-size: 17px;
+}
+.left {
+    float: left;
+}
+.right {
+    float: right;
+}
+.clear {
+    clear: both;
+}
+.strong {
+    font-weight: 600;
+}
+input , textarea {
+    border: 1px solid #b8c3d9;
+    outline: 2px solid transparent;
+    padding-left: 15px;
+}
+input:focus , textarea:focus {
+    outline: 2px solid #427DE3;
+    border: 1px solid #427DE3;
+}
+input[type=radio]:focus {
+    outline: none;
+}
+/************************************************/
+body {
+    min-width: 1280px;
+    width: 100%;
+    height: 100%;
+    font-family: "微软雅黑" !important;
+    color: #313131  ;
+    overflow-x: hidden;
+}
+h1,h2,h3,h4,h5,h6,p,div,span,input,textarea,button {
+    font-family: "微软雅黑" !important;
+}
+.container {
+    width: 1280px;
+    margin: 0 auto;
+}
+#nav {
+    min-width: 1280px;
+}
+
+
+/*头部*/
+/*上*/
+#nav {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #ffffff;
+    opacity: .93;
+    z-index: 999;
+
+}
+#nav .nav-top {
+    margin-bottom: 20px;
+}
+#nav .nav-top > ul {
+    float: right;
+}
+#nav .nav-top > ul li {
+    float: left;
+    padding: 14px 0 0 26px;
+}
+#nav .nav-top > ul li a {
+    font-size: 13px;
+}
+#nav .nav-top > ul li a:hover {
+    color: #313131;
+    font-weight: 600;
+}
+#nav .nav-top > ul li a.selected {
+    color: #313131;
+    font-weight: 600;
+}
+/*下*/
+#nav .nav-bottom {
+    margin-bottom: 22px;
+}
+#nav .nav-bottom .logo h1 {
+    margin: 0;
+}
+#nav .nav-bottom .logo > div {
+    width: 128px;
+    margin-left: 13px;
+}
+#nav .nav-bottom > ul {
+    margin-top: 16px;
+    margin-bottom: 15px;
+}
+#nav .nav-bottom > ul li {
+    float: left;
+}
+#nav .nav-bottom > ul li a {
+    font-size: 17px;
+    margin-left: 67px;
+    color: #313131;
+}
+#nav .nav-bottom > ul li a.selected {
+    color: #427DE3;
+    font-weight: bold;
+}
+#nav .nav-bottom > ul li a:hover {
+    color: #427DE3;
+    font-weight: bold;
+}
+/*头部按钮*/
+#nav .nav-bottom > a {
+    display: inline-block;
+    margin-left: 41px;
+    width: 116px;
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+    background-color: #ffffff;
+    border: 2px solid #427DE3;
+    border-radius: 25px;
+    color: #427DE3;
+    transition: all .3s linear;
+}
+#nav .nav-bottom > a:hover {
+    background-color: #427DE3;
+    color: #ffffff;
+}
+/*轮播图*/
+.slideBox{
+    width:100%;
+    height:728px;
+    overflow:hidden;
+    position:relative;
+}
+.slideBox .hd{
+    height:6px;
+    overflow:hidden;
+    position:absolute;
+    right:5px;
+    bottom:15px;
+    z-index:1;
+    left: 50%;
+    margin-left: -135px;
+}
+.slideBox .hd ul{
+    overflow:hidden;
+    zoom:1;
+    float:left;
+}
+.slideBox .hd ul li{
+    float:left;
+    margin-right:10px;
+    width:80px;
+    height:5px;
+    line-height:14px;
+    background:#fff;
+    cursor:pointer;
+}
+.slideBox .hd ul li.on{
+    background:#427DE3;
+}
+.slideBox .bd{
+    position:relative;
+    height:100%; z-index:0;
+}
+.slideBox .bd li{
+    zoom:1;
+    vertical-align:middle;
+}
+.slideBox .bd img{
+    width:100%;
+    height: 728px;
+    display:block;
+}
+
+
+/* 下面是前/后按钮代码，如果不需要删除即可 */
+.slideBox .prev,
+.slideBox .next{ position:absolute; left:3%; top:50%; margin-top:-25px; display:block; width:32px; height:40px; background:url(http://llfileserver.oss-cn-hangzhou.aliyuncs.com/StaticFiles/mds/Content/PC/img/slider-arrow.png) -110px 5px no-repeat; filter:alpha(opacity=50);opacity:0.5;   }
+.slideBox .next{ left:auto; right:3%; background-position:8px 5px; }
+.slideBox .prev:hover,
+.slideBox .next:hover{ filter:alpha(opacity=100);opacity:1;  }
+.slideBox .prevStop{ display:none;  }
+.slideBox .nextStop{ display:none;  }
+
+/*******************主体**************************/
+#main {
+    min-height: 1000px;
+}
+/*标题下下划线*/
+.underline {
+    width: 37px;
+    height: 3px;
+    background-color: #427DE3;
+    margin: 0 auto;
+}
+/*我们的服务*/
+#main .ourService h1{
+    margin-top: 58px;
+    margin-bottom: 26px;
+    font-size: 32px;
+    text-align: center;
+}
+#main .ourService span{
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+}
+#main .ourService h3 {
+    margin-top: 22px;
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-weight: 600;
+}
+.ourService h5 {
+    margin-bottom: 63px;
+
+}
+#main .ourService p {
+    width: 300px;
+    line-height: 1.5;
+}
+#main .ourService {
+    background: url("http://llfileserver.oss-cn-hangzhou.aliyuncs.com/StaticFiles/mds/Content/PC/img/ourSev_bg.png") no-repeat center bottom;
+    padding-bottom: 30px;
+}
+#main .ourService > div{
+    width: 50%;
+    margin-bottom: 45px;
+}
+#main .ourService .yuyue span {
+    background: #c9fdc9 url("http://llfileserver.oss-cn-hangzhou.aliyuncs.com/StaticFiles/mds/Content/PC/img/ourSev_01.png")  no-repeat 0 0;
+
+}
+#main .ourService .hexiao span {
+    background: #c9fdc9 url("http://llfileserver.oss-cn-hangzhou.aliyuncs.com/StaticFiles/mds/Content/PC/img/ourSev_02.png")  no-repeat 0 0;
+
+}
+#main .ourService .feiyong span {
+    background: #c9fdc9 url("http://llfileserver.oss-cn-hangzhou.aliyuncs.com/StaticFiles/mds/Content/PC/img/ourSev_03.png")  no-repeat 0 0;
+
+}
+#main .ourService .shouhou span {
+    background: #c9fdc9 url("http://llfileserver.oss-cn-hangzhou.aliyuncs.com/StaticFiles/mds/Content/PC/img/ourSev_04.png")  no-repeat 0 0;
+}
+#main .ourService > div:nth-of-type(2) , #main .ourService > div:nth-of-type(4) {
+    text-align: right;
+}
+
+/*安装服务*/
+#main .installSev {
+    background-color: #f7f7f7;
+}
+#main .installSev .iSevBg {
+    height: 58px;
+    background-color: #f9e1db;
+}
+#main .installSev .iSevCon {
+    text-align: center;
+    margin-top: 58px;
+}
+#main .installSev .iSevCon > h1 {
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+#main .installSev .iSevCon > h1 span {
+    font-weight: 600;
+}
+#main .installSev .iSevCon > h4 {
+    margin-top: 0;
+    margin-bottom: 26px;
+}
+#main .installSev .iSevCon > .underline {
+    margin-bottom: 45px;
+}
+#main .installSev .iSevCon > div {
+    width: 25%;
+    box-sizing: border-box;
+    padding: 0 42px;
+    margin-bottom: 58px;
+}
+#main .installSev .iSevCon div span {
+    display: inline-block;
+    width: 56px;
+    height: 56px;
+}
+#main .installSev .iSevCon div h3 {
+    margin-top: 20px;
+    margin-bottom: 16px;
+    font-size: 20px;
+    font-weight: 600;
+}
+#main .installSev .iSevCon div p {
+    line-height: 1.8;
+}
+#main .installSev .iSevCon div:nth-of-type(1) span {
+    background: url("http://llfileserver.oss-cn-hangzhou.aliyuncs.com/StaticFiles/mds/Content/PC/img/jiaju_01.png") no-repeat 0 0;
+}
+#main .installSev .iSevCon div:nth-of-type(2) span {
+    background: url("http://llfileserver.oss-cn-hangzhou.aliyuncs.com/StaticFiles/mds/Content/PC/img/jiaju_02.png") no-repeat 0 0;
+}
+#main .installSev .iSevCon div:nth-of-type(3) span {
+    background: url("http://llfileserver.oss-cn-hangzhou.aliyuncs.com/StaticFiles/mds/Content/PC/img/jiaju_03.png") no-repeat 0 0;
+}
+#main .installSev .iSevCon div:nth-of-type(4) span {
+    background: url("http://llfileserver.oss-cn-hangzhou.aliyuncs.com/StaticFiles/mds/Content/PC/img/jiaju_04.png") no-repeat 0 0;
+}
+
+/*服务质量*/
+#main .sevQuality {
+    text-align: center;
+}
+#main .sevQuality  h1 {
+    margin-top: 58px;
+    margin-bottom: 20px;
+}
+#main .sevQuality  h4 {
+    margin-bottom: 25px;
+}
+#main .sevQuality  .underline {
+    margin-bottom: 53px;
+}
+#main .sevQuality  h1 span {
+    font-weight: 600;
+}
+#main .sevQuality .sQuCon > div {
+    width: 20%;
+    position: relative;
+    margin-bottom: 133px;
+}
+#main .sevQuality .sQuCon > div > span {
+    display: inline-block;
+    position: absolute;
+    right: 7px;
+}
+#main .sevQuality .sQuCon > div:nth-of-type(1) > span {
+    width: 49px;
+    height: 106px;
+    background: url("http://llfileserver.oss-cn-hangzhou.aliyuncs.com/StaticFiles/mds/Content/PC/img/fuwu_01.png") no-repeat 0 0;
+}
+#main .sevQuality .sQuCon > div:nth-of-type(2) > span {
+    width: 79px;
+    height: 109px;
+    background: url("http://llfileserver.oss-cn-hangzhou.aliyuncs.com/StaticFiles/mds/Content/PC/img/fuwu_02.png") no-repeat 0 0;
+}
+#main .sevQuality .sQuCon > div:nth-of-type(3) > span {
+    width: 86px;
+    height: 112px;
+    background: url("http://llfileserver.oss-cn-hangzhou.aliyuncs.com/StaticFiles/mds/Content/PC/img/fuwu_03.png") no-repeat 0 0;
+}
+#main .sevQuality .sQuCon > div:nth-of-type(4) > span {
+    width: 89px;
+    height: 106px;
+    background: url("http://llfileserver.oss-cn-hangzhou.aliyuncs.com/StaticFiles/mds/Content/PC/img/fuwu_04.png") no-repeat 0 0;
+}
+#main .sevQuality .sQuCon > div:nth-of-type(5) > span {
+    width: 80px;
+    height: 109px;
+    background: url("http://llfileserver.oss-cn-hangzhou.aliyuncs.com/StaticFiles/mds/Content/PC/img/fuwu_05.png") no-repeat 0 0;
+}
+#main .sevQuality .sQuCon > div > div{
+    margin: auto;
+    margin-top: 50px;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+#main .sevQuality .sQuCon > div > div > a{
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+    line-height: 150px;
+    background: url("http://llfileserver.oss-cn-hangzhou.aliyuncs.com/StaticFiles/mds/Content/PC/img/fuwu_bg.png") no-repeat 0 0;
+    position: relative;
+    z-index: 99;
+    margin: 0 auto;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 50%;
+    cursor: default;
+}
+#main .sevQuality .sQuCon > div > div > a:hover {
+    background: url("http://llfileserver.oss-cn-hangzhou.aliyuncs.com/StaticFiles/mds/Content/PC/img/wufu_bgHover.png");
+    color: #ffffff;
+    box-shadow: 0 10px 25px #427DE3;
+}
+#main .sevQuality .sQuCon > div > div > a i {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 1px solid transparent;
+    padding: 0;
+    transition: padding, .6s linear;
+}
+#main .sevQuality .sQuCon > div > div > a:hover i {
+    top: -75px;
+    left: -75px;
+    padding: 75px;
+    border: 1px solid #ccc;
+}
+
+
+/*用户反馈*/
+#main .feedback {
+    text-align: center;
+}
+#main .feedback h1 {
+    margin-top: 58px;
+    margin-bottom: 20px;
+}
+#main .feedback h1 span {
+    font-weight: 600;
+}
+#main .feedback h4 {
+    margin-bottom: 25px;
+}
+#main .feedback .underline {
+    margin-bottom: 53px;
+}
+#main .feedback .fbCon {
+    height: 306px;
+    margin-bottom: 58px;
+    position: relative;
+}
+#main .feedback .fbCon img {
+    border-radius: 50%;
+}
+#main .feedback .fbCon > div{
+    width: 50%;
+}
+#main .feedback .fbCon > div.fbCon-right {
+    padding-left: 55px;
+    box-sizing: border-box;
+}
+#main .feedback .fbCon > div > p {
+    width: 386px;
+    height: 136px;
+    max-height: 220px;
+    overflow: hidden;
+    margin-left: 30px;
+    text-align: left;
+    color: #333333;
+    line-height: 2;
+    margin-bottom: 25px;
+}
+#main .feedback .fbCon > div > div:nth-of-type(2) {
+    margin-left: 120px;
+}
+#main .feedback .fbCon > div > div:nth-of-type(2) > span {
+    display: inline-block;
+    width: 35px;
+    height: 55px;
+    background: url("http://llfileserver.oss-cn-hangzhou.aliyuncs.com/StaticFiles/mds/Content/PC/img/feedback_03.png") no-repeat center top;
+}
+#main .feedback .fbCon > div > div:nth-of-type(2) > div {
+    font-weight: 600;
+    margin-bottom: 2px;
+}
+#main .feedback .fbCon > div > div:nth-of-type(2) > div ,#main .feedback .fbCon > div > div:nth-of-type(2) > p{
+    width: 75%;
+    margin-left: 20px;
+    text-align: left;
+    overflow: hidden;
+    font-size: 17px;
+    height: 20px;
+}
+#fankuiBox {
+    position: relative;
+}
+#fankuiBox .hd{
+    height:10px;
+    overflow:hidden;
+    position:absolute;
+    right:5px;
+    bottom:88px;
+    z-index:1;
+    left: 50%;
+    margin-left: -30px;
+}
+#fankuiBox .hd ul{
+    overflow:hidden;
+    zoom:1;
+    float:left;
+}
+#fankuiBox .hd ul li{
+    float:left;
+    margin-right:10px;
+    width:10px;
+    height:10px;
+    border-radius: 50%;
+    background:#cdd4f9;
+    cursor:pointer;
+}
+#fankuiBox .hd ul li.on{
+    background:#427DE3;
+}
+
+/*******************其他部分**************************/
+/*规范*/
+#others .guifan {
+    width: 100%;
+    height: 194px;
+    background: url("http://llfileserver.oss-cn-hangzhou.aliyuncs.com/StaticFiles/mds/Content/PC/img/guifan_bg.png") no-repeat center;
+    text-align: center;
+    position: relative;
+    margin-bottom: 78px;
+}
+#others .guifan h1 {
+    margin-top: 55px;
+    margin-bottom: 30px;
+    font-size: 28px;
+    color: #ffffff;
+}
+#others .guifan div a {
+    display: inline-block;
+    width: 116px;
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+    background-color: #ffffff;
+    border-radius: 25px;
+    color: #427DE3;
+}
+#others .guifan span.gfBG {
+    display: inline-block;
+    width: 187px;
+    height: 274px;
+    position: absolute;
+    bottom: 0;
+    left: 135px;
+    background: url("http://llfileserver.oss-cn-hangzhou.aliyuncs.com/StaticFiles/mds/Content/PC/img/guifan_01.png") no-repeat 0 0 ;
+}
+
+/*统计*/
+#others .statistics {
+    margin: 0 25px;
+    margin-bottom: 78px;
+}
+#others .statistics ul li {
+    float: left;
+    width: 25%;
+    text-align: center;
+    border-right: 1px solid #d7d7d7;
+    box-sizing: border-box;
+}
+#others .statistics ul li:last-child {
+    border-right: none;
+}
+#others .statistics ul li > h1 {
+    font-size: 45px;
+    margin: 10px 0;
+    color: #427DE3;
+}
+#others .statistics ul li > p {
+    margin-bottom: 5px;
+}
+
+/*新闻动态*/
+#others .news {
+
+}
+#others .news h1 {
+    margin-top: 0;
+    margin-bottom: 25px;
+    text-align: center;
+}
+#others .news .underline {
+    margin-bottom: 53px;
+}
+#others .news .newsCon > div {
+    box-sizing: border-box;
+    width: 30%;
+    text-align: left;
+    height: 290px;
+    padding: 40px 40px 10px;
+    background-color: #f7f7f7;
+    margin-left: 4.5%;
+    overflow: hidden;
+    margin-bottom: 58px;
+    cursor: pointer;
+    transition: all .3s linear;
+}
+#others .news .newsCon > div:hover {
+    background-color: #427DE3;
+    color: #ffffff ;
+}
+#others .news .newsCon > div:hover a {
+    color: #ffffff;
+}
+#others .news .newsCon > div:hover span {
+    color: #ffffff;
+}
+#others .news .newsCon > div:hover p {
+    color: #ffffff;
+}
+#others .news .newsCon > div:nth-of-type(1) {
+    margin-left: 0;
+}
+#others .news .newsCon > div > a {
+    display: block;
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-weight: 600;
+    color: #474747;
+    line-height: 1.5;
+    font-size: 18px;
+    overflow:  hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+#others .news .newsCon > div > span {
+    display: block;
+    color: #707070;
+    margin-bottom: 30px;
+}
+#others .news .newsCon > div > p {
+    line-height: 1.5;
+    height: 120px;
+    overflow: hidden;
+}
+
+/*都在使用住好乐*/
+#others .allUse {
+    text-align: center;
+}
+#others .allUse h1{
+    margin-top: 58px;
+    margin-bottom: 20px;
+}
+#others .allUse h4 {
+    margin-bottom: 20px;
+}
+#others .allUse .underline {
+    margin-bottom: 45px;
+}
+#others .allUse .allUseCon {
+    margin: 0 20px;
+    margin-bottom: 45px;
+}
+#others .allUse .allUseCon > ul {
+    width: 100%;
+}
+#others .allUse .allUseCon > ul li {
+    float: left;
+    width: 25%;
+    height: 100px;
+    text-align: center;
+}
+#others .allUse .allUseCon > ul li a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
+#others .allUse .allUseCon > ul li:nth-of-type(1) a {
+    background: url("http://llfileserver.oss-cn-hangzhou.aliyuncs.com/StaticFiles/mds/Content/PC/img/user_01.png") no-repeat center center;
+}
+#others .allUse .allUseCon > ul li:nth-of-type(2) a {
+    background: url("http://llfileserver.oss-cn-hangzhou.aliyuncs.com/StaticFiles/mds/Content/PC/img/user_02.png") no-repeat center center;
+}
+#others .allUse .allUseCon > ul li:nth-of-type(3) a {
+    background: url("http://llfileserver.oss-cn-hangzhou.aliyuncs.com/StaticFiles/mds/Content/PC/img/user_03.png") no-repeat center center;
+}
+#others .allUse .allUseCon > ul li:nth-of-type(4) a {
+    background: url("http://llfileserver.oss-cn-hangzhou.aliyuncs.com/StaticFiles/mds/Content/PC/img/user_04.png") no-repeat center center;
+}
+
+/******************底部*******************/
+#footer {
+    min-height: 311px;
+    background-color: #313131;
+}
+/*底部上*/
+#footer .footer-top {
+    position: relative;
+    padding-bottom: 30px;
+}
+#footer .footer-top .contact {
+    text-align: center;
+    margin-left: 100px;
+}
+#footer .footer-top .contact > span {
+    display: block;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    color: #999999;
+}
+#footer .footer-top .contact i {
+    display: inline-block;
+    width: 54px;
+    height: 57px;
+    background: url("http://llfileserver.oss-cn-hangzhou.aliyuncs.com/StaticFiles/mds/Content/PC/img/footer-kefu.png") no-repeat 0 0;
+    margin-bottom: 20px;
+}
+#footer .footer-top .contact h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 30px;
+    color: #427DE3;
+}
+#footer .footer-top .QR {
+    position: absolute;
+    width: 151px;
+    left: 50%;
+    margin-left: -75px;
+    text-align: center;
+}
+#footer .footer-top .QR > span {
+    display: block;
+    margin-top: 40px;
+    margin-bottom: 15px;
+    color: #999999;
+    text-align: center;
+}
+#footer .footer-top .footer-nav {
+    margin-top: 73px;
+    margin-right: 140px;
+}
+#footer .footer-top .footer-nav ul {
+    width: 200px;
+}
+#footer .footer-top .footer-nav ul li{
+    float: left;
+    margin: 0 0 20px 45px;
+}
+#footer .footer-top .footer-nav ul li:nth-child(odd) {
+    margin-left: 0;
+}
+#footer .footer-top .footer-nav ul li a:hover{
+    color: #dfa640;
+}
+#footer .footer-bottom {
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+}
+#footer .footer-bottom p {
+    font-size: 15px;
+}
+
+
+/*弹出框*/
+.warpper {
+    position: relative;
+}
+#popBox {
+    width: 274px;
+    height: 230px;
+    background-color: #427DE3;
+    position: absolute;
+    top: 13%;
+    right: -360px;
+    padding: 25px;
+    padding-left: 45px;
+    z-index: 999;
+    box-shadow: 0 10px 30px #427DE3;
+    transition: right 1s linear;
+}
+#popBox h1 {
+    color: #ffffff;
+    margin: 15px 0;
+}
+#popBox h3 {
+    color: #ffffff;
+    margin-bottom: 30px;
+}
+#popBox a {
+    display: inline-block;
+    width: 116px;
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+    background-color: #febc43;
+    border-radius: 25px;
+    color: #ffffff;
+}
+
+/**************快速下单********************/
+#quickCreate > .container {
+    width: 743px;
+    position: relative;
+}
+#quickMain > .goods {
+    margin-bottom: 40px;
+}
+#quickMain > .question {
+    margin-bottom: 40px;
+}
+#quickMain > .uploading {
+
+    padding-bottom: 20px;
+}
+#quickMain > .address {
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
+#quickMain > .timeSel {
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+}
+#quickMain > .contants {
+    margin-bottom: 40px;
+}
+#quickMain > .yanzheng {
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+}
+#quickMain > p {
+    margin-top: 30px;
+    margin-bottom: 55px;
+}
+#quickMain > .subOrder {
+    margin-bottom: 100px;
+}
+#quickMain h3 {
+    margin-bottom: 15px;
+}
+#quickMain input {
+    padding-left: 15px;
+}
+#quickMain textarea {
+    padding-top: 15px;
+    padding-left: 15px;
+}
+#quickCreate .bgOne {
+    background-color: #427DE3;
+    position: absolute;
+    left: -40%;
+    top: -93px;
+    width: 1061px;
+    height: 505px;
+    z-index: 3;
+    background: url('http://llfileserver.oss-cn-hangzhou.aliyuncs.com/StaticFiles/mds/Content/PC/img/kuaisu/ksbg_01.png') no-repeat center bottom;
+}
+#quickCreate .bgTwo {
+    background-color: rgb(254, 188, 67);
+    position: absolute;
+    right: 0;
+    top: -5%;
+    width: 264px;
+    height: 323px;
+    z-index: 4;
+    background: url('http://llfileserver.oss-cn-hangzhou.aliyuncs.com/StaticFiles/mds/Content/PC/img/kuaisu/ksbg_02.png') no-repeat right bottom;
+}
+#quickCreate .bgOne > .title {
+    margin-top: 288px;
+    margin-bottom: 54px;
+    margin-left: 268px;
+}
+#quickCreate  .title > h1 {
+    font-size: 32px;
+    color: rgb(255, 255, 255);
+    line-height: 1.105;
+}
+#quickCreate  .title > h4 {
+    font-size: 17px;
+    color: rgb(255, 255, 255);
+    line-height: 1.988;
+}
+#quickMain {
+    margin-top: 10px;
+    box-sizing: border-box;
+}
+#quickMain .form-group  h3{
+    font-size: 20px;
+    color: rgb(49, 49, 49);
+    font-weight: bold;
+    margin-bottom: 15px;
+    margin-top: 0;
+}
+
+#quickMain .goods > input {
+    width: 465px;
+    height: 36px;
+}
+#quickMain .goods > span {
+    display: none;
+    margin-left: 15px;
+    color: rgb(255, 82, 82);
+}
+#quickMain  .goods input.error {
+    border: 1px solid rgb(255, 82, 82);
+    background-color: rgb(255, 246, 246);
+    color: #b7b7b7;
+}
+/*************************************/
+#quickMain .question > textarea {
+    width: 742px;
+    height: 148px;
+    padding-top: 5px;
+    resize: none;
+    line-height: 1.5;
+
+}
+/**************************************/
+#quickMain .uploading  .img-group , #quickMain .uploading  .img-add{
+    float: left;
+    width: 90px;
+    height: 90px;
+    background-color: #f5f7fa;
+    margin-right: 15px;
+    margin-bottom: 10px;
+    position: relative;
+    cursor: pointer;
+}
+#quickMain .uploading   i , #quickMain .uploading b{
+    position: absolute;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+#quickMain .uploading  .img-group:hover i{
+    background-color: #a1a3a5;
+    opacity: .6;
+}
+#quickMain .uploading  .img-group:hover b{
+    background: url('http://llfileserver.oss-cn-hangzhou.aliyuncs.com/StaticFiles/mds/Content/PC/img/kuaisu/uploading_del.png') no-repeat center center;
+}
+#quickMain .uploading  .img-add {
+    margin-right: 0;
+}
+#quickMain .uploading  .img-add > i{
+    background: url('http://llfileserver.oss-cn-hangzhou.aliyuncs.com/StaticFiles/mds/Content/PC/img/kuaisu/uploading_add.png') no-repeat center center;
+}
+#quickMain .uploading img{
+    width:90px;
+    height: 90px;
+}
+/**************************/
+#quickMain .address  select {
+    width: 148px;
+    height: 36px;
+    padding-left: 15px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+}
+#quickMain .address div:nth-of-type(2) {
+    width: 388px;
+    margin-right: 10px;
+}
+#quickMain .address div span {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: rgb(112, 112, 112);
+}
+#quickMain .address div input {
+    box-sizing: border-box;
+}
+#quickMain .address div:nth-of-type(2) input {
+    width: 100%;
+    height: 36px;
+}
+#quickMain .address div:nth-of-type(3) {
+    width: 75px;
+    margin-right: 40px;
+}
+#quickMain .address div:nth-of-type(3) input {
+    width: 100%;
+    height: 36px;
+}
+#quickMain .address div:nth-of-type(4) {
+    height: 70px;
+    padding-top: 40px;
+}
+#quickMain .address div:nth-of-type(4) label {
+    margin-right: 10px;
+}
+#quickMain  input[type=radio] {
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 9;
+    opacity: 0.1;
+}
+
+/***********************************/
+#quickMain label {
+    position: relative;
+    padding-left: 30px;
+}
+#quickMain .timeSel  label{
+    margin-right: 25px;
+    margin-top: 5px;
+    height: 34px;
+}
+#quickMain label i {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+    background: url('http://llfileserver.oss-cn-hangzhou.aliyuncs.com/StaticFiles/mds/Content/PC/img/kuaisu/ks_radio.png') no-repeat left top;
+}
+#quickMain label i.selected {
+    background: url('http://llfileserver.oss-cn-hangzhou.aliyuncs.com/StaticFiles/mds/Content/PC/img/kuaisu/ks_radioChecked.png') no-repeat left top;
+}
+#quickMain .timeSel div {
+    width: 240px;
+}
+.timeSel .form-group {
+    margin-bottom: 0;
+}
+/**********************************/
+#quickMain .contants input{
+    width: 250px;
+    height: 36px;
+    margin-right: 10px;
+}
+/************************************/
+#quickMain .yanzheng input {
+    width: 100px;
+    height: 36px;
+    margin-right: 10px;
+}
+#quickMain .yanzheng span {
+    color: #427DE3;
+    cursor: pointer;
+}
+#quickMain > p {
+    color: #313131;
+}
+/*验证失败*/
+#quickMain .yanzheng input.error {
+    border: 1px solid rgb(255, 82, 82);
+    background-color: rgb(255, 246, 246);
+    color: #ff5252;
+}
+
+/************************************/
+#quickMain .subOrder button {
+    outline: none;
+    background-color: #427DE3;
+    color: #fff;
+    width: 150px;
+    height: 50px;
+    border: none;
+    border-radius: 34px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+}
+#quickMain .subOrder button.btnDis {
+    background-color: #d7d7d7;
+    color: #fff;
+}
+#quickMain .subOrder button.btnSuc {
+    background-color: #427DE3;
+    color: #fff;
+}
+
+/*****************企业登录与注册************************/
+#Login {
+    width: 100%;
+    height: 900px;
+}
+#Login .ShifuLog ,#Login .ShifuReg ,#Login .customerLog ,#Login .customerReg{
+    position: absolute;
+    top:0;
+    left:0;
+    width :100%;
+    height: 100%;
+}
+#Login .ShifuLog {
+    background: url('http://llfileserver.oss-cn-hangzhou.aliyuncs.com/StaticFiles/mds/Content/PC/img/login/company01.png') no-repeat left top;
+    background-size:cover;
+}
+#Login .ShifuReg {
+    background: url('http://llfileserver.oss-cn-hangzhou.aliyuncs.com/StaticFiles/mds/Content/PC/img/login/company02.png') no-repeat left top;
+    background-size:cover;
+}
+#Login .customerLog {
+    background: url('http://llfileserver.oss-cn-hangzhou.aliyuncs.com/StaticFiles/mds/Content/PC/img/login/customer01.png') no-repeat left top;
+    background-size:cover;
+}
+#Login .customerReg {
+    background: url('http://llfileserver.oss-cn-hangzhou.aliyuncs.com/StaticFiles/mds/Content/PC/img/login/customer02.png') no-repeat left top;
+    background-size:cover;
+}
+#Login .LoginCon {
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 19px 32px 0px rgba(0, 0, 0, 0.22);
+    width: 448px;
+    position: absolute;
+    top: 50%;
+    right: 10%;
+    padding: 18px 46px 38px 49px;
+    color: #313131;
+    box-sizing: border-box;
+}
+.ShifuLog .LoginCon {
+    margin-top: -210px;
+}
+.ShifuReg .LoginCon {
+    margin-top: -185px;
+}
+.customerLog .LoginCon {
+    margin-top: -179px;
+}
+.customerReg .LoginCon {
+    margin-top: -153px;
+}
+
+.LoginCon  .title {
+    margin-bottom: 34px;
+}
+.LoginCon  .title h3 ,.LoginCon  .title h1{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.LoginCon  .title h3 {
+    margin-top: 14px;
+    font-size: 19px;
+    font-weight: 600;
+}
+.LoginCon  input {
+    width: 100%;
+    height: 45px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}
+.LoginCon  .yanzhengma {
+    position: relative;
+    margin-bottom: 20px;
+}
+.LoginCon .yanzhengma > input {
+    margin-bottom: 0;
+    padding-right: 116px;
+}
+.LoginCon  .yanzhengma > a {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    margin-top: -8px;
+    padding: 0 16px;
+    border-left: 1px solid #b8c3d9;
+    color: #427DE3;
+}
+.LoginCon  .msg {
+    color:  #ff5252;
+    margin-bottom: 20px;
+}
+.LoginCon  .button-group {
+    margin-bottom: 34px;
+}
+.LoginCon .cut {
+    position: relative;
+    height: 18px;
+}
+.LoginCon .cut > a {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    color: #febc43;
+    padding: 0 10px;
+    z-index: 9;
+    background-color: #fff;
+    margin-left: -58px;
+}
+.LoginCon .cut > i {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #b7b7b7;
+    z-index: 1;
+}
+/*师傅登录*/
+.LoginCon .companyLogin .button-group a:first-child {
+    display: inline-block;
+    width: 165px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    background-color: #427DE3;
+    border-radius: 25px;
+    color: #ffffff;
+    opacity: 0.769;
+}
+.LoginCon .companyLogin .button-group a:last-child {
+    display: inline-block;
+    width: 165px;
+    height: 46px;
+    line-height: 46px;
+    text-align: center;
+    border: 2px solid #427DE3;
+    background-color: #ffffff;
+    border-radius: 25px;
+    color: #427DE3;
+}
+/*师傅注册*/
+.LoginCon .companyRegister  .button-group a:first-child {
+    display: inline-block;
+    width: 165px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    background-color: #427DE3;
+    border-radius: 25px;
+    color: #ffffff;
+    opacity: 0.769;
+}
+.LoginCon .companyRegister .button-group a:last-child {
+    display: inline-block;
+    width: 165px;
+    height: 46px;
+    line-height: 46px;
+    text-align: center;
+    color: #427DE3;
+}
+.LoginCon .companyRegister .button-group {
+    margin-bottom: 0;
+}
+/*用户登录*/
+.LoginCon .customerLogin .button-group a:first-child {
+    display: inline-block;
+    width: 165px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    background-color: #427DE3;
+    border-radius: 25px;
+    color: #ffffff;
+    opacity: 0.769;
+}
+.LoginCon .customerLogin .button-group a:last-child {
+    display: inline-block;
+    width: 165px;
+    height: 46px;
+    line-height: 46px;
+    text-align: center;
+    border: 2px solid #427DE3;
+    background-color: #ffffff;
+    border-radius: 25px;
+    color: #427DE3;
+}
+/*用户注册*/
+.LoginCon .customerRegister .button-group a:first-child {
+    display: inline-block;
+    width: 165px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    background-color: #427DE3;
+    border-radius: 25px;
+    color: #ffffff;
+    opacity: 0.769;
+}
+.LoginCon .customerRegister .button-group a:last-child {
+    display: inline-block;
+    width: 165px;
+    height: 46px;
+    line-height: 46px;
+    text-align: center;
+    color: #427DE3;
+}
+.LoginCon .customerRegister .button-group {
+    margin-bottom: 0;
+}
+
+
+/**************帮助页面***********/
+
+#nav .helpSearch {
+    text-align: center;
+    width: 100%;
+    height: 75px;
+    background-color: #427DE3;
+}
+#nav h1 {
+    font-size: 32px;
+    color: #ffffff;
+    line-height: 1;
+}
+#Help {
+    width: 100%;
+    height: 100%;
+}
+#Help .helpNav {
+    width: 350px;
+    background-color: #ffffff;
+    min-height: 468px;
+}
+/*#Help .helpCon {
+    height: 100%;
+    background-color: #fff;
+    position: relative;
+    box-sizing: border-box;
+    padding: 0 20px 20px 0;
+    min-height: 468px;
+}
+#Help .helpCon > div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width:100%;
+    height:100%;
+    font-size: 16px;
+    color: #313131;   
+    line-height: 1.8;
+}*/
+
+#Help .helpCon {
+    margin-left: 350px;
+    background-color: #fff;
+    position: relative;
+    box-sizing: border-box;
+    padding: 0 20px 20px 0;
+
+}
+#Help .helpCon > div {
+    width:100%;
+    height:100%;
+    font-size: 16px;
+    color: #313131;
+    line-height: 1.8;
+}
+#Help .helpCon > div h1 {
+    margin-top: 50px;
+    margin-bottom: 45px;
+    font-weight: 600;
+}
+#Help .helpCon > div h3 {
+    margin-top: 0;
+    margin-bottom: 45px;
+}
+
+/*******************/
+
+.accordion {
+    width: 100%;
+    max-width: 360px;
+    margin-top: 50px;
+    background: #FFF;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    box-sizing: border-box;
+    padding-right: 50px;
+
+}
+
+.accordion .link {
+    cursor: pointer;
+    display: block;
+    padding: 15px 15px 15px 42px;
+    color: #313131;
+    font-size: 20px;
+    font-weight: 700;
+    position: relative;
+    -webkit-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+}
+
+
+
+.accordion li i {
+    display: inline-block;
+    font-size: 18px;
+    color: #595959;
+    width: 13px;
+    height: 8px;
+    margin-left: 10px;
+    margin-bottom: 3px;
+    background: url('http://llfileserver.oss-cn-hangzhou.aliyuncs.com/StaticFiles/mds/Content/PC/img/arrow.png') no-repeat ;
+    -webkit-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+}
+
+.accordion li.open i.helpArrow {
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+
+
+/**
+ * Submenu
+ -----------------------------*/
+.submenu {
+    display: none;
+    font-size: 16px;
+}
+
+.submenu li {
+}
+
+.submenu a {
+    display: block;
+    text-decoration: none;
+    color: #d9d9d9;
+    padding: 12px;
+    padding-left: 70px;
+    font-size: 16px;
+    color: #b7b7b7;
+    -webkit-transition: all 0.25s ease;
+    -o-transition: all 0.25s ease;
+    transition: all 0.25s ease;
+}
+
+.submenu a:hover {
+    color: #313131;
+}
+.submenu a.selected {
+    color: #313131;
+}
+
+
+/***********服务保障************/
+#serviceBZ > .adv {
+    position: relative;
+    width:100%;
+    height: 600px;
+    background: #eff1f4 url('http://llfileserver.oss-cn-hangzhou.aliyuncs.com/StaticFiles/mds/Content/PC/img/Service/serviceAdv_01.svg') repeat-x ;
+}
+#serviceBZ h1 {
+    font-size: 32px;
+    text-align: center;
+}
+#serviceBZ .advCon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-55%);
+}
+#serviceBZ .advCon h1 {
+    text-align: left;
+    margin-top: 0;
+}
+#serviceBZ .advCon  h3 {
+    font-size: 20px;
+    margin-bottom: 68px;
+}
+#serviceBZ .advCon a {
+    display: inline-block;
+    width: 165px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    background-color: #febc43;
+    border-radius: 25px;
+    color: #ffffff;
+}
+#serviceBZ .adv .right {
+    position: absolute;
+    right: 10%;
+    bottom: 0;
+}
+
+#serviceBZ .serviceMain > .container {
+    width: 905px;
+}
+#serviceBZ .serviceMain h1 {
+    margin-top: 78px;
+    margin-bottom: 26px;
+}
+#serviceBZ .serviceMain h1 span {
+    font-weight: 600;
+}
+#serviceBZ .serviceMain h5 {
+    margin-bottom: 100px;
+}
+#serviceBZ .serviceMain .itemL ,#serviceBZ .serviceMain .itemL h1{
+    text-align: left
+}
+#serviceBZ .serviceMain .itemR ,#serviceBZ .serviceMain .itemR h1{
+    text-align: right
+}
+#serviceBZ .serviceMain .item-group {
+    margin-bottom: 110px;
+}
+#serviceBZ .serviceMain .item-group h1 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 30px;
+}
+#serviceBZ .serviceMain .item-group h1:nth-of-type(1){
+    margin-top:30px;
+    margin-bottom: 10px;
+}
+#serviceBZ .serviceMain .item-group h1.strong {
+    font-weight: 600;
+}
+#serviceBZ .serviceMain .item-group p {
+    line-height:1.8;
+    font-size: 17px;
+    width: 448px;
+    color: #707070;
+}
+#serviceBZ .serviceMain .item-group:last-child {
+    margin-bottom: 150px;
+}
+.serviceMain .guifan {
+    width: 100%;
+    height: 194px;
+    background: url("http://llfileserver.oss-cn-hangzhou.aliyuncs.com/StaticFiles/mds/Content/PC/img/guifan_bg.png") no-repeat center;
+    text-align: center;
+    position: relative;
+    margin-bottom: 80px;
+}
+#serviceBZ .serviceMain .guifan h1 {
+    margin-top: 55px;
+    margin-bottom: 30px;
+    font-size: 28px;
+    color: #ffffff;
+}
+#serviceBZ .serviceMain .guifan div a {
+    display: inline-block;
+    width: 145px;
+    height: 51px;
+    line-height: 51px;
+    text-align: center;
+    background-color: #ffffff;
+    border-radius: 25px;
+    color: #427DE3;
+    box-shadow: 0px 15px 18px 0px rgba(0, 0, 0, 0.16);
+}
+#serviceBZ .serviceMain .guifan span.gfBG {
+    display: inline-block;
+    width: 323px;
+    height: 252px;
+    position: absolute;
+    bottom: 0;
+    left: 5%;
+    background: url("http://llfileserver.oss-cn-hangzhou.aliyuncs.com/StaticFiles/mds/Content/PC/img/Service/gf_01.png") no-repeat 0 0 ;
+}
+#serviceBZ .serviceMain  .question > .container {
+    width: 1280px;
+}
+#serviceBZ .serviceMain  .question h1 {
+    margin-top: 0;
+    margin-bottom: 26px;
+}
+#serviceBZ .serviceMain  .question h5 {
+    margin-top: 0;
+    margin-bottom: 58px;
+}
+#serviceBZ .serviceMain  .questionCon {
+    margin-bottom: 77px;
+}
+#serviceBZ .serviceMain  .questionCon > div {
+    width: 390px;
+    height: 295px;
+    background-color: rgb(247, 247, 247);
+    margin-right: 55px;
+    padding: 40px;
+    box-sizing:border-box;
+}
+#serviceBZ .serviceMain  .questionCon > div:last-child {
+    margin-right: 0;
+}
+#serviceBZ .serviceMain  .questionCon > div > span {
+    display: block;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+#serviceBZ .serviceMain  .questionCon > div > ul > li > a{
+    display: block;
+    font-size: 22px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+}
+#serviceBZ .serviceMain  .questionCon > div > ul > li > a:hover {
+    color: #427DE3;
+}
+
+
+/*******师傅入驻***************/
+#shifuEnter .banner {
+    width: 100%;
+    height: 599px;
+    background: #ffffff url('http://llfileserver.oss-cn-hangzhou.aliyuncs.com/StaticFiles/mds/Content/PC/img/shifuEnter/banner.png') no-repeat center bottom;
+    position: relative;
+}
+#shifuEnter .banner i {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url('http://llfileserver.oss-cn-hangzhou.aliyuncs.com/StaticFiles/mds/Content/PC/img/shifuEnter/fugai.png') repeat ;
+}
+#shifuEnter .banner img {
+    position: absolute;
+    width: 286px;
+    height: 300px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-20%);
+}
+.shifuEnterCon .troll {
+    width: 100%;
+    height: 304px;
+    background: url(http://llfileserver.oss-cn-hangzhou.aliyuncs.com/StaticFiles/mds/Content/PC/img/guifan_bg.png) repeat center;
+}
+.shifuEnterCon .troll .item-group {
+    text-align: center;
+    width: 33%;
+    height: 100%;
+    padding: 25px 60px 41px;
+    box-sizing: border-box;
+}
+.shifuEnterCon .troll .item-group span {
+    display: block;
+    width: 100%;
+    height: 72px;
+}
+.shifuEnterCon .troll .item-group:nth-of-type(1) span{
+    background: url('http://llfileserver.oss-cn-hangzhou.aliyuncs.com/StaticFiles/mds/Content/PC/img/shifuEnter/shifuEnter_01.svg') no-repeat center center;
+}
+.shifuEnterCon .troll .item-group:nth-of-type(2) span{
+    background: url('http://llfileserver.oss-cn-hangzhou.aliyuncs.com/StaticFiles/mds/Content/PC/img/shifuEnter/shifuEnter_02.svg') no-repeat center center;
+}
+.shifuEnterCon .troll .item-group:nth-of-type(3) span{
+    background: url('http://llfileserver.oss-cn-hangzhou.aliyuncs.com/StaticFiles/mds/Content/PC/img/shifuEnter/shifuEnter_03.svg') no-repeat center center;
+}
+.shifuEnterCon .troll .item-group h2 {
+    font-size: 28px;
+    margin-top: 20px;
+    margin-bottom: 25px;
+    color: #ffffff;
+}
+.shifuEnterCon .troll .item-group p {
+    line-height: 1.9;
+    color: #ffffff;
+}
+
+.liucheng {
+    text-align: center;
+}
+.liucheng  h1 {
+    margin-top: 58px;
+    margin-bottom: 20px;
+    font-size: 36px;
+}
+.liucheng  .underline {
+    margin-bottom: 65px;
+}
+h1 span {
+    font-weight: 600;
+}
+.liucheng .sQuCon > div {
+    width: 20%;
+    position: relative;
+    margin-bottom: 158px;
+}
+.liucheng .sQuCon > div > span {
+    display: inline-block;
+    position: absolute;
+    right: 7px;
+}
+.liucheng .sQuCon > div:nth-of-type(1) > span {
+    width: 49px;
+    height: 106px;
+    background: url("http://llfileserver.oss-cn-hangzhou.aliyuncs.com/StaticFiles/mds/Content/PC/img/fuwu_01.png") no-repeat 0 0;
+}
+.liucheng .sQuCon > div:nth-of-type(2) > span {
+    width: 79px;
+    height: 109px;
+    background: url("http://llfileserver.oss-cn-hangzhou.aliyuncs.com/StaticFiles/mds/Content/PC/img/fuwu_02.png") no-repeat 0 0;
+}
+.liucheng .sQuCon > div:nth-of-type(3) > span {
+    width: 86px;
+    height: 112px;
+    background: url("http://llfileserver.oss-cn-hangzhou.aliyuncs.com/StaticFiles/mds/Content/PC/img/fuwu_03.png") no-repeat 0 0;
+}
+.liucheng .sQuCon > div:nth-of-type(4) > span {
+    width: 89px;
+    height: 106px;
+    background: url("http://llfileserver.oss-cn-hangzhou.aliyuncs.com/StaticFiles/mds/Content/PC/img/fuwu_04.png") no-repeat 0 0;
+}
+.liucheng .sQuCon > div:nth-of-type(5) > span {
+    width: 80px;
+    height: 109px;
+    background: url("http://llfileserver.oss-cn-hangzhou.aliyuncs.com/StaticFiles/mds/Content/PC/img/fuwu_05.png") no-repeat 0 0;
+}
+.liucheng .sQuCon > div > div{
+    margin: auto;
+    margin-top: 50px;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+.liucheng .sQuCon > div > div > a{
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+    line-height: 150px;
+    background: url("http://llfileserver.oss-cn-hangzhou.aliyuncs.com/StaticFiles/mds/Content/PC/img/fuwu_bg.png") no-repeat 0 0;
+    position: relative;
+    z-index: 99;
+    margin: 0 auto;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 50%;
+    cursor: default;
+}
+.liucheng .sQuCon > div > div > a:hover {
+    background: url("http://llfileserver.oss-cn-hangzhou.aliyuncs.com/StaticFiles/mds/Content/PC/img/wufu_bgHover.png");
+    color: #ffffff;
+    box-shadow: 0 10px 25px #427DE3;
+}
+.liucheng .sQuCon > div > div > a i {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 1px solid transparent;
+    padding: 0;
+    transition: padding, .6s linear;
+}
+.liucheng .sQuCon > div > div > a:hover i {
+    top: -75px;
+    left: -75px;
+    padding: 75px;
+    border: 1px solid #ccc;
+}
+.shifuEnterCon .question {
+    background-color: #f7f7f7;
+}
+.shifuEnterCon .question > h1 ,.shifuEnterCon .question > h5 {
+    text-align: center;
+}
+.shifuEnterCon .question > h1 {
+    margin-top: 58px;
+    font-size: 36px;
+}
+.shifuEnterCon .question h5 {
+    margin-bottom: 58px;
+}
+.shifuEnterCon .questionCon {
+    margin: 0 5%;
+}
+.shifuEnterCon .questionCon .question-group {
+    padding-left: 60px;
+    margin-bottom: 50px;
+    background: url("http://llfileserver.oss-cn-hangzhou.aliyuncs.com/StaticFiles/mds/Content/PC/img/feedback_03.png") no-repeat left top;
+}
+.shifuEnterCon .questionCon .question-group:last-child {
+    margin-bottom: 55px;
+}
+.shifuEnterCon .questionCon .question-group h2 {
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+.shifuEnterCon .questionCon .question-group p {
+    line-height: 1.9;
+    color: #313131;
+}
+.shifuEnterCon .questionCon .more a {
+    display: inline-block;
+    width: 165px;
+    height: 46px;
+    line-height: 46px;
+    text-align: center;
+    border: 2px solid #427DE3;
+    background-color: #ffffff;
+    border-radius: 25px;
+    color: #427DE3;
+    margin-left: 60px;
+    margin-bottom: 100px;
+    transition: all .5s  linear;
+}
+.shifuEnterCon .questionCon .more a:hover {
+    background-color: #427DE3;
+    color: #ffffff;
+}
+
+
+/************关于我们*************/
+/*关于住好乐*/
+#aboutUS .banner {
+    width: 100%;
+    height: 599px;
+    background: url('http://llfileserver.oss-cn-hangzhou.aliyuncs.com/StaticFiles/mds/Content/PC/img/shifuEnter/aboutBanner.png') no-repeat center center;
+    color: #313131;
+    position: relative;
+}
+#aboutUS .banner i{
+    position: absolute;
+    width: 479px;
+    height: 113px;
+    top: 50%;
+    transform: translateY(-30%);
+    background: url('http://llfileserver.oss-cn-hangzhou.aliyuncs.com/StaticFiles/mds/Content/PC/img/shifuEnter/banner_title.png') no-repeat;
+}
+#aboutUS .aboutMain {
+    padding: 77px 0 70px;
+}
+#aboutUS .aboutusNavbar {
+    width: 255px;
+}
+#aboutUS .aboutusNavbar li {
+    margin-bottom: 35px;
+}
+#aboutUS .aboutusNavbar li a{
+    font-size: 20px;
+    color: #313131;
+}
+#aboutUS .aboutusNavbar li a:hover {
+    font-weight: 600;
+}
+#aboutUS .aboutusNavbar li a.selected {
+    font-weight: 600;
+}
+#aboutUS .aboutusCon {
+    margin-left: 255px;
+    position: relative;
+}
+#aboutUS .aboutusCon h1 {
+    margin-top: 0;
+    margin-bottom: 65px;
+}
+#aboutUS .aboutusCon h6 {
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0;
+    margin-bottom: 10px;
+}
+#aboutUS .aboutusCon .aboutMDS span {
+    display: block;
+    line-height: 1.8;
+}
+#aboutUS .aboutusCon .aboutMDS span:nth-of-type(2) {
+    margin-bottom: 40px;
+}
+#aboutUS .aboutusCon .aboutMDS p {
+    line-height: 1.8;
+    margin-bottom: 40px;
+    color: #313131;
+}
+/*联系我们*/
+#aboutUS .aboutusCon .contactUS .contactWay {
+    margin-bottom: 42px;
+    height: 50px;
+}
+#aboutUS .aboutusCon .contactUS .contactWay > div .wayImg {
+    width: 50px;
+    height: 50px;
+}
+#aboutUS .aboutusCon .contactUS .contactWay > div:nth-of-type(1) {
+    width: 25%;
+}
+#aboutUS .aboutusCon .contactUS .contactWay > div:nth-of-type(2) {
+    width: 25%;
+}
+#aboutUS .aboutusCon .contactUS .contactWay > div:nth-of-type(3) {
+    width: 50%;
+}
+#aboutUS .aboutusCon .contactUS .contactWay > div:nth-of-type(1) .wayImg{
+    background: url('http://llfileserver.oss-cn-hangzhou.aliyuncs.com/StaticFiles/mds/Content/PC/img/shifuEnter/phone.svg') no-repeat center center;
+}
+#aboutUS .aboutusCon .contactUS .contactWay > div:nth-of-type(2) .wayImg{
+    background: url('http://llfileserver.oss-cn-hangzhou.aliyuncs.com/StaticFiles/mds/Content/PC/img/shifuEnter/eMail.svg') no-repeat center center;
+}
+#aboutUS .aboutusCon .contactUS .contactWay > div:nth-of-type(3) .wayImg{
+    background: url('http://llfileserver.oss-cn-hangzhou.aliyuncs.com/StaticFiles/mds/Content/PC/img/shifuEnter/address.svg') no-repeat center center;
+}
+#aboutUS .aboutusCon .contactUS .contactWay > div .wayCon {
+    margin-left: 15px;
+}
+#aboutUS .aboutusCon .contactUS .contactWay > div h3 {
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+#aboutUS .aboutusCon .contactUS .contactWay > div p {
+    color: #313131;
+    font-size: 13px;
+}
+#aboutUS .aboutusCon #bmap {
+    width: 100%;
+    height: 540px;
+}
+
+/*新闻列表*/
+#aboutUS .aboutusCon .NewsList .news-group {
+    display:block;
+    margin-bottom: 45px;
+
+}
+#aboutUS .aboutusCon .NewsList .news-group:hover h1 {
+    color: #427DE3;
+}
+#aboutUS .aboutusCon .NewsList .news-group:last-child {
+    margin-bottom: 134px;
+}
+#aboutUS .aboutusCon .NewsList h1 {
+    font-size: 28px;
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: #313131;
+    position: relative;
+    bottom: 2px;
+}
+#aboutUS .aboutusCon .NewsList h1 span {
+    display: inline-block;
+    width: 70%;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+}
+#aboutUS .aboutusCon .NewsList h1 i {
+    font-weight: normal;
+    position: absolute;
+    right: 0;
+    bottom: 8px;
+    font-size: 13.333px;
+    color: rgb(153, 153, 153);
+}
+
+.NewsList .news-group > span {
+    display: block;
+    line-height: 1.8;
+    color: #313131 !important;
+}
+
+#aboutUS .aboutusCon .NewsList p {
+    line-height: 1.8;
+    color: #313131;
+    height: 85px;
+    overflow: hidden;
+}
+
+/*新闻主体*/
+#aboutUS .aboutusCon .NewsCon h1 {
+    font-size: 28px;
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: #313131;
+    line-height: 1.5;
+}
+#aboutUS .aboutusCon .NewsCon h5 {
+    font-size: 14px;
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: rgb(153, 153, 153);
+}
+#aboutUS .aboutusCon .NewsCon h6 {
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0;
+    margin-bottom: 10px;
+}
+#aboutUS .aboutusCon .NewsCon div {
+    line-height: 1.9;
+    color: #313131;
+}
+
+#aboutUS .aboutusCon .NewsCon p {
+    line-height: 1.8;
+    margin-bottom: 40px;
+    color: #313131;
+}
+
+
+/*********解决方案 *******/
+#solution .banner {
+    width: 100%;
+    height: 727px;
+    background-color: #427DE3;
+}
+#solution .traditionQS {
+    background-color: #f7f7f7;
+}
+#solution .traditionQS .iSevBg {
+    height: 58px;
+    background-color: #f9e1db;
+}
+#solution .traditionQS .QSCon {
+    text-align: center;
+    margin-top: 58px;
+}
+#solution .traditionQS .QSCon > h1 {
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+#solution .traditionQS .QSCon > h1 span {
+    font-weight: 600;
+}
+#solution .traditionQS .QSCon > h4 {
+    margin-top: 0;
+    margin-bottom: 26px;
+}
+#solution .traditionQS .QSCon > .underline {
+    margin-bottom: 45px;
+}
+#solution .traditionQS .QSCon > div {
+    width: 25%;
+    box-sizing: border-box;
+    padding: 0 42px;
+    margin-bottom: 58px;
+}
+#solution .traditionQS .QSCon div span {
+    display: inline-block;
+    width: 56px;
+    height: 56px;
+}
+#solution .traditionQS .QSCon div h3 {
+    margin-top: 20px;
+    margin-bottom: 16px;
+    font-size: 20px;
+    font-weight: 600;
+}
+#solution .traditionQS .QSCon div p {
+    line-height: 1.8;
+}
+#solution .traditionQS .QSCon div:nth-of-type(1) span {
+    background: url("http://llfileserver.oss-cn-hangzhou.aliyuncs.com/StaticFiles/mds/Content/PC/img/solution/1.svg") no-repeat center center;
+}
+#solution .traditionQS .QSCon div:nth-of-type(2) span {
+    background: url("http://llfileserver.oss-cn-hangzhou.aliyuncs.com/StaticFiles/mds/Content/PC/img/solution/2.svg") no-repeat center center;
+}
+#solution .traditionQS .QSCon div:nth-of-type(3) span {
+    background: url("http://llfileserver.oss-cn-hangzhou.aliyuncs.com/StaticFiles/mds/Content/PC/img/solution/3.svg") no-repeat center center;
+}
+#solution .traditionQS .QSCon div:nth-of-type(4) span {
+    background: url("http://llfileserver.oss-cn-hangzhou.aliyuncs.com/StaticFiles/mds/Content/PC/img/solution/4.svg") no-repeat center center;
+}
+
+/*三大优势*/
+.advantage  .advantageOne {
+    width: 100%;
+    height: 500px;
+    background: #ffffff url('http://llfileserver.oss-cn-hangzhou.aliyuncs.com/StaticFiles/mds/Content/PC/img/solution/adv_01.png') no-repeat center 5px;
+}
+.advantage   h1 {
+    margin-top: 58px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.advantage  .advantageCon {
+    margin-top: 35px;
+    width: 475px;
+}
+.advantage  .advantageCon h2 {
+    margin: 0;
+    font-size: 30px;
+}
+.advantage  .advantageCon h2 span {
+    font-weight: 600;
+}
+.advantage  .advantageCon p {
+    margin-top: 25px;
+    line-height: 1.8;
+    font-size: 18px;
+}
+.advantage  .advantageTwo {
+    width: 100%;
+    height: 500px;
+    background:#f7f7f7 url('http://llfileserver.oss-cn-hangzhou.aliyuncs.com/StaticFiles/mds/Content/PC/img/solution/adv_02.png') no-repeat center bottom;
+}
+.advantage  .advantageThree {
+    width: 100%;
+    height: 500px;
+    background: #ffffff url('http://llfileserver.oss-cn-hangzhou.aliyuncs.com/StaticFiles/mds/Content/PC/img/solution/adv_03.png') no-repeat center 5px;
+}
+.advantage  .advantageTwo .advantageCon, .advantage  .advantageThree .advantageCon {
+    margin-top: 155px;
+}
+.advantage > div {
+    position: relative;
+}
+.advantage .cir {
+    position: absolute;
+    left: 50%;
+    bottom: 50px;
+    transform: translateX(-50%);
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: url(http://llfileserver.oss-cn-hangzhou.aliyuncs.com/StaticFiles/mds/Content/PC/img/wufu_bgHover.png);
+    box-shadow: 0 10px 25px #427DE3;
+}
+.advantage .cir > div {
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.advantage .cir h1 , .advantage .cir h3 {
+    text-align: center;
+    margin: 0;
+    color: #ffffff;
+}
+.advantage .cir h1 {
+    font-size: 45px;
+    font-weight: 600;
+}
+
+/*帮助文档*/
+.helpDoc {
+    background-color: #f7f7f7;
+    padding-bottom: 90px;
+}
+.helpDoc h1 {
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: 26px;
+}
+
+.helpDoc .item-group {
+    width: 33%;
+    margin-top: 58px;
+    box-sizing: border-box;
+    border-left: 1px solid #d8d9dc;
+    text-align: center;
+}
+.helpDoc .item-group:first-child {
+    border-left: none;
+}
+.helpDoc .item-group span {
+    display: block;
+    font-size: 20px;
+    font-weight: 600;
+    color: #313131;
+    margin-bottom: 30px;
+}
+.helpDoc .item-group li {
+    margin-bottom: 20px;
+}
+.helpDoc .item-group li a {
+    display: inline-block;
+    width: 100%;
+    font-size: 25px;
+    color: #313131;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+    font-weight: 100;
+    box-sizing: border-box;
+    padding: 0 20px;
+}
+.helpDoc .item-group li a:hover {
+    color: #427DE3;
+}
+
+/*规范*/
+.solutionMain .guifan {
+    width: 100%;
+    height: 194px;
+    background: url("http://llfileserver.oss-cn-hangzhou.aliyuncs.com/StaticFiles/mds/Content/PC/img/guifan_bg.png") no-repeat center bottom;
+    text-align: center;
+    position: relative;
+}
+.solutionMain .guifan h1 {
+    margin-top: 55px;
+    margin-bottom: 30px;
+    font-size: 28px;
+    color: #ffffff;
+}
+.solutionMain .guifan div a {
+    display: inline-block;
+    width: 145px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    background-color: #ffffff;
+    border-radius: 25px;
+    color: #427DE3;
+}
+/**********轮播图********/
+#solution .slideBox{
+    width:100%;
+    height:727px;
+    overflow:hidden;
+    position:relative;
+}
+#solution .slideBox .hd{
+    width: 100%;
+    height: 100px;
+    overflow:hidden;
+    position:absolute;
+    left: 0;
+    bottom: 0;
+    z-index:1;
+    margin: 0;
+}
+
+#solution .slideBox .hd ul{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1500px;
+    margin:0 auto;
+}
+
+#solution .slideBox .hd ul li{
+    float:left;
+    width:500px;
+    height:100px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffffff;
+    line-height:100px;
+    text-align:center;
+    cursor:pointer;
+    margin: 0;
+    position: relative;
+    background-color: transparent;
+}
+
+#solution .slideBox .hd ul li > i {
+    position: absolute;
+    width : 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: #fff;
+    opacity: 0.11;
+    z-index:99;
+}
+#solution .slideBox .hd ul li.on i{
+    background-color: rgb(0, 0, 0);
+    opacity: 0.11;
+}
+#solution .slideBox .bd{
+    position:relative;
+    height:100%;
+    z-index:0;
+}
+#solution .slideBox .bd li{
+    width: 100%;
+    height: 727px;
+    zoom:1;
+    vertical-align:middle;
+
+}
+#solution .slideBox .bd li > div {
+    margin: 0 auto;
+    width: 1500px;
+    height: 727px;
+    position: relative;
+}
+#solution .slideBox .bd li:nth-of-type(1) > div {
+    background: url('http://llfileserver.oss-cn-hangzhou.aliyuncs.com/StaticFiles/mds/Content/PC/img/solution/banner_01.png') no-repeat center bottom;
+}
+#solution .slideBox .bd li:nth-of-type(2) > div {
+    background: url('http://llfileserver.oss-cn-hangzhou.aliyuncs.com/StaticFiles/mds/Content/PC/img/solution/banner_02.png') no-repeat center bottom;
+}
+#solution .slideBox .bd li:nth-of-type(3) > div {
+    background: url('http://llfileserver.oss-cn-hangzhou.aliyuncs.com/StaticFiles/mds/Content/PC/img/solution/banner_03.png') no-repeat center bottom;
+}
+#solution .slideBox .bd li > div a {
+    position: absolute;
+    width: 145px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    border-radius: 25px;
+}
+#solution .slideBox .bd li:nth-of-type(1) > div a {
+    top: 300px;
+    left: 100px;
+    color: #ffffff;
+    background-color: #427DE3;
+}
+#solution .slideBox .bd li:nth-of-type(2) > div a {
+    top: 415px;
+    left: 47%;
+    transform: translateX(-50%);
+    color: #313131;
+    background-color: #ffffff;
+}
+#solution .slideBox .bd li:nth-of-type(3) > div a {
+    top: 530px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #313131;
+    background-color: #ffffff;
+}
