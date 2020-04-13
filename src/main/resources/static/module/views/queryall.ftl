@@ -25,8 +25,9 @@ window.onload=window.onresize=function(){
 <div id="xt-right">
     <div class="xt-input">
         <span>选择时间定时运行</span>
-        <input type="text" id="picktime" value="03-27 15:00" class="int-text" readonly>
-        <input type="button" value="确 定" class="green-int" />
+        <input type="text" id="scheduled" value="03-27 15:00" class="int-text" readonly>
+<#--        <input onclick="login()" value="确 定" class="green-int" />-->
+        <a id="testfunction" onclick="setScheduledTasks()" class="green-int">确 定</a>
 <#--        <span>来源</span>-->
 <#--        <input type="text" class="int-text" />-->
         <a id="testfunction" onclick="testfunction()" class="yellow-int">点击立即运行</a>
@@ -101,6 +102,30 @@ window.onload=window.onresize=function(){
                 }
             })
 
+    }
+
+
+    //设置定时任务
+    function setScheduledTasks() {
+        var scheduled = $("#scheduled").val();
+        if (scheduled == null || scheduled == "") {
+            alert("请选择正确的时间");
+            return false;
+        }else {
+            $.ajax({
+                url: "/timing/setScheduledTasks",
+                type: "post",
+                data: {scheduled: scheduled},
+                success: function (data) {
+                    console.log(data);
+                    if (data.succeed) {
+                        alert("定时任务设置成功");
+                    } else {
+                        alert(data.errorMessage);
+                    }
+                }
+            })
+        }
     }
 </script>
 </html>

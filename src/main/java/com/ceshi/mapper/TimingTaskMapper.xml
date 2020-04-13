@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ceshi.dao.TimingTaskMapper">
+  <resultMap id="BaseResultMap" type="com.ceshi.entity.TimingTask">
+    <!--@mbg.generated-->
+    <!--@Table timing_task-->
+    <result column="id" jdbcType="INTEGER" property="id" />
+    <result column="timing_task" jdbcType="VARCHAR" property="timingTask" />
+    <result column="creation_time" jdbcType="TIMESTAMP" property="creationTime" />
+    <result column="modification_time" jdbcType="TIMESTAMP" property="modificationTime" />
+    <result column="delete" jdbcType="VARCHAR" property="delete" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    id, timing_task, creation_time, modification_time, `delete`
+  </sql>
+  <insert id="insert" parameterType="com.ceshi.entity.TimingTask">
+    <!--@mbg.generated-->
+    insert into timing_task (id, timing_task, creation_time, 
+      modification_time, `delete`)
+    values (#{id,jdbcType=INTEGER}, #{timingTask,jdbcType=VARCHAR}, #{creationTime,jdbcType=TIMESTAMP}, 
+      #{modificationTime,jdbcType=TIMESTAMP}, #{delete,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.ceshi.entity.TimingTask">
+    <!--@mbg.generated-->
+    insert into timing_task
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="timingTask != null">
+        timing_task,
+      </if>
+      <if test="creationTime != null">
+        creation_time,
+      </if>
+      <if test="modificationTime != null">
+        modification_time,
+      </if>
+      <if test="delete != null">
+        `delete`,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="timingTask != null">
+        #{timingTask,jdbcType=VARCHAR},
+      </if>
+      <if test="creationTime != null">
+        #{creationTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="modificationTime != null">
+        #{modificationTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="delete != null">
+        #{delete,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+
+  <insert id="setScheduledTasks" parameterType="com.ceshi.entity.TimingTask">
+    <!--@mbg.generated-->
+    insert into timing_task (timing_task)
+    values (#{timingTask,jdbcType=VARCHAR})
+  </insert>
+
+
+
+</mapper>
+
+
+
