@@ -2,40 +2,40 @@
 <testng-results skipped="0" failed="1" ignored="0" total="8" passed="7">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="4357" started-at="2020-04-13T08:32:04Z" finished-at="2020-04-13T08:32:08Z">
+  <suite name="Suite" duration-ms="2255" started-at="2020-04-15T14:04:31Z" finished-at="2020-04-15T14:04:33Z">
     <groups>
     </groups>
-    <test name="TestNG1" duration-ms="4357" started-at="2020-04-13T08:32:04Z" finished-at="2020-04-13T08:32:08Z">
+    <test name="TestNG1" duration-ms="2255" started-at="2020-04-15T14:04:31Z" finished-at="2020-04-15T14:04:33Z">
       <class name="test.controller.TestOwner">
-        <test-method status="PASS" signature="leaderboardList()[pri:0, instance:test.controller.TestOwner@175b9425]" name="leaderboardList" duration-ms="2185" started-at="2020-04-13T08:32:04Z" description="排行榜列表" finished-at="2020-04-13T08:32:06Z">
+        <test-method status="PASS" signature="leaderboardList()[pri:0, instance:test.controller.TestOwner@46389160]" name="leaderboardList" duration-ms="311" started-at="2020-04-15T14:04:31Z" description="排行榜列表" finished-at="2020-04-15T14:04:31Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- leaderboardList -->
-        <test-method status="PASS" signature="queryCurrentSeason()[pri:0, instance:test.controller.TestOwner@175b9425]" name="queryCurrentSeason" duration-ms="359" started-at="2020-04-13T08:32:06Z" description="查询当前赛季" finished-at="2020-04-13T08:32:07Z">
+        <test-method status="PASS" signature="queryCurrentSeason()[pri:0, instance:test.controller.TestOwner@46389160]" name="queryCurrentSeason" duration-ms="336" started-at="2020-04-15T14:04:31Z" description="查询当前赛季" finished-at="2020-04-15T14:04:31Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- queryCurrentSeason -->
-        <test-method status="PASS" signature="queryMyRanking()[pri:0, instance:test.controller.TestOwner@175b9425]" name="queryMyRanking" duration-ms="320" started-at="2020-04-13T08:32:07Z" description="查询我的排行" finished-at="2020-04-13T08:32:07Z">
+        <test-method status="PASS" signature="queryMyRanking()[pri:0, instance:test.controller.TestOwner@46389160]" name="queryMyRanking" duration-ms="325" started-at="2020-04-15T14:04:31Z" description="查询我的排行" finished-at="2020-04-15T14:04:32Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- queryMyRanking -->
-        <test-method status="PASS" signature="querySeasonNumber()[pri:0, instance:test.controller.TestOwner@175b9425]" name="querySeasonNumber" duration-ms="377" started-at="2020-04-13T08:32:07Z" description="查询赛季人数" finished-at="2020-04-13T08:32:07Z">
+        <test-method status="PASS" signature="querySeasonNumber()[pri:0, instance:test.controller.TestOwner@46389160]" name="querySeasonNumber" duration-ms="336" started-at="2020-04-15T14:04:32Z" description="查询赛季人数" finished-at="2020-04-15T14:04:32Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- querySeasonNumber -->
-        <test-method status="PASS" signature="querySeasonSettlementRewards()[pri:0, instance:test.controller.TestOwner@175b9425]" name="querySeasonSettlementRewards" duration-ms="370" started-at="2020-04-13T08:32:07Z" description="查询赛季结算奖励" finished-at="2020-04-13T08:32:08Z">
+        <test-method status="PASS" signature="querySeasonSettlementRewards()[pri:0, instance:test.controller.TestOwner@46389160]" name="querySeasonSettlementRewards" duration-ms="317" started-at="2020-04-15T14:04:32Z" description="查询赛季结算奖励" finished-at="2020-04-15T14:04:32Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- querySeasonSettlementRewards -->
-        <test-method status="PASS" signature="receiveSeasonSettlementAward()[pri:0, instance:test.controller.TestOwner@175b9425]" name="receiveSeasonSettlementAward" duration-ms="1" started-at="2020-04-13T08:32:08Z" description="领取赛季结算奖励" finished-at="2020-04-13T08:32:08Z">
+        <test-method status="PASS" signature="receiveSeasonSettlementAward()[pri:0, instance:test.controller.TestOwner@46389160]" name="receiveSeasonSettlementAward" duration-ms="0" started-at="2020-04-15T14:04:32Z" description="领取赛季结算奖励" finished-at="2020-04-15T14:04:32Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- receiveSeasonSettlementAward -->
-        <test-method status="PASS" signature="receiveUpgradeAward()[pri:0, instance:test.controller.TestOwner@175b9425]" name="receiveUpgradeAward" duration-ms="336" started-at="2020-04-13T08:32:08Z" description="领取升级奖励" finished-at="2020-04-13T08:32:08Z">
+        <test-method status="PASS" signature="receiveUpgradeAward()[pri:0, instance:test.controller.TestOwner@46389160]" name="receiveUpgradeAward" duration-ms="310" started-at="2020-04-15T14:04:32Z" description="领取升级奖励" finished-at="2020-04-15T14:04:33Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- receiveUpgradeAward -->
-        <test-method status="FAIL" signature="userInformation()[pri:0, instance:test.controller.TestOwner@175b9425]" name="userInformation" duration-ms="347" started-at="2020-04-13T08:32:08Z" description="用户信息" finished-at="2020-04-13T08:32:08Z">
+        <test-method status="FAIL" signature="userInformation()[pri:0, instance:test.controller.TestOwner@46389160]" name="userInformation" duration-ms="318" started-at="2020-04-15T14:04:33Z" description="用户信息" finished-at="2020-04-15T14:04:33Z">
           <exception class="java.lang.NullPointerException">
             <full-stacktrace>
               <![CDATA[java.lang.NullPointerException
@@ -63,7 +63,63 @@ at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
 at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
 at org.testng.TestNG.runSuites(TestNG.java:1049)
 at org.testng.TestNG.run(TestNG.java:1017)
-at test.TestngRun.main(TestngRun.java:16)
+at test.TestngRun.run(TestngRun.java:23)
+at com.ceshi.serviceImpl.TestDataServiceImpl.function(TestDataServiceImpl.java:66)
+at com.ceshi.controller.TestDataController.function(TestDataController.java:89)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.lang.reflect.Method.invoke(Method.java:498)
+at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:189)
+at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:102)
+at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:800)
+at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1038)
+at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005)
+at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:908)
+at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
+at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882)
+at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92)
+at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:200)
+at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:834)
+at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1415)
+at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+at java.lang.Thread.run(Thread.java:748)
 ]]>
             </full-stacktrace>
           </exception> <!-- java.lang.NullPointerException -->

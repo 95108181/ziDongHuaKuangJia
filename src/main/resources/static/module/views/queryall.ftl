@@ -10,24 +10,27 @@
 </head>
 
 <script>
-function windowHeight() {
-	var de = document.documentElement;
-	return self.innerHeight||(de && de.clientHeight)||document.body.clientHeight;
-}
-window.onload=window.onresize=function(){
-	var wh=windowHeight();
-	document.getElementById("xt-left").style.height = document.getElementById("xt-right").style.height = (wh-document.getElementById("xt-top").offsetHeight)+"px";
-}
+// function windowHeight() {
+// 	var de = document.documentElement;
+// 	return self.innerHeight||(de && de.clientHeight)||document.body.clientHeight;
+// }
+// window.onload=window.onresize=function(){
+// 	var wh=windowHeight();
+// 	document.getElementById("xt-left").style.height = document.getElementById("xt-right").style.height = (wh-document.getElementById("xt-top").offsetHeight)+"px";
+// }
 </script>
 
 <body>
 <div class="xt-center">
 <div id="xt-right">
     <div class="xt-input">
+<#--        <span>选择时间定时运行</span>-->
+<#--        <input type="text"  value="03-27 15:00" class="int-text" readonly>-->
+<#--        <input type="button" value="确 定" class="green-int" />-->
+
         <span>选择时间定时运行</span>
-        <input type="text" id="scheduled" value="03-27 15:00" class="int-text" readonly>
-<#--        <input onclick="login()" value="确 定" class="green-int" />-->
-        <a id="testfunction" onclick="setScheduledTasks()" class="green-int">确 定</a>
+        <input type="text" id="picktime" value="03-27 15:00" class="int-text" readonly>
+        <input type="button" value="确 定" class="green-int"  id="input1" />
 <#--        <span>来源</span>-->
 <#--        <input type="text" class="int-text" />-->
         <a id="testfunction" onclick="testfunction()" class="yellow-int">点击立即运行</a>
@@ -79,7 +82,6 @@ window.onload=window.onresize=function(){
 </div>
 
 </body>
-
 <script>
     $(function(){
         $('#picktime').mtimer();
@@ -106,8 +108,8 @@ window.onload=window.onresize=function(){
 
 
     //设置定时任务
-    function setScheduledTasks() {
-        var scheduled = $("#scheduled").val();
+    document.getElementById('input1').onclick=function(){
+        var scheduled = $("#picktime").val();
         if (scheduled == null || scheduled == "") {
             alert("请选择正确的时间");
             return false;
@@ -126,6 +128,9 @@ window.onload=window.onresize=function(){
                 }
             })
         }
-    }
+    };
+
+
+
 </script>
 </html>

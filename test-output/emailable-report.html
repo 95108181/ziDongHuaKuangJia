@@ -9,15 +9,67 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="7">Suite</th></tr>
-<tr><td><a href="#t0">TestNG1</a></td><td class="num">7</td><td class="num">0</td><td class="num attn">1</td><td class="num">4,357</td><td></td><td></td></tr>
+<tr><td><a href="#t0">TestNG1</a></td><td class="num">7</td><td class="num">0</td><td class="num attn">1</td><td class="num">2,255</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">TestNG1 &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">test.controller.TestOwner</td><td><a href="#m0">userInformation</a></td><td rowspan="1">1586766728486</td><td rowspan="1">347</td></tr><tr><th colspan="4">TestNG1 &#8212; passed</th></tr><tr class="passedeven"><td rowspan="7">test.controller.TestOwner</td><td><a href="#m1">leaderboardList</a></td><td rowspan="1">1586766724532</td><td rowspan="1">2185</td></tr><tr class="passedeven"><td><a href="#m2">queryCurrentSeason</a></td><td rowspan="1">1586766726718</td><td rowspan="1">359</td></tr><tr class="passedeven"><td><a href="#m3">queryMyRanking</a></td><td rowspan="1">1586766727077</td><td rowspan="1">320</td></tr><tr class="passedeven"><td><a href="#m4">querySeasonNumber</a></td><td rowspan="1">1586766727398</td><td rowspan="1">377</td></tr><tr class="passedeven"><td><a href="#m5">querySeasonSettlementRewards</a></td><td rowspan="1">1586766727777</td><td rowspan="1">370</td></tr><tr class="passedeven"><td><a href="#m6">receiveSeasonSettlementAward</a></td><td rowspan="1">1586766728148</td><td rowspan="1">1</td></tr><tr class="passedeven"><td><a href="#m7">receiveUpgradeAward</a></td><td rowspan="1">1586766728149</td><td rowspan="1">336</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">TestNG1 &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">test.controller.TestOwner</td><td><a href="#m0">userInformation</a></td><td rowspan="1">1586959473102</td><td rowspan="1">318</td></tr><tr><th colspan="4">TestNG1 &#8212; passed</th></tr><tr class="passedeven"><td rowspan="7">test.controller.TestOwner</td><td><a href="#m1">leaderboardList</a></td><td rowspan="1">1586959471166</td><td rowspan="1">311</td></tr><tr class="passedeven"><td><a href="#m2">queryCurrentSeason</a></td><td rowspan="1">1586959471477</td><td rowspan="1">336</td></tr><tr class="passedeven"><td><a href="#m3">queryMyRanking</a></td><td rowspan="1">1586959471813</td><td rowspan="1">325</td></tr><tr class="passedeven"><td><a href="#m4">querySeasonNumber</a></td><td rowspan="1">1586959472138</td><td rowspan="1">336</td></tr><tr class="passedeven"><td><a href="#m5">querySeasonSettlementRewards</a></td><td rowspan="1">1586959472474</td><td rowspan="1">317</td></tr><tr class="passedeven"><td><a href="#m6">receiveSeasonSettlementAward</a></td><td rowspan="1">1586959472791</td><td rowspan="1">0</td></tr><tr class="passedeven"><td><a href="#m7">receiveUpgradeAward</a></td><td rowspan="1">1586959472791</td><td rowspan="1">310</td></tr></tbody>
 </table>
 <h2>TestNG1</h2><h3 id="m0">test.controller.TestOwner#userInformation</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NullPointerException
 	at test.service.UserInformation.userInformation(UserInformation.java:39)
 	at test.controller.TestOwner.userInformation(TestOwner.java:15)
-	at test.TestngRun.main(TestngRun.java:16)
-... Removed 22 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+	at test.TestngRun.run(TestngRun.java:23)
+	at com.ceshi.serviceImpl.TestDataServiceImpl.function(TestDataServiceImpl.java:66)
+	at com.ceshi.controller.TestDataController.function(TestDataController.java:89)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:189)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:102)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:800)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1038)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:908)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:200)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:834)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1415)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+... Removed 26 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 <h3 id="m1">test.controller.TestOwner#leaderboardList</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 <h3 id="m2">test.controller.TestOwner#queryCurrentSeason</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 <h3 id="m3">test.controller.TestOwner#queryMyRanking</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>

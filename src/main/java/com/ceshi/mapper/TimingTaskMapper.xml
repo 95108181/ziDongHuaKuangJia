@@ -62,10 +62,20 @@
 
   <insert id="setScheduledTasks" parameterType="com.ceshi.entity.TimingTask">
     <!--@mbg.generated-->
-    insert into timing_task (timing_task)
-    values (#{timingTask,jdbcType=VARCHAR})
+    insert into timing_task (timing_task, creation_time,
+    modification_time, `delete`)
+    values (#{timingTask,jdbcType=VARCHAR}, #{creationTime,jdbcType=TIMESTAMP},
+    #{modificationTime,jdbcType=TIMESTAMP}, #{delete,jdbcType=VARCHAR})
   </insert>
 
+
+    <select id="findAll" resultMap="BaseResultMap">
+        SELECT * from timing_task where `delete` = '0' order by creation_time desc
+    </select>
+
+    <delete id="delete" parameterType="com.ceshi.entity.TimingTask">
+      DELETE FROM timing_task WHERE id = #{id}
+    </delete>
 
 
 </mapper>

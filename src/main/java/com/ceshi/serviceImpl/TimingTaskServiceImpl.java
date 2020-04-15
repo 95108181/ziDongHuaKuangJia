@@ -9,6 +9,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Date;
 
 
 @Service("TimingTaskService")
@@ -24,7 +25,10 @@ class TimingTaskServiceImpl implements TimingTaskService {
     public Boolean setScheduledTasks(String scheduled) {
         TimingTask timingTask = new TimingTask();
         timingTask.setTimingTask(scheduled);
-        if (timingTask.getTimingTask().equals(null)){
+        timingTask.setCreationTime(new Date());
+        timingTask.setModificationTime(new Date());
+        timingTask.setDelete("0");
+        if (timingTask.getTimingTask() != null){
             timingTaskMapper.setScheduledTasks(timingTask);
             return true;
         }
