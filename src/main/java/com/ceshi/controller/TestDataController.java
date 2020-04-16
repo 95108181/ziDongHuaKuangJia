@@ -91,4 +91,18 @@ public class TestDataController {
     }
 
 
+
+    /**
+     * 删除测试用例
+     * @param id
+     * @return
+     */
+    @ResponseBody
+    @PostMapping("/deleteCase")
+    public BaseResult deleteCase( Integer id) {
+        Boolean status = testDataService.deleteCase(id);
+        if (status) {return BaseResult.Success();} else {return BaseResult.Error("系统繁忙，请稍后再试!");}
+    }
+
+
 }

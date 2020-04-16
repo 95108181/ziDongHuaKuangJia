@@ -57,10 +57,10 @@
                 <td>${goods.testSkip}</td>
                 <td>${goods.testsFail}</td>
                 <td>${goods.runningTime}</td>
-                <td>${goods.startTime}</td>
+                <td>${goods.startTime}ms</td>
                 <td>${goods.caseName}</td>
-                <td>2020-3-31</td>
-                <td><a href="/testData/details/${goods.id}" class="yellow-xt">详情</a><a href="#" class="blue-xt">删除</a></td>
+                <td>${goods.creationTime}</td>
+                <td><a href="/testData/details/${goods.id}" class="yellow-xt">详情</a><a id="deleteTestCase" href="#" value=${goods.id}  onclick="deleteCase()" class="blue-xt">删除</a></td>
             </tr>
             </#list>
 
@@ -129,6 +129,31 @@
             })
         }
     };
+
+    //删除测试用例
+
+    function deleteCase() {
+        var id = $("#deleteTestCase").attr("value");
+        if (id == null || id == "") {
+            alert("系统繁忙，请稍后再试");
+            return false;
+        }else {
+            $.ajax({
+                url: "/testData/deleteCase",
+                type: "post",
+                data: {id: id},
+                success: function (data) {
+                    console.log(data);
+                    if (data.succeed) {
+                        alert("删除成功");
+                        window.location.href = "/testData/queryall";
+                    } else {
+                        alert(data.errorMessage);
+                    }
+                }
+            })
+        }
+    }
 
 
 

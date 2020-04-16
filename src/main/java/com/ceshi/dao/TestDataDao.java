@@ -15,4 +15,5 @@ public interface TestDataDao {
 
     List<TestData> queryall();
 
+    void deleteCase(@Param("id")Integer id);
 }

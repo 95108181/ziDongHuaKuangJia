@@ -2,40 +2,40 @@
 <testng-results skipped="0" failed="1" ignored="0" total="8" passed="7">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="2255" started-at="2020-04-15T14:04:31Z" finished-at="2020-04-15T14:04:33Z">
+  <suite name="Suite" duration-ms="2425" started-at="2020-04-16T03:30:56Z" finished-at="2020-04-16T03:30:58Z">
     <groups>
     </groups>
-    <test name="TestNG1" duration-ms="2255" started-at="2020-04-15T14:04:31Z" finished-at="2020-04-15T14:04:33Z">
+    <test name="TestNG1" duration-ms="2425" started-at="2020-04-16T03:30:56Z" finished-at="2020-04-16T03:30:58Z">
       <class name="test.controller.TestOwner">
-        <test-method status="PASS" signature="leaderboardList()[pri:0, instance:test.controller.TestOwner@46389160]" name="leaderboardList" duration-ms="311" started-at="2020-04-15T14:04:31Z" description="排行榜列表" finished-at="2020-04-15T14:04:31Z">
+        <test-method status="PASS" signature="leaderboardList()[pri:0, instance:test.controller.TestOwner@6815fb84]" name="leaderboardList" duration-ms="483" started-at="2020-04-16T03:30:56Z" description="排行榜列表" finished-at="2020-04-16T03:30:56Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- leaderboardList -->
-        <test-method status="PASS" signature="queryCurrentSeason()[pri:0, instance:test.controller.TestOwner@46389160]" name="queryCurrentSeason" duration-ms="336" started-at="2020-04-15T14:04:31Z" description="查询当前赛季" finished-at="2020-04-15T14:04:31Z">
+        <test-method status="PASS" signature="queryCurrentSeason()[pri:0, instance:test.controller.TestOwner@6815fb84]" name="queryCurrentSeason" duration-ms="316" started-at="2020-04-16T03:30:56Z" description="查询当前赛季" finished-at="2020-04-16T03:30:57Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- queryCurrentSeason -->
-        <test-method status="PASS" signature="queryMyRanking()[pri:0, instance:test.controller.TestOwner@46389160]" name="queryMyRanking" duration-ms="325" started-at="2020-04-15T14:04:31Z" description="查询我的排行" finished-at="2020-04-15T14:04:32Z">
+        <test-method status="PASS" signature="queryMyRanking()[pri:0, instance:test.controller.TestOwner@6815fb84]" name="queryMyRanking" duration-ms="314" started-at="2020-04-16T03:30:57Z" description="查询我的排行" finished-at="2020-04-16T03:30:57Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- queryMyRanking -->
-        <test-method status="PASS" signature="querySeasonNumber()[pri:0, instance:test.controller.TestOwner@46389160]" name="querySeasonNumber" duration-ms="336" started-at="2020-04-15T14:04:32Z" description="查询赛季人数" finished-at="2020-04-15T14:04:32Z">
+        <test-method status="PASS" signature="querySeasonNumber()[pri:0, instance:test.controller.TestOwner@6815fb84]" name="querySeasonNumber" duration-ms="328" started-at="2020-04-16T03:30:57Z" description="查询赛季人数" finished-at="2020-04-16T03:30:57Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- querySeasonNumber -->
-        <test-method status="PASS" signature="querySeasonSettlementRewards()[pri:0, instance:test.controller.TestOwner@46389160]" name="querySeasonSettlementRewards" duration-ms="317" started-at="2020-04-15T14:04:32Z" description="查询赛季结算奖励" finished-at="2020-04-15T14:04:32Z">
+        <test-method status="PASS" signature="querySeasonSettlementRewards()[pri:0, instance:test.controller.TestOwner@6815fb84]" name="querySeasonSettlementRewards" duration-ms="362" started-at="2020-04-16T03:30:57Z" description="查询赛季结算奖励" finished-at="2020-04-16T03:30:58Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- querySeasonSettlementRewards -->
-        <test-method status="PASS" signature="receiveSeasonSettlementAward()[pri:0, instance:test.controller.TestOwner@46389160]" name="receiveSeasonSettlementAward" duration-ms="0" started-at="2020-04-15T14:04:32Z" description="领取赛季结算奖励" finished-at="2020-04-15T14:04:32Z">
+        <test-method status="PASS" signature="receiveSeasonSettlementAward()[pri:0, instance:test.controller.TestOwner@6815fb84]" name="receiveSeasonSettlementAward" duration-ms="1" started-at="2020-04-16T03:30:58Z" description="领取赛季结算奖励" finished-at="2020-04-16T03:30:58Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- receiveSeasonSettlementAward -->
-        <test-method status="PASS" signature="receiveUpgradeAward()[pri:0, instance:test.controller.TestOwner@46389160]" name="receiveUpgradeAward" duration-ms="310" started-at="2020-04-15T14:04:32Z" description="领取升级奖励" finished-at="2020-04-15T14:04:33Z">
+        <test-method status="PASS" signature="receiveUpgradeAward()[pri:0, instance:test.controller.TestOwner@6815fb84]" name="receiveUpgradeAward" duration-ms="318" started-at="2020-04-16T03:30:58Z" description="领取升级奖励" finished-at="2020-04-16T03:30:58Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- receiveUpgradeAward -->
-        <test-method status="FAIL" signature="userInformation()[pri:0, instance:test.controller.TestOwner@46389160]" name="userInformation" duration-ms="318" started-at="2020-04-15T14:04:33Z" description="用户信息" finished-at="2020-04-15T14:04:33Z">
+        <test-method status="FAIL" signature="userInformation()[pri:0, instance:test.controller.TestOwner@6815fb84]" name="userInformation" duration-ms="296" started-at="2020-04-16T03:30:58Z" description="用户信息" finished-at="2020-04-16T03:30:58Z">
           <exception class="java.lang.NullPointerException">
             <full-stacktrace>
               <![CDATA[java.lang.NullPointerException
@@ -63,7 +63,7 @@ at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
 at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
 at org.testng.TestNG.runSuites(TestNG.java:1049)
 at org.testng.TestNG.run(TestNG.java:1017)
-at test.TestngRun.run(TestngRun.java:23)
+at test.TestngRun.run(TestngRun.java:19)
 at com.ceshi.serviceImpl.TestDataServiceImpl.function(TestDataServiceImpl.java:66)
 at com.ceshi.controller.TestDataController.function(TestDataController.java:89)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)

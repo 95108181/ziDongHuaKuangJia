@@ -38,8 +38,8 @@ public class TestDataDB {
             ptmt.setString(6, testData.getRunningTime());
             ptmt.setString(7, testData.getCaseName());
             ptmt.setString(8, testData.getCaseResult());
-            ptmt.setObject(9, testData.getCreationTime());
-            ptmt.setObject(10, testData.getModificationTime());
+            ptmt.setString(9, testData.getCreationTime());
+            ptmt.setString(10, testData.getModificationTime());
             ptmt.setString(11, testData.getIsItDeleted());
 
             ptmt.execute();

@@ -32,4 +32,11 @@ public interface TestDataService {
      * @return
      */
     Boolean function();
+
+    /**
+     * 删除测试用例
+     * @param id
+     * @return
+     */
+    Boolean deleteCase(Integer id);
 }

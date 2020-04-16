@@ -51,12 +51,12 @@ public class TestData {
     /**
     * 创建时间
     */
-    private Date creationTime;
+    private String creationTime;
 
     /**
     * 修改时间
     */
-    private Date modificationTime;
+    private String modificationTime;
 
     /**
     * 是否删除
@@ -135,19 +135,19 @@ public class TestData {
         this.caseResult = caseResult;
     }
 
-    public Date getCreationTime() {
+    public String getCreationTime() {
         return creationTime;
     }
 
-    public void setCreationTime(Date creationTime) {
+    public void setCreationTime(String creationTime) {
         this.creationTime = creationTime;
     }
 
-    public Date getModificationTime() {
+    public String getModificationTime() {
         return modificationTime;
     }
 
-    public void setModificationTime(Date modificationTime) {
+    public void setModificationTime(String modificationTime) {
         this.modificationTime = modificationTime;
     }
 

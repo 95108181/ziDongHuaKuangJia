@@ -131,29 +131,27 @@ public class SchedulingTest {
         return null;
     }
 
-
-    //添加定时任务每5秒执行一次
-    @Scheduled(cron = "*/5 * * * * ?")
+    /**
+     * 添加定时任务每分钟执行一次
+     * @throws Exception
+     */
+    @Scheduled(cron = "0 */1 * * * ?")
     public void setupTime() throws Exception {
         //获取当前时间转换为字符串
-        SimpleDateFormat sdf = new SimpleDateFormat(" MM-dd HH:mm ");
+        SimpleDateFormat sdf = new SimpleDateFormat("MM-dd HH:mm");
         String strDate = sdf.format(new Date());
-        logger.info("获取当前时间转换为字符串：" + strDate);
         //查询出所有的定时任务数据
         List<TimingTask> timingTaskList = timingTaskMapper.findAll();
         //遍历数据判断是否与当前时间相等
         for (int i = 0; i < timingTaskList.size(); i++) {
-            TimingTask timingTask = timingTaskList.get(i);
-            logger.info("遍历定时任务数据：" + timingTask.getTimingTask());
-            if (timingTask.getTimingTask().equals(strDate)) {
+            if ((timingTaskList.get(i).getTimingTask()).equals(strDate)) {
                 //执行测试任务
-                TestngRun testngRun = new TestngRun();
-                testngRun.run();
+                TestngRun.run();
                 logger.info("定时执行测试任务");
                 //删除已执行的定时任务数据
-                timingTaskMapper.delete(timingTask.getId());
+                timingTaskMapper.delete(timingTaskList.get(i).getId());
             } else {
-                logger.info("没有可执行的测试任务");
+                logger.info("没有可定时执行的测试任务");
             }
         }
 

@@ -13,8 +13,8 @@
         <result column="running_time" jdbcType="VARCHAR" property="runningTime"/>
         <result column="case_name" jdbcType="VARCHAR" property="caseName"/>
         <result column="case_result" jdbcType="VARCHAR" property="caseResult"/>
-        <result column="creation_time" jdbcType="TIMESTAMP" property="creationTime"/>
-        <result column="modification_time" jdbcType="TIMESTAMP" property="modificationTime"/>
+        <result column="creation_time" jdbcType="VARCHAR" property="creationTime"/>
+        <result column="modification_time" jdbcType="VARCHAR" property="modificationTime"/>
         <result column="is_it_deleted" jdbcType="VARCHAR" property="isItDeleted"/>
     </resultMap>
 
@@ -28,8 +28,8 @@
         modification_time, is_it_deleted)
         values (#{testPass,jdbcType=VARCHAR}, #{testSkip,jdbcType=VARCHAR}, #{testAll,jdbcType=VARCHAR},
         #{testsFail,jdbcType=VARCHAR}, #{startTime,jdbcType=VARCHAR}, #{runningTime,jdbcType=VARCHAR},
-        #{caseName,jdbcType=VARCHAR}, #{caseResult,jdbcType=VARCHAR}, #{creationTime,jdbcType=TIMESTAMP},
-        #{modificationTime,jdbcType=TIMESTAMP}, #{isItDeleted,jdbcType=VARCHAR})
+        #{caseName,jdbcType=VARCHAR}, #{caseResult,jdbcType=VARCHAR}, #{creationTime,jdbcType=VARCHAR},
+        #{modificationTime,jdbcType=VARCHAR}, #{isItDeleted,jdbcType=VARCHAR})
     </insert>
 
 
@@ -44,6 +44,12 @@
     <select id="queryall" resultMap="BaseResultMap">
         SELECT * from test_data where is_it_deleted = '0' order by creation_time desc
     </select>
+
+
+
+    <delete id="deleteCase" parameterType="com.ceshi.entity.TestData">
+        DELETE FROM test_data WHERE id = #{id}
+    </delete>
 
 
 </mapper>

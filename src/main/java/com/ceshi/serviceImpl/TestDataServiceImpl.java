@@ -69,5 +69,14 @@ class TestDataServiceImpl implements TestDataService {
         }catch (Exception e){return false;}
     }
 
+    @Override
+    public Boolean deleteCase(Integer id) {
+        if (id != null){
+            testDataDao.deleteCase(id);
+            return true;
+        }
+        return false;
+    }
+
 
 }

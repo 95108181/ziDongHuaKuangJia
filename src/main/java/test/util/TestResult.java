@@ -141,8 +141,11 @@ public class TestResult implements IReporter {
             TestData testData = new TestData();
             testData.setCaseName(name);
             testData.setCaseResult(Matcher.quoteReplacement(gson.toJson(result)));
-            testData.setCreationTime(new Date());
-            testData.setModificationTime(new Date());
+            //获取当前时间转换为字符串
+            SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+            String strDate = sdf.format(new Date());
+            testData.setCreationTime(strDate);
+            testData.setModificationTime(strDate);
             testData.setIsItDeleted("0");
             testData.setRunningTime(beginTime);
             testData.setStartTime(String.valueOf(totalTime));
