@@ -4,6 +4,7 @@ import com.ceshi.entity.TestData;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import java.util.Date;
 
 /**
  * 数据层处理类
@@ -43,7 +44,8 @@ public class TestDataDB {
             ptmt.setString(11, testData.getIsItDeleted());
 
             ptmt.execute();
-        } catch (SQLException e) {e.printStackTrace();} finally {
+            System.out.println(new Date()+"测试用例运行结果，数据库存储成功");
+        } catch (SQLException e) {e.printStackTrace();System.out.println(new Date()+"测试用例运行结果，数据库存储失败");} finally {
             try {
                 if (ptmt != null) { ptmt.close();}
             } catch (SQLException e) {e.printStackTrace();}

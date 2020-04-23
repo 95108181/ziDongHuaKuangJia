@@ -54,6 +54,7 @@ public class SchedulingTest {
      * @throws InterruptedException
      */
     @Scheduled(cron = "30 10 * * * ?") // 每小时的10分30秒触发任务
+//    @Scheduled(cron = "0 */1 * * * ?")
     public String getVerificationCode() throws IOException, InterruptedException {
 
         //获取验证码
@@ -121,12 +122,14 @@ public class SchedulingTest {
         System.out.println(ccTokenJoRsultBody.getJSONObject("data").get("token"));
         String token = JSON.toJSONString(ccTokenJoRsultBody.getJSONObject("data").get("token"));
         Assert.assertNotNull(token);
+        String strToken= token.replace("\"", "");
+        logger.info("去掉双引号的strToken："+strToken);
 
         //把tcoken值存入数据库
         CcToken ctcoken = new CcToken();
         ctcoken.setCreationTime(new Date());
         ctcoken.setSystemCode("德州扑克");
-        ctcoken.setToken(token);
+        ctcoken.setToken(strToken);
         ccTokenMapper.insert(ctcoken);
         return null;
     }

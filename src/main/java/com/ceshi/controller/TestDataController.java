@@ -7,6 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 @Controller
@@ -99,10 +100,15 @@ public class TestDataController {
      */
     @ResponseBody
     @PostMapping("/deleteCase")
-    public BaseResult deleteCase( Integer id) {
-        Boolean status = testDataService.deleteCase(id);
+    public BaseResult deleteCase( HttpServletRequest req) {
+        String[] ids = req.getParameterValues("valueId[]");
+        Boolean status = testDataService.deleteCase(ids);
         if (status) {return BaseResult.Success();} else {return BaseResult.Error("系统繁忙，请稍后再试!");}
+
     }
+
+
+
 
 
 }

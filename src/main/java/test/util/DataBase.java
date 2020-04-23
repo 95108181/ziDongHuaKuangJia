@@ -5,7 +5,7 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class DataBase {
-    private static final String URL = "jdbc:mysql://47.96.233.196:3306/wangqicheshitestng?useUnicode=true&characterEncoding=utf8";
+    private static final String URL = "jdbc:mysql://47.96.233.196:3306/wangqicheshitestng?useUnicode=true&characterEncoding=utf8&autoReconnect=true";
     private static final String UNAME = "root";
     private static final String PWD = "123456";
     private static Connection conn = null;

@@ -38,6 +38,7 @@
     <div class="xt-table">
         <table cellpadding="0" cellspacing="0" border="0" bgcolor="#dcdcdc" width="100%">
             <tr>
+            <th>选择框</th>
             <th>编号</th>
             <th>用例总数</th>
             <th>用例通过</th>
@@ -51,6 +52,7 @@
             </tr>
             <#list goodsList as goods>
             <tr>
+                <td><input type="checkbox" name="vehicle" value="${goods.id} " /></td>
                 <td>${goods.id}</td>
                 <td>${goods.testAll}</td>
                 <td>${goods.testPass}</td>
@@ -60,7 +62,7 @@
                 <td>${goods.startTime}ms</td>
                 <td>${goods.caseName}</td>
                 <td>${goods.creationTime}</td>
-                <td><a href="/testData/details/${goods.id}" class="yellow-xt">详情</a><a id="deleteTestCase" href="#" value=${goods.id}  onclick="deleteCase()" class="blue-xt">删除</a></td>
+                <td><a href="/testData/details/${goods.id}" class="yellow-xt">详情</a><a  href="#"   onclick="deleteCase()" class="blue-xt">删除</a></td>
             </tr>
             </#list>
 
@@ -98,6 +100,7 @@
                     console.log(data);
                     if (data.succeed) {
                         alert("运行成功");
+                        window.location.href = "/testData/queryall";
                     } else {
                         alert("系统繁忙，请稍后再试");
                     }
@@ -133,15 +136,21 @@
     //删除测试用例
 
     function deleteCase() {
-        var id = $("#deleteTestCase").attr("value");
-        if (id == null || id == "") {
+        var id = document.getElementsByName('vehicle');
+        var valueId = new Array();
+        for(var i = 0; i < id.length; i++){
+            if(id[i].checked)
+                valueId.push(id[i].value);
+        }
+        // alert(valueId);
+        if (valueId == null || valueId == "") {
             alert("系统繁忙，请稍后再试");
             return false;
         }else {
             $.ajax({
                 url: "/testData/deleteCase",
                 type: "post",
-                data: {id: id},
+                data: {valueId: valueId},
                 success: function (data) {
                     console.log(data);
                     if (data.succeed) {

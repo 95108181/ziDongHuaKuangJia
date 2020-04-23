@@ -20,6 +20,7 @@ public class UserInformation {
     public static String userInformation() throws IOException {
         List<CcToken> ccTokenList= CcTokenDB.getAll();
         String token = ccTokenList.get(0).getToken();
+        System.out.println(token);
         OkHttpClient client = new OkHttpClient().newBuilder()
                 .build();
         MediaType mediaType = MediaType.parse("text/plain");

@@ -8,7 +8,7 @@
     <classes>
       <class name="test.controller.TestOwner">
         <methods>
-          <include name="userInformation"/>
+          <include name="leaderboardList"/>
         </methods>
       </class> <!-- test.controller.TestOwner -->
     </classes>

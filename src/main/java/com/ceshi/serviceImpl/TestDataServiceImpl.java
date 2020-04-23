@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import test.TestngRun;
 
+import java.math.BigInteger;
 import java.util.List;
 
 @Service("TestDataService")
@@ -58,6 +59,7 @@ class TestDataServiceImpl implements TestDataService {
 
     /**
      * 执行测试用例
+     *
      * @return
      */
     @Override
@@ -66,13 +68,24 @@ class TestDataServiceImpl implements TestDataService {
             TestngRun.run();
             logger.info("执行测试任务");
             return true;
-        }catch (Exception e){return false;}
+        } catch (Exception e) {
+            return false;
+        }
     }
 
+    /**
+     * 删除用例
+     * @param ids
+     * @return
+     */
     @Override
-    public Boolean deleteCase(Integer id) {
-        if (id != null){
-            testDataDao.deleteCase(id);
+    public Boolean deleteCase(String[] ids) {
+        if (ids != null) {
+            //遍历，去"号，去空格,转换成int格式，在删除数据
+            for (int i = 0; i < ids.length; i++) {
+                String id = ids[i].replace("\"", "");
+                testDataDao.deleteCase(Integer.parseInt(id.replace(" ","")));
+            }
             return true;
         }
         return false;

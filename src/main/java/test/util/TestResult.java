@@ -29,7 +29,7 @@ public class TestResult implements IReporter {
     // 定义生成测试报告的路径和文件名，为兼容Windows和Linux此处使用File.separator代替分隔符
     private String path = System.getProperty("user.dir") + File.separator + reportdate + ".html";
     // 定义html样式模板所在路径
-    private String templatePath = System.getProperty("user.dir") + File.separator + "template";
+//    private String templatePath = System.getProperty("user.dir") + File.separator + "template";
 
     private int testsPass = 0;
 
@@ -86,7 +86,7 @@ public class TestResult implements IReporter {
     }
 
     private void outputResult(List<ITestResult> list) {
-        try {
+//        try {
             List<ReportInfo> listInfo = new ArrayList<ReportInfo>();
             int index = 0;
             for (ITestResult result : list) {
@@ -132,9 +132,9 @@ public class TestResult implements IReporter {
             result.put("totalTime", totalTime + "ms");
             result.put("testResult", listInfo);
             Gson gson = new GsonBuilder().disableHtmlEscaping().setPrettyPrinting().create();
-            String template = this.read(templatePath);
-            BufferedWriter output = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(new File(path)), "UTF-8"));
-            template = template.replaceFirst("\\$\\{resultData\\}", Matcher.quoteReplacement(gson.toJson(result)));
+//            String template = this.read(templatePath);
+//            BufferedWriter output = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(new File(path)), "UTF-8"));
+//            template = template.replaceFirst("\\$\\{resultData\\}", Matcher.quoteReplacement(gson.toJson(result)));
 
 
 
@@ -158,12 +158,12 @@ public class TestResult implements IReporter {
             logger.info(testData.getCaseResult());
 
 
-            output.write(template);
-            output.flush();
-            output.close();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+//            output.write(template);
+//            output.flush();
+//            output.close();
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
 
     }
 

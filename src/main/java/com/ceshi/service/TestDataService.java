@@ -38,5 +38,7 @@ public interface TestDataService {
      * @param id
      * @return
      */
-    Boolean deleteCase(Integer id);
+    Boolean deleteCase(String[] id);
+
+
 }
