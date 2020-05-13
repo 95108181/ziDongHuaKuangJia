@@ -5,9 +5,10 @@ import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.springframework.util.Base64Utils;
+import org.springframework.util.StringUtils;
 
-import java.io.File;
-import java.io.IOException;
+import java.io.*;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.text.SimpleDateFormat;
@@ -78,19 +79,81 @@ public class BaseService {
     }
 
 
-    public static void takeScreenShot(AndroidDriver driver) {
+    public static String takeScreenShot(AndroidDriver driver) {
         File screenShotFile = driver.getScreenshotAs(OutputType.FILE);
         try {
             FileUtils.copyFile(screenShotFile, new File("D:\\AutomaticScreenshot\\" + getCurrentDateTime() + ".jpg"));
         } catch (IOException e) {
             e.printStackTrace();
         }
+        return "D:\\AutomaticScreenshot\\" + getCurrentDateTime() + ".jpg";
     }
 
     public static String getCurrentDateTime() {
         //设置日期格式
         SimpleDateFormat df = new SimpleDateFormat("yyyyMMdd_HHmmss");
         return df.format(new Date());
+    }
+
+    /**
+     * 本地图片转换成base64字符串
+     *
+     * @param imgFile 本地图片全路径 （注意：带文件名）
+     *                (将图片文件转化为字节数组字符串，并对其进行Base64编码处理)
+     * @return
+     */
+    public static String ImageToBase64ByLocal(String imgFile) {
+
+
+        byte[] data = null;
+
+        // 读取图片字节数组
+        try {
+            InputStream in = new FileInputStream(imgFile);
+
+            data = new byte[in.available()];
+            in.read(data);
+            in.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        // 返回Base64编码过的字节数组字符串
+        return Base64Utils.encodeToString(data);
+    }
+
+    /**
+     * base64字符串转换成图片 (对字节数组字符串进行Base64解码并生成图片)
+     *
+     * @param imgStr      base64字符串
+     * @param imgFilePath 指定图片存放路径  （注意：带文件名）
+     * @return
+     */
+    public static boolean Base64ToImage(String imgStr, String imgFilePath) {
+        // 图像数据为空
+        if (StringUtils.isEmpty(imgStr)) {
+            return false;
+        }
+        try {
+            // Base64解码
+            byte[] b = Base64Utils.decodeFromString(imgStr);
+            for (int i = 0; i < b.length; ++i) {
+                // 调整异常数据
+                if (b[i] < 0) {
+                    b[i] += 256;
+                }
+            }
+
+            OutputStream out = new FileOutputStream(imgFilePath);
+            out.write(b);
+            out.flush();
+            out.close();
+
+            return true;
+        } catch (Exception e) {
+            return false;
+        }
+
     }
 
 
