@@ -1,12 +1,17 @@
 package test.service.servicePhone;
 
 import io.appium.java_client.android.AndroidDriver;
+import org.apache.commons.fileupload.FileItem;
+import org.apache.commons.fileupload.FileItemFactory;
+import org.apache.commons.fileupload.disk.DiskFileItemFactory;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.springframework.util.Base64Utils;
 import org.springframework.util.StringUtils;
+import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.multipart.commons.CommonsMultipartFile;
 
 import java.io.*;
 import java.net.MalformedURLException;
@@ -154,6 +159,43 @@ public class BaseService {
             return false;
         }
 
+    }
+
+    //本地文件转为MultipartFile类型(文件路径)
+    static MultipartFile getMulFileByPath(String picPath) {
+        FileItem fileItem = createFileItem(picPath);
+        MultipartFile mfile = new CommonsMultipartFile(fileItem);
+        return mfile;
+    }
+
+    private static FileItem createFileItem(String filePath)
+    {
+        FileItemFactory factory = new DiskFileItemFactory(16, null);
+        String textFieldName = "textField";
+        int num = filePath.lastIndexOf(".");
+        String extFile = filePath.substring(num);
+        FileItem item = factory.createItem(textFieldName, "text/plain", true,
+                "MyFileName" + extFile);
+        File newfile = new File(filePath);
+        long fileSize = newfile.length();
+        int bytesRead = 0;
+        byte[] buffer =new byte[(int) fileSize];
+        try
+        {
+            FileInputStream fis = new FileInputStream(newfile);
+            OutputStream os = item.getOutputStream();
+            while ((bytesRead = fis.read(buffer, 0,  buffer.length))!= -1)
+            {
+                os.write(buffer, 0, bytesRead);
+            }
+            os.close();
+            fis.close();
+        }
+        catch (IOException e)
+        {
+            e.printStackTrace();
+        }
+        return item;
     }
 
 

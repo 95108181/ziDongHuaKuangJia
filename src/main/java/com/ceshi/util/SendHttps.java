@@ -11,8 +11,8 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Map.Entry;
 /**
- * @Author: zhouhe
- * @Date: 2019/6/20 14:49
+ * @Author: wangqi
+ * @Date: 2020-5-13 23:30:48
  */
 public class SendHttps {
     private static Logger logger = LoggerFactory.getLogger(SendHttps.class);

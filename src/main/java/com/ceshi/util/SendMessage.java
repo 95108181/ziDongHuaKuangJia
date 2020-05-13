@@ -17,9 +17,10 @@ public class SendMessage {
         // 请求的JSON数据，这里我用map在工具类里转成json格式
         Map<String,Object> json=new HashMap();
         Map<String,Object> text=new HashMap();
-        json.put("msgtype","text");
-        text.put("content","-智能-#### 杭州天气 @150XXXXXXXX \n> 9度，西北风1级，空气良89，相对温度73%\n> ![screenshot](https://img.alicdn.com/tfs/TB1NwmBEL9TBuNjy1zbXXXpepXa-2400-1218.png)\n> ###### 10点20分发布 [天气](https://www.dingalk.com) \n");
-        json.put("text",text);
+        json.put("msgtype","markdown");
+        text.put("title","测试");
+        text.put("text","# 测试 \n  智能机器人推送 \n ![](https://wangqioss.oss-cn-beijing.aliyuncs.com/CCpicture/1589382512547.png?Expires=1904742506&OSSAccessKeyId=LTAI4Fh3gTdTRL5vcnjQJfs7&Signature=dwyZqypYU2PEgxWck5RpBDAkpkk%3D)\n [链接](https://www.dingtalk.com) \n");
+        json.put("markdown",text);
         // 发送post请求
         String response = SendHttps.sendPostByMap(dingDingToken, json);
         System.out.println("相应结果："+response);

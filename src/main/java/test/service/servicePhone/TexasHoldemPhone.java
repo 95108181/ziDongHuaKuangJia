@@ -3,6 +3,9 @@ package test.service.servicePhone;
 import io.appium.java_client.android.AndroidDriver;
 import java.net.MalformedURLException;
 import org.openqa.selenium.By;
+import org.springframework.web.multipart.MultipartFile;
+import test.util.OssUtil;
+
 import static java.lang.Thread.sleep;
 
 
@@ -34,8 +37,17 @@ public class TexasHoldemPhone {
 //            sleep(7000);
 //            String imgFile = BaseService.takeScreenShot(driver);
             String imgFile = "D:\\AutomaticScreenshot\\2020513191105.png";
-            String imgBase64 = BaseService.ImageToBase64ByLocal(imgFile);
-            System.out.println(imgBase64);
+            OssUtil ossUtil = new  OssUtil();
+            MultipartFile  fileItem = BaseService.getMulFileByPath(imgFile);
+            String url = ossUtil.checkImage(fileItem);
+            System.out.println(url);
+
+//            String imgFile = "D:\\AutomaticScreenshot\\1.png";
+//            System.out.println(BaseService.ImageToBase64ByLocal(imgFile));
+
+
+
+
         } catch (Exception e) {
 //            driver.closeApp();
 //            driver.quit();
