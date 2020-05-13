@@ -15,6 +15,7 @@ import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 import org.testng.Assert;
 import test.TestngRun;
+import test.controller.TestPhone;
 
 import java.io.IOException;
 import java.text.SimpleDateFormat;
@@ -138,25 +139,40 @@ public class SchedulingTest {
      * 添加定时任务每分钟执行一次
      * @throws Exception
      */
-    @Scheduled(cron = "0 */1 * * * ?")
-    public void setupTime() throws Exception {
-        //获取当前时间转换为字符串
-        SimpleDateFormat sdf = new SimpleDateFormat("MM-dd HH:mm");
-        String strDate = sdf.format(new Date());
-        //查询出所有的定时任务数据
-        List<TimingTask> timingTaskList = timingTaskMapper.findAll();
-        //遍历数据判断是否与当前时间相等
-        for (int i = 0; i < timingTaskList.size(); i++) {
-            if ((timingTaskList.get(i).getTimingTask()).equals(strDate)) {
-                //执行测试任务
-                TestngRun.run();
-                logger.info("定时执行测试任务");
-                //删除已执行的定时任务数据
-                timingTaskMapper.delete(timingTaskList.get(i).getId());
-            } else {
-                logger.info("没有可定时执行的测试任务");
-            }
-        }
+//    @Scheduled(cron = "0 */1 * * * ?")
+//    public void setupTime() throws Exception {
+//        //获取当前时间转换为字符串
+//        SimpleDateFormat sdf = new SimpleDateFormat("MM-dd HH:mm");
+//        String strDate = sdf.format(new Date());
+//        //查询出所有的定时任务数据
+//        List<TimingTask> timingTaskList = timingTaskMapper.findAll();
+//        //遍历数据判断是否与当前时间相等
+//        for (int i = 0; i < timingTaskList.size(); i++) {
+//            if ((timingTaskList.get(i).getTimingTask()).equals(strDate)) {
+//                //执行测试任务
+//                TestngRun.run();
+//                logger.info("定时执行测试任务");
+//                //删除已执行的定时任务数据
+//                timingTaskMapper.delete(timingTaskList.get(i).getId());
+//            } else {
+//                logger.info("没有可定时执行的测试任务");
+//            }
+//        }
+//
+//    }
 
+
+    /**
+     * 添加定时任务,德州自动化
+     *
+     * @return
+     * @throws IOException
+     * @throws InterruptedException
+     */
+    @Scheduled(cron = "0 */4 * * * ?")
+    public String dezhouAutomation() throws Exception {
+        logger.info("德州自动化执行的测试任务");
+        TestPhone.userInformation();
+        return null;
     }
 }
