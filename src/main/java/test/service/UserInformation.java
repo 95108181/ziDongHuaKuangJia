@@ -9,6 +9,8 @@ import org.testng.Reporter;
 import test.util.CcTokenDB;
 
 import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 
 public class UserInformation {
@@ -18,6 +20,9 @@ public class UserInformation {
      * @throws IOException
      */
     public static String userInformation() throws IOException {
+        //获取当前时间转换为字符串
+        SimpleDateFormat sdf = new SimpleDateFormat("MM-dd HH:mm");
+        String strDate = sdf.format(new Date());
         List<CcToken> ccTokenList= CcTokenDB.getAll();
         String token = ccTokenList.get(0).getToken();
         System.out.println(token);
@@ -39,6 +44,9 @@ public class UserInformation {
         JSONObject joRsultBody = JSONObject.parseObject(rsultBody);
         String nickname= JSON.toJSONString(joRsultBody.getJSONObject("data").get("nickname"));
         Assert.assertNotNull(nickname);
+
+        Reporter.log(strDate +":"+"打印的日志");
+        Reporter.log(strDate +":"+rsultBody.replace("\"", ""));
         return null;
     }
 }

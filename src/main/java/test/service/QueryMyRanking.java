@@ -2,6 +2,8 @@ package test.service;
 
 import java.io.IOException;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 
 import com.alibaba.fastjson.JSON;
@@ -19,6 +21,9 @@ public class QueryMyRanking {
      * @throws IOException
      */
     public static String queryMyRanking() throws IOException {
+        //获取当前时间转换为字符串
+        SimpleDateFormat sdf = new SimpleDateFormat("MM-dd HH:mm");
+        String strDate = sdf.format(new Date());
         List<CcToken> ccTokenList= CcTokenDB.getAll();
         String token = ccTokenList.get(0).getToken();
         OkHttpClient client = new OkHttpClient().newBuilder()
@@ -42,6 +47,9 @@ public class QueryMyRanking {
         String code= JSON.toJSONString(joRsultBody.get("code"));
         //断言
         Assert.assertNotNull(code);
+
+        Reporter.log(strDate +":"+"打印的日志");
+        Reporter.log(strDate +":"+rsultBody.replace("\"", ""));
         return null;
     }
 }

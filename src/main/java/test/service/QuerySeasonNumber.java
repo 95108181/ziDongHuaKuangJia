@@ -9,6 +9,8 @@ import org.testng.Reporter;
 import test.util.CcTokenDB;
 
 import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 
 public class QuerySeasonNumber {
@@ -18,6 +20,9 @@ public class QuerySeasonNumber {
      * @throws IOException
      */
     public static String querySeasonNumber() throws IOException {
+        //获取当前时间转换为字符串
+        SimpleDateFormat sdf = new SimpleDateFormat("MM-dd HH:mm");
+        String strDate = sdf.format(new Date());
         List<CcToken> ccTokenList= CcTokenDB.getAll();
         String token = ccTokenList.get(0).getToken();
         OkHttpClient client = new OkHttpClient().newBuilder()
@@ -38,6 +43,9 @@ public class QuerySeasonNumber {
         JSONObject joRsultBody = JSONObject.parseObject(rsultBody);
         String data= JSON.toJSONString(joRsultBody.getJSONObject("data"));
         Assert.assertNotNull(data);
+
+        Reporter.log(strDate +":"+"打印的日志");
+        Reporter.log(strDate +":"+rsultBody.replace("\"", ""));
 
         return null;
     }

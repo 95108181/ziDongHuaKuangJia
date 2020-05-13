@@ -1,42 +1,126 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testng-results skipped="0" failed="0" ignored="0" total="8" passed="8">
   <reporter-output>
+    <line>
+      <![CDATA[04-24 19:24:打印的日志]]>
+    </line>
+    <line>
+      <![CDATA[04-24 19:24:{code:OK,data:[{userId:115364,nickname:wangqi2,avatar:avatar/20200323/c905a779b4dd5e77.jpg,location:,ccToken:eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJnYW1lIiwiaXNzIjoiY29tLmNjIiwiZXhwIjoxNTg5ODgzMDQ3LCJ1c2VyaWQiOjExNTM2NH0.bpzx04yACqyOkHlBejd2XPevTpnzqiw0nqGfiwvVj08,country:CN,level:3,playCount:5,winCount:1,rank:1,dan:0,stage:1,star:0},{userId:115338,nickname:王琪1,avatar:avatar/20200403/5229a6ec91740796.jpg,location:,ccToken:eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJnYW1lIiwiaXNzIjoiY29tLmNjIiwiZXhwIjoxNTg5ODc1NDM2LCJ1c2VyaWQiOjExNTMzOH0.aGgtGGDUTfUaAyu9NHpmFxiLv1O1wUHxqnNcRI98xHM,country:CN,level:3,playCount:23,winCount:4,rank:2,dan:0,stage:1,star:0}]}]]>
+    </line>
+    <line>
+      <![CDATA[04-24 19:24:打印的日志]]>
+    </line>
+    <line>
+      <![CDATA[04-24 19:24:{code:OK,data:{id:5ea168147c06489a8aad207e,name:Season,status:running,poolBonus:10000000,endTime:1588521599999}}]]>
+    </line>
+    <line>
+      <![CDATA[04-24 19:24:打印的日志]]>
+    </line>
+    <line>
+      <![CDATA[04-24 19:24:{code:OK,data:{userId:115364,nickname:wangqi2,avatar:avatar/20200323/c905a779b4dd5e77.jpg,location:,ccToken:eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJnYW1lIiwiaXNzIjoiY29tLmNjIiwiZXhwIjoxNTg5ODgzMDQ3LCJ1c2VyaWQiOjExNTM2NH0.bpzx04yACqyOkHlBejd2XPevTpnzqiw0nqGfiwvVj08,country:CN,level:3,dan:0,stage:1,star:0,rank:1}}]]>
+    </line>
+    <line>
+      <![CDATA[04-24 19:24:打印的日志]]>
+    </line>
+    <line>
+      <![CDATA[04-24 19:24:{code:OK,data:{0:6,1:0,2:0,3:0,4:0,5:0,6:0,7:0,8:0}}]]>
+    </line>
+    <line>
+      <![CDATA[04-24 19:24:打印的日志]]>
+    </line>
+    <line>
+      <![CDATA[04-24 19:24:{code:OK,data:{seasonAward:227272,rankingAward:5000,userCount:22,bonusPool:5000000,rank:53,dan:7,stage:1,star:2,kingAward:303032,firstAward:1000000}}]]>
+    </line>
+    <line>
+      <![CDATA[04-24 19:24:打印的日志]]>
+    </line>
+    <line>
+      <![CDATA[04-24 19:24:{code:OK,data:{claimed:[]}}]]>
+    </line>
+    <line>
+      <![CDATA[04-24 19:24:打印的日志]]>
+    </line>
+    <line>
+      <![CDATA[04-24 19:24:{code:OK,data:{userId:115364,nickname:wangqi2,avatar:avatar/20200323/c905a779b4dd5e77.jpg,country:CN,playCount:5,winCount:1,exp:15,danInfo:{dan:0,stage:1,star:0},buyIn:50,upgradeBonus:500,level:3,levelAwards:[],lastSeasonSettled:false}}]]>
+    </line>
   </reporter-output>
-  <suite name="Suite" duration-ms="2246" started-at="2020-04-23T14:55:50Z" finished-at="2020-04-23T14:55:53Z">
+  <suite name="Suite" duration-ms="3671" started-at="2020-04-24T11:24:46Z" finished-at="2020-04-24T11:24:50Z">
     <groups>
     </groups>
-    <test name="TestNG1" duration-ms="2246" started-at="2020-04-23T14:55:50Z" finished-at="2020-04-23T14:55:53Z">
+    <test name="TestNG1" duration-ms="3671" started-at="2020-04-24T11:24:46Z" finished-at="2020-04-24T11:24:50Z">
       <class name="test.controller.TestOwner">
-        <test-method status="PASS" signature="leaderboardList()[pri:0, instance:test.controller.TestOwner@26eb3f41]" name="leaderboardList" duration-ms="318" started-at="2020-04-23T14:55:50Z" description="排行榜列表" finished-at="2020-04-23T14:55:51Z">
+        <test-method status="PASS" signature="leaderboardList()[pri:0, instance:test.controller.TestOwner@6334938b]" name="leaderboardList" duration-ms="1622" started-at="2020-04-24T11:24:46Z" description="排行榜列表" finished-at="2020-04-24T11:24:48Z">
           <reporter-output>
+            <line>
+              <![CDATA[04-24 19:24:打印的日志]]>
+            </line>
+            <line>
+              <![CDATA[04-24 19:24:{code:OK,data:[{userId:115364,nickname:wangqi2,avatar:avatar/20200323/c905a779b4dd5e77.jpg,location:,ccToken:eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJnYW1lIiwiaXNzIjoiY29tLmNjIiwiZXhwIjoxNTg5ODgzMDQ3LCJ1c2VyaWQiOjExNTM2NH0.bpzx04yACqyOkHlBejd2XPevTpnzqiw0nqGfiwvVj08,country:CN,level:3,playCount:5,winCount:1,rank:1,dan:0,stage:1,star:0},{userId:115338,nickname:王琪1,avatar:avatar/20200403/5229a6ec91740796.jpg,location:,ccToken:eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJnYW1lIiwiaXNzIjoiY29tLmNjIiwiZXhwIjoxNTg5ODc1NDM2LCJ1c2VyaWQiOjExNTMzOH0.aGgtGGDUTfUaAyu9NHpmFxiLv1O1wUHxqnNcRI98xHM,country:CN,level:3,playCount:23,winCount:4,rank:2,dan:0,stage:1,star:0}]}]]>
+            </line>
           </reporter-output>
         </test-method> <!-- leaderboardList -->
-        <test-method status="PASS" signature="queryCurrentSeason()[pri:0, instance:test.controller.TestOwner@26eb3f41]" name="queryCurrentSeason" duration-ms="311" started-at="2020-04-23T14:55:51Z" description="查询当前赛季" finished-at="2020-04-23T14:55:51Z">
+        <test-method status="PASS" signature="queryCurrentSeason()[pri:0, instance:test.controller.TestOwner@6334938b]" name="queryCurrentSeason" duration-ms="333" started-at="2020-04-24T11:24:48Z" description="查询当前赛季" finished-at="2020-04-24T11:24:48Z">
           <reporter-output>
+            <line>
+              <![CDATA[04-24 19:24:打印的日志]]>
+            </line>
+            <line>
+              <![CDATA[04-24 19:24:{code:OK,data:{id:5ea168147c06489a8aad207e,name:Season,status:running,poolBonus:10000000,endTime:1588521599999}}]]>
+            </line>
           </reporter-output>
         </test-method> <!-- queryCurrentSeason -->
-        <test-method status="PASS" signature="queryMyRanking()[pri:0, instance:test.controller.TestOwner@26eb3f41]" name="queryMyRanking" duration-ms="332" started-at="2020-04-23T14:55:51Z" description="查询我的排行" finished-at="2020-04-23T14:55:51Z">
+        <test-method status="PASS" signature="queryMyRanking()[pri:0, instance:test.controller.TestOwner@6334938b]" name="queryMyRanking" duration-ms="320" started-at="2020-04-24T11:24:48Z" description="查询我的排行" finished-at="2020-04-24T11:24:48Z">
           <reporter-output>
+            <line>
+              <![CDATA[04-24 19:24:打印的日志]]>
+            </line>
+            <line>
+              <![CDATA[04-24 19:24:{code:OK,data:{userId:115364,nickname:wangqi2,avatar:avatar/20200323/c905a779b4dd5e77.jpg,location:,ccToken:eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJnYW1lIiwiaXNzIjoiY29tLmNjIiwiZXhwIjoxNTg5ODgzMDQ3LCJ1c2VyaWQiOjExNTM2NH0.bpzx04yACqyOkHlBejd2XPevTpnzqiw0nqGfiwvVj08,country:CN,level:3,dan:0,stage:1,star:0,rank:1}}]]>
+            </line>
           </reporter-output>
         </test-method> <!-- queryMyRanking -->
-        <test-method status="PASS" signature="querySeasonNumber()[pri:0, instance:test.controller.TestOwner@26eb3f41]" name="querySeasonNumber" duration-ms="317" started-at="2020-04-23T14:55:51Z" description="查询赛季人数" finished-at="2020-04-23T14:55:52Z">
+        <test-method status="PASS" signature="querySeasonNumber()[pri:0, instance:test.controller.TestOwner@6334938b]" name="querySeasonNumber" duration-ms="326" started-at="2020-04-24T11:24:48Z" description="查询赛季人数" finished-at="2020-04-24T11:24:49Z">
           <reporter-output>
+            <line>
+              <![CDATA[04-24 19:24:打印的日志]]>
+            </line>
+            <line>
+              <![CDATA[04-24 19:24:{code:OK,data:{0:6,1:0,2:0,3:0,4:0,5:0,6:0,7:0,8:0}}]]>
+            </line>
           </reporter-output>
         </test-method> <!-- querySeasonNumber -->
-        <test-method status="PASS" signature="querySeasonSettlementRewards()[pri:0, instance:test.controller.TestOwner@26eb3f41]" name="querySeasonSettlementRewards" duration-ms="321" started-at="2020-04-23T14:55:52Z" description="查询赛季结算奖励" finished-at="2020-04-23T14:55:52Z">
+        <test-method status="PASS" signature="querySeasonSettlementRewards()[pri:0, instance:test.controller.TestOwner@6334938b]" name="querySeasonSettlementRewards" duration-ms="349" started-at="2020-04-24T11:24:49Z" description="查询赛季结算奖励" finished-at="2020-04-24T11:24:49Z">
           <reporter-output>
+            <line>
+              <![CDATA[04-24 19:24:打印的日志]]>
+            </line>
+            <line>
+              <![CDATA[04-24 19:24:{code:OK,data:{seasonAward:227272,rankingAward:5000,userCount:22,bonusPool:5000000,rank:53,dan:7,stage:1,star:2,kingAward:303032,firstAward:1000000}}]]>
+            </line>
           </reporter-output>
         </test-method> <!-- querySeasonSettlementRewards -->
-        <test-method status="PASS" signature="receiveSeasonSettlementAward()[pri:0, instance:test.controller.TestOwner@26eb3f41]" name="receiveSeasonSettlementAward" duration-ms="0" started-at="2020-04-23T14:55:52Z" description="领取赛季结算奖励" finished-at="2020-04-23T14:55:52Z">
+        <test-method status="PASS" signature="receiveSeasonSettlementAward()[pri:0, instance:test.controller.TestOwner@6334938b]" name="receiveSeasonSettlementAward" duration-ms="1" started-at="2020-04-24T11:24:49Z" description="领取赛季结算奖励" finished-at="2020-04-24T11:24:49Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- receiveSeasonSettlementAward -->
-        <test-method status="PASS" signature="receiveUpgradeAward()[pri:0, instance:test.controller.TestOwner@26eb3f41]" name="receiveUpgradeAward" duration-ms="318" started-at="2020-04-23T14:55:52Z" description="领取升级奖励" finished-at="2020-04-23T14:55:52Z">
+        <test-method status="PASS" signature="receiveUpgradeAward()[pri:0, instance:test.controller.TestOwner@6334938b]" name="receiveUpgradeAward" duration-ms="350" started-at="2020-04-24T11:24:49Z" description="领取升级奖励" finished-at="2020-04-24T11:24:49Z">
           <reporter-output>
+            <line>
+              <![CDATA[04-24 19:24:打印的日志]]>
+            </line>
+            <line>
+              <![CDATA[04-24 19:24:{code:OK,data:{claimed:[]}}]]>
+            </line>
           </reporter-output>
         </test-method> <!-- receiveUpgradeAward -->
-        <test-method status="PASS" signature="userInformation()[pri:0, instance:test.controller.TestOwner@26eb3f41]" name="userInformation" duration-ms="328" started-at="2020-04-23T14:55:52Z" description="用户信息" finished-at="2020-04-23T14:55:53Z">
+        <test-method status="PASS" signature="userInformation()[pri:0, instance:test.controller.TestOwner@6334938b]" name="userInformation" duration-ms="332" started-at="2020-04-24T11:24:49Z" description="用户信息" finished-at="2020-04-24T11:24:50Z">
           <reporter-output>
+            <line>
+              <![CDATA[04-24 19:24:打印的日志]]>
+            </line>
+            <line>
+              <![CDATA[04-24 19:24:{code:OK,data:{userId:115364,nickname:wangqi2,avatar:avatar/20200323/c905a779b4dd5e77.jpg,country:CN,playCount:5,winCount:1,exp:15,danInfo:{dan:0,stage:1,star:0},buyIn:50,upgradeBonus:500,level:3,levelAwards:[],lastSeasonSettled:false}}]]>
+            </line>
           </reporter-output>
         </test-method> <!-- userInformation -->
       </class> <!-- test.controller.TestOwner -->

@@ -14,9 +14,9 @@ public class TestngRun {
         //获取TestNG的xml的地址
         List suites = Lists.newArrayList();
         //本地地址
-        suites.add(System.getProperty("user.dir")+ File.separator+"src"+ File.separator+"main"+ File.separator+"resources"+ File.separator+"testng.xml");
+//        suites.add(System.getProperty("user.dir")+ File.separator+"src"+ File.separator+"main"+ File.separator+"resources"+ File.separator+"testng.xml");
         //线上地址
-//        suites.add(System.getProperty("user.dir")+ File.separator+"testng.xml");
+        suites.add(System.getProperty("user.dir")+ File.separator+"testng.xml");
         testng.setTestSuites(suites);
         //执行测试代码
         testng.run();
