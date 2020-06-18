@@ -1,6 +1,5 @@
-package test.service;
+package test.service.serviceGame;
 
-import java.io.IOException;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import com.ceshi.entity.CcToken;
@@ -14,21 +13,17 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 
-import static org.hamcrest.CoreMatchers.containsString;
-import static org.junit.Assert.assertThat;
-import static org.testng.AssertJUnit.assertEquals;
 
-public class QueryCurrentSeason {
+public class QuerySeasonSettlementRewards {
     /**
-     * 查询当前赛季
+     * 查询赛季结算奖励
      * @return
      * @throws IOException
      */
-    public static String queryCurrentSeason() throws IOException {
+    public static String querySeasonSettlementRewards() throws IOException {
         //获取当前时间转换为字符串
         SimpleDateFormat sdf = new SimpleDateFormat("MM-dd HH:mm");
         String strDate = sdf.format(new Date());
-
         List<CcToken> ccTokenList= CcTokenDB.getAll();
         String token = ccTokenList.get(0).getToken();
         OkHttpClient client = new OkHttpClient().newBuilder()
@@ -36,7 +31,7 @@ public class QueryCurrentSeason {
         MediaType mediaType = MediaType.parse("text/plain");
         RequestBody body = RequestBody.create(mediaType, "");
         Request request = new Request.Builder()
-                .url("https://luckytime.lerjin.com/holdem/season/current")
+                .url("https://luckytime.lerjin.com/holdem/season/settle")
                 .method("POST", body)
                 .addHeader("token", token)
                 .build();
@@ -50,6 +45,7 @@ public class QueryCurrentSeason {
         String code= JSON.toJSONString(joRsultBody.get("code"));
         //断言
         Assert.assertNotNull(code);
+
         Reporter.log(strDate +":"+"打印的日志");
         Reporter.log(strDate +":"+rsultBody.replace("\"", ""));
         return null;

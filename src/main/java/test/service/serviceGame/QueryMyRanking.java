@@ -1,11 +1,4 @@
-package test.service;
-
-import java.io.IOException;
-import java.io.IOException;
-import java.io.IOException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.List;
+package test.service.serviceGame;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
@@ -15,17 +8,21 @@ import org.testng.Assert;
 import org.testng.Reporter;
 import test.util.CcTokenDB;
 
-public class LeaderboardList {
+import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.List;
+
+public class QueryMyRanking {
     /**
-     * 排行榜列表
+     * 查询我的排行
      * @return
      * @throws IOException
      */
-    public static String leaderboardList() throws IOException {
+    public static String queryMyRanking() throws IOException {
         //获取当前时间转换为字符串
         SimpleDateFormat sdf = new SimpleDateFormat("MM-dd HH:mm");
         String strDate = sdf.format(new Date());
-
         List<CcToken> ccTokenList= CcTokenDB.getAll();
         String token = ccTokenList.get(0).getToken();
         OkHttpClient client = new OkHttpClient().newBuilder()
@@ -33,10 +30,10 @@ public class LeaderboardList {
         MediaType mediaType = MediaType.parse("application/json,text/plain");
         RequestBody body = RequestBody.create(mediaType, "{\r\n\t\"type\":\"WORLD\"\r\n}");
         Request request = new Request.Builder()
-                .url("https://luckytime.lerjin.com/holdem/season/rank/list")
+                .url("https://luckytime.lerjin.com/holdem/season/rank/me")
                 .method("POST", body)
-                .addHeader("token", token)
                 .addHeader("Content-Type", "application/json")
+                .addHeader("token", token)
                 .addHeader("Content-Type", "text/plain")
                 .build();
         Response response = client.newCall(request).execute();
@@ -46,10 +43,10 @@ public class LeaderboardList {
         // 获取身体信息
         String rsultBody = response.body().string();
         JSONObject joRsultBody = JSONObject.parseObject(rsultBody);
-        System.out.println(rsultBody);
         String code= JSON.toJSONString(joRsultBody.get("code"));
         //断言
         Assert.assertNotNull(code);
+
         Reporter.log(strDate +":"+"打印的日志");
         Reporter.log(strDate +":"+rsultBody.replace("\"", ""));
         return null;

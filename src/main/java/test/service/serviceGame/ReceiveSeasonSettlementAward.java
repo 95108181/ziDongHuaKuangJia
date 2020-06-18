@@ -1,4 +1,4 @@
-package test.service;
+package test.service.serviceGame;
 
 import java.io.IOException;
 

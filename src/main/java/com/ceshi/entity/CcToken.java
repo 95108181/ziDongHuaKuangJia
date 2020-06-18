@@ -19,6 +19,11 @@ public class CcToken {
     private String token;
 
     /**
+     * 视频id
+     */
+    private String videoId;
+
+    /**
     * 系统代码
     */
     private String systemCode;
@@ -56,6 +61,14 @@ public class CcToken {
 
     public void setToken(String token) {
         this.token = token;
+    }
+
+    public String getVideoId() {
+        return videoId;
+    }
+
+    public void setVideoId(String videoId) {
+        this.videoId = videoId;
     }
 
     public String getSystemCode() {

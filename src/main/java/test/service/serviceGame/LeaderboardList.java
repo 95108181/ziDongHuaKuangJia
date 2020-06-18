@@ -1,4 +1,4 @@
-package test.service;
+package test.service.serviceGame;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
@@ -13,26 +13,29 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 
-public class QuerySeasonNumber {
+public class LeaderboardList {
     /**
-     * 查询赛季人数
+     * 排行榜列表
      * @return
      * @throws IOException
      */
-    public static String querySeasonNumber() throws IOException {
+    public static String leaderboardList() throws IOException {
         //获取当前时间转换为字符串
         SimpleDateFormat sdf = new SimpleDateFormat("MM-dd HH:mm");
         String strDate = sdf.format(new Date());
+
         List<CcToken> ccTokenList= CcTokenDB.getAll();
         String token = ccTokenList.get(0).getToken();
         OkHttpClient client = new OkHttpClient().newBuilder()
                 .build();
-        MediaType mediaType = MediaType.parse("text/plain");
-        RequestBody body = RequestBody.create(mediaType, "");
+        MediaType mediaType = MediaType.parse("application/json,text/plain");
+        RequestBody body = RequestBody.create(mediaType, "{\r\n\t\"type\":\"WORLD\"\r\n}");
         Request request = new Request.Builder()
-                .url("https://luckytime.lerjin.com/holdem/season/user/count")
+                .url("https://luckytime.lerjin.com/holdem/season/rank/list")
                 .method("POST", body)
                 .addHeader("token", token)
+                .addHeader("Content-Type", "application/json")
+                .addHeader("Content-Type", "text/plain")
                 .build();
         Response response = client.newCall(request).execute();
 
@@ -41,12 +44,12 @@ public class QuerySeasonNumber {
         // 获取身体信息
         String rsultBody = response.body().string();
         JSONObject joRsultBody = JSONObject.parseObject(rsultBody);
-        String data= JSON.toJSONString(joRsultBody.getJSONObject("data"));
-        Assert.assertNotNull(data);
-
+        System.out.println(rsultBody);
+        String code= JSON.toJSONString(joRsultBody.get("code"));
+        //断言
+        Assert.assertNotNull(code);
         Reporter.log(strDate +":"+"打印的日志");
         Reporter.log(strDate +":"+rsultBody.replace("\"", ""));
-
         return null;
     }
 }

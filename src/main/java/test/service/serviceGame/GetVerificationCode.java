@@ -1,14 +1,10 @@
-package test.service;
+package test.service.serviceGame;
 
 
 import com.alibaba.fastjson.JSON;
-import com.ceshi.Application;
-import okhttp3.*;
 import com.alibaba.fastjson.JSONObject;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import okhttp3.*;
 import org.testng.Assert;
-import org.testng.Reporter;
 
 import java.io.IOException;
 

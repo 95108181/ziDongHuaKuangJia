@@ -39,6 +39,7 @@ public class CcTokenDB {
                 CcToken ccToken = new CcToken();
                 ccToken.setToken(rs.getString("token"));
                 ccToken.setUserIdToken(rs.getString("userId_Token"));
+                ccToken.setVideoId(rs.getString("video_id"));
                 ccTokenList.add(ccToken);
             }
             return ccTokenList;

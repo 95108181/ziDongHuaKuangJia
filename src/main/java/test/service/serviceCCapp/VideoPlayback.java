@@ -31,12 +31,14 @@ public class VideoPlayback {
         LogPrinting.log("userId",userId);
         String token = ccTokenList.get(0).getToken();
         LogPrinting.log("token",token);
+        String VideoId = ccTokenList.get(0).getVideoId();
+        LogPrinting.log("VideoId",VideoId);
 
 
         OkHttpClient client = new OkHttpClient().newBuilder().build();
         MediaType mediaType = MediaType.parse("application/json");
         RequestBody body = RequestBody.create(mediaType,
-                "\r\n{\r\n\t\"eventType\":\"VIEW\",\r\n\t\"sourceId\":\"8a8386cf72c123840172c6b69854001f\",\r\n\t\"pid\":\"eerj2i3123\",\r\n\t\"status\":\"0\",\r\n\t\"source\":\"0\",\r\n\t\"feedOrder\":\"0\",\r\n\t\"duration\":\"2\"\r\n}");
+                "\r\n{\r\n\t\"eventType\":\"VIEW\",\r\n\t\"sourceId\":\""+VideoId+"\",\r\n\t\"pid\":\"eerj2i3123\",\r\n\t\"status\":\"0\",\r\n\t\"source\":\"0\",\r\n\t\"feedOrder\":\"0\",\r\n\t\"duration\":\"2\"\r\n}");
         Request request = new Request.Builder()
                 .url("https://cpv.ccdev.lerjin.com/behavior/event")
                 .method("POST", body)

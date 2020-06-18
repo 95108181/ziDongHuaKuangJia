@@ -16,7 +16,9 @@ import org.springframework.stereotype.Component;
 import org.testng.Assert;
 import test.TestngRun;
 import test.controller.TestPhone;
+import test.util.LogPrinting;
 
+import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -34,6 +36,7 @@ public class SchedulingTest {
 
     @Autowired
     CcTokenMapper ccTokenMapper;
+
     @Autowired
     TimingTaskMapper timingTaskMapper;
 
@@ -48,14 +51,14 @@ public class SchedulingTest {
 
 
     /**
-     * 添加定时任务,获取登录token
+     * 添加定时任务,获取登录token userid  视频id
      *
      * @return
      * @throws IOException
      * @throws InterruptedException
      */
-    @Scheduled(cron = "30 10 * * * ?") // 每小时的10分30秒触发任务
-//    @Scheduled(cron = "0 */1 * * * ?")
+//    @Scheduled(cron = "30 10 * * * ?") // 每小时的10分30秒触发任务
+    @Scheduled(cron = "0 */1 * * * ?")
     public String getVerificationCode() throws IOException, InterruptedException {
 
         //获取验证码
@@ -123,11 +126,56 @@ public class SchedulingTest {
         //判断是否为null
         Assert.assertNotNull(ccToken);
 
+
         //等待2秒
         Thread.sleep(2000);
         String strToken = ccToken.replace("\"", "");
         String strUserid = userid.replace("\"", "");
         logger.info("去掉双引号的strToken：" + strToken);
+
+
+        OkHttpClient Videoclient = new OkHttpClient().newBuilder()
+                .build();
+        MediaType VideomediaType = MediaType.parse("text/plain");
+        //线下
+        RequestBody Videobody = new MultipartBody.Builder().setType(MultipartBody.FORM)
+                .addFormDataPart("videoTitle", "视频上传测试")
+                .addFormDataPart("videoDescribe", "ldaskdlaskjldkjksald")
+                .addFormDataPart("file", System.getProperty("user.dir")+ File.separator+"src"+ File.separator+"main"+ File.separator+"resources"+ File.separator+"ceshishiping.mp4",
+                        RequestBody.create(MediaType.parse("application/octet-stream"),
+                                new File(System.getProperty("user.dir")+ File.separator+"src"+ File.separator+"main"+ File.separator+"resources"+ File.separator+"ceshishiping.mp4")))
+                .build();
+
+        //线上
+//        RequestBody Videobody = new MultipartBody.Builder().setType(MultipartBody.FORM)
+//                .addFormDataPart("videoTitle", "视频上传测试")
+//                .addFormDataPart("videoDescribe", "ldaskdlaskjldkjksald")
+//                .addFormDataPart("file", System.getProperty("user.dir")+ File.separator+"ceshishiping.mp4l",
+//                        RequestBody.create(MediaType.parse("application/octet-stream"),
+//                                new File(System.getProperty("user.dir")+ File.separator+"ceshishiping.mp4l")))
+//                .build();
+
+        Request Videorequest = new Request.Builder()
+                .url("https://ugc.ccdev.lerjin.com/video/upload")
+                .method("POST", body)
+                .addHeader("token", strToken)
+                .addHeader("lang", "CN")
+                .addHeader("userId", strUserid)
+                .addHeader("module", "ugc")
+                .build();
+        LogPrinting.log("request数据", request);
+        Response Videoresponse = client.newCall(request).execute();
+
+        // 获取头部
+        Headers VideorsultHeaders = response.headers();
+        // 获取身体信息
+        String VideorsultBody = response.body().string();
+        System.out.println(VideorsultBody.substring(7, 39));
+
+
+        String strVideorsultBody = VideorsultBody.replace("\"", "");
+        logger.info("视频ID：" + strVideorsultBody);
+
 
         //把tcoken和userID值存入数据库
         CcToken ctcoken = new CcToken();
@@ -135,6 +183,7 @@ public class SchedulingTest {
         ctcoken.setSystemCode("CCapp");
         ctcoken.setUserIdToken(strUserid);
         ctcoken.setToken(strToken);
+        ctcoken.setVideoId(strVideorsultBody);
         ccTokenMapper.insert(ctcoken);
         return null;
     }

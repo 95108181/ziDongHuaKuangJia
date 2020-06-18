@@ -42,9 +42,9 @@ public class VideoUpload {
         RequestBody body = new MultipartBody.Builder().setType(MultipartBody.FORM)
                 .addFormDataPart("videoTitle", "视频上传测试"+strDate)
                 .addFormDataPart("videoDescribe", "ldaskdlaskjldkjksald")
-                .addFormDataPart("file","/C:/Users/95108181/Desktop/normal video.mp4",
+                .addFormDataPart("file",System.getProperty("user.dir")+ File.separator+"src"+ File.separator+"main"+ File.separator+"resources"+ File.separator+"ceshishiping.mp4",
                         RequestBody.create(MediaType.parse("application/octet-stream"),
-                                new File("/C:/Users/95108181/Desktop/normal video.mp4")))
+                                new File(System.getProperty("user.dir")+ File.separator+"src"+ File.separator+"main"+ File.separator+"resources"+ File.separator+"ceshishiping.mp4")))
                 .build();
         Request request = new Request.Builder()
                 .url("https://ugc.ccdev.lerjin.com/video/upload")
@@ -61,6 +61,8 @@ public class VideoUpload {
         Headers rsultHeaders = response.headers();
         // 获取身体信息
         String rsultBody = response.body().string();
+        System.out.println(rsultBody.substring(7,39));
+
         LogPrinting.log("response数据",rsultBody);
 //        JSONObject joRsultBody = JSONObject.parseObject(rsultBody);
 //        String data= JSON.toJSONString(joRsultBody.getJSONObject("id"));
