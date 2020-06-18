@@ -16,7 +16,8 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 //此注解表示开启缓存功能
 @EnableCaching
 @SpringBootApplication(exclude = MongoAutoConfiguration.class)
-public class Application {private static final Logger logger = LoggerFactory.getLogger(Application.class);
+public class Application {
+  private static final Logger logger = LoggerFactory.getLogger(Application.class);
 
   public static void main(String[] args) throws Exception {
     logger.info("》》》》》》》》》》》》开始启动《《《《《《《《《《《《");

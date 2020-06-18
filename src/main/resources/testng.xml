@@ -12,7 +12,7 @@
 	<test name="TestNG1">
 		<!--类-->
 		<classes>
-			<class name="test.controller.TestOwner"/>
+			<class name="test.controller.TestCCapp"/>
 		</classes>
 	</test> <!-- TestNG -->
 

@@ -31,13 +31,14 @@ public class CcTokenDB {
         try {
             conn = DataBase.getConnection();
 
-            String sql = "SELECT * FROM cc_token where system_code = '德州扑克' order by creation_time desc";
+            String sql = "SELECT * FROM cc_token where system_code = 'CCapp' order by creation_time desc";
             ptmt = conn.prepareStatement(sql);
             rs = ptmt.executeQuery();
             List<CcToken> ccTokenList = new ArrayList<>();
             while (rs.next()) {
                 CcToken ccToken = new CcToken();
                 ccToken.setToken(rs.getString("token"));
+                ccToken.setUserIdToken(rs.getString("userId_Token"));
                 ccTokenList.add(ccToken);
             }
             return ccTokenList;

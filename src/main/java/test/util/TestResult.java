@@ -41,7 +41,7 @@ public class TestResult implements IReporter {
 
     private long totalTime;
 
-    private String name = "CLIPCLAPS 游戏测试";
+    private String name = "CLIPCLAPS App";
 
     @Override
     public void generateReport(List<XmlSuite> xmlSuites, List<ISuite> suites, String outputDirectory) {

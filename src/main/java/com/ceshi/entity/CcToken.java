@@ -9,6 +9,11 @@ public class CcToken {
     private Integer id;
 
     /**
+     * 系统token用户id
+     */
+    private String userIdToken;
+
+    /**
     * 系统token
     */
     private String token;
@@ -28,12 +33,21 @@ public class CcToken {
     */
     private String delete;
 
+
     public Integer getId() {
         return id;
     }
 
     public void setId(Integer id) {
         this.id = id;
+    }
+
+    public String getUserIdToken() {
+        return userIdToken;
+    }
+
+    public void setUserIdToken(String userIdToken) {
+        this.userIdToken = userIdToken;
     }
 
     public String getToken() {

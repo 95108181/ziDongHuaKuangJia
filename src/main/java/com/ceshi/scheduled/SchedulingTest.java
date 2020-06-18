@@ -61,19 +61,27 @@ public class SchedulingTest {
         //获取验证码
         OkHttpClient client = new OkHttpClient().newBuilder().build();
         MediaType mediaType = MediaType.parse("application/json,text/plain");
-        RequestBody body = RequestBody.create(mediaType, "{\r\n    \"areaCode\": 86,\r\n    \"phone\" : 17323226097,\r\n    \"verifyType\" : 4\r\n}");
+        RequestBody body = RequestBody.create(mediaType,
+                "{\r\n    \"areaCode\": 86,\r\n    \"phone\" : 17323226097,\r\n    \"verifyType\" : 4\r\n}");
         Request request = new Request.Builder()
                 .url("https://api.testing.clipclaps.tv/sms/verify")
                 .method("POST", body)
                 .addHeader("Content-Type", "application/json")
                 .addHeader("Content-Type", "text/plain")
                 .build();
+
+        //发送请求
         Response response = client.newCall(request).execute();
+
         // 获取头部
         Headers rsultHeaders = response.headers();
+
         // 获取身体信息
         String rsultBody = response.body().string();
         JSONObject joRsultBody = JSONObject.parseObject(rsultBody);
+        logger.info("验证码数据：" + joRsultBody);
+
+        //判断是否为空
         System.out.println(joRsultBody.getJSONObject("data").get("verifyCode"));
         String verifyCode = JSON.toJSONString(joRsultBody.getJSONObject("data").get("verifyCode"));
         Assert.assertNotNull(verifyCode);
@@ -84,52 +92,48 @@ public class SchedulingTest {
         //获取ccToken
         OkHttpClient loginClient = new OkHttpClient().newBuilder().build();
         MediaType loginMediaType = MediaType.parse("application/json,text/plain");
-        RequestBody loginBody = RequestBody.create(loginMediaType, "{\r\n\t\"areaCode\":86,\r\n\t\"phone\":17323226097,\r\n\t\"verifyCode\":" + verifyCode + "\r\n}");
+        RequestBody loginBody = RequestBody.create(loginMediaType,
+                "{\r\n\t\"areaCode\":86,\r\n\t\"phone\":17323226097,\r\n\t\"verifyCode\":" + verifyCode + "\r\n}");
         Request loginRequest = new Request.Builder()
                 .url("https://api.testing.clipclaps.tv/account/login")
                 .method("POST", loginBody)
                 .addHeader("Content-Type", "application/json")
                 .addHeader("Content-Type", "text/plain")
                 .build();
+        logger.info("请求数据：" + loginRequest);
+
+        //发送请求
         Response loginResponse = loginClient.newCall(loginRequest).execute();
+
+
         // 获取头部
         Headers loginRsultHeaders = loginResponse.headers();
+        logger.info("获取头部返回数据：" + loginRsultHeaders);
+
         // 获取身体信息
         String loginRsultBody = loginResponse.body().string();
+        logger.info("获取身体信息返回数据：" + loginRsultBody);
+
         JSONObject loginJoRsultBody = JSONObject.parseObject(loginRsultBody);
         System.out.println(loginJoRsultBody.getJSONObject("data").get("token"));
         String ccToken = JSON.toJSONString(loginJoRsultBody.getJSONObject("data").get("token"));
+        String userid = JSON.toJSONString(loginJoRsultBody.getJSONObject("data").getJSONObject("principal").get("userid"));
+        logger.info(ccToken + "============================" + userid);
+
+        //判断是否为null
         Assert.assertNotNull(ccToken);
 
         //等待2秒
         Thread.sleep(2000);
+        String strToken = ccToken.replace("\"", "");
+        String strUserid = userid.replace("\"", "");
+        logger.info("去掉双引号的strToken：" + strToken);
 
-        //获取ccToken
-        OkHttpClient ccTokenClient = new OkHttpClient().newBuilder().build();
-        MediaType ccTokenMediaType = MediaType.parse("application/json,text/plain");
-        RequestBody ccTokenBody = RequestBody.create(ccTokenMediaType, "{\r\n\t\"ccUserId\": \"115364\",\r\n\t\"ccToken\": " + ccToken + "\r\n}");
-        Request ccTokenRequest = new Request.Builder()
-                .url("https://luckytime.lerjin.com/user/login")
-                .method("POST", ccTokenBody)
-                .addHeader("Content-Type", "application/json")
-                .addHeader("Content-Type", "text/plain")
-                .build();
-        Response ccTokenResponse = ccTokenClient.newCall(ccTokenRequest).execute();
-        // 获取头部
-        Headers ccTokenRsultHeaders = ccTokenResponse.headers();
-        // 获取身体信息
-        String ccTokenRsultBody = ccTokenResponse.body().string();
-        JSONObject ccTokenJoRsultBody = JSONObject.parseObject(ccTokenRsultBody);
-        System.out.println(ccTokenJoRsultBody.getJSONObject("data").get("token"));
-        String token = JSON.toJSONString(ccTokenJoRsultBody.getJSONObject("data").get("token"));
-        Assert.assertNotNull(token);
-        String strToken= token.replace("\"", "");
-        logger.info("去掉双引号的strToken："+strToken);
-
-        //把tcoken值存入数据库
+        //把tcoken和userID值存入数据库
         CcToken ctcoken = new CcToken();
         ctcoken.setCreationTime(new Date());
-        ctcoken.setSystemCode("德州扑克");
+        ctcoken.setSystemCode("CCapp");
+        ctcoken.setUserIdToken(strUserid);
         ctcoken.setToken(strToken);
         ccTokenMapper.insert(ctcoken);
         return null;
@@ -169,10 +173,10 @@ public class SchedulingTest {
      * @throws IOException
      * @throws InterruptedException
      */
-    @Scheduled(cron = "0 */4 * * * ?")
-    public String dezhouAutomation() throws Exception {
-        logger.info("德州自动化执行的测试任务");
-        TestPhone.userInformation();
-        return null;
-    }
+//    @Scheduled(cron = "0 */4 * * * ?")
+//    public String dezhouAutomation() throws Exception {
+//        logger.info("德州自动化执行的测试任务");
+//        TestPhone.userInformation();
+//        return null;
+//    }
 }

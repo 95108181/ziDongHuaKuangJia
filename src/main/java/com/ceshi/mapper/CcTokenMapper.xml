@@ -5,6 +5,7 @@
     <!--@mbg.generated-->
     <!--@Table cc_token-->
     <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="userId_Token" jdbcType="VARCHAR" property="userIdToken" />
     <result column="token" jdbcType="VARCHAR" property="token" />
     <result column="system_code" jdbcType="VARCHAR" property="systemCode" />
     <result column="creation_time" jdbcType="TIMESTAMP" property="creationTime" />
@@ -21,18 +22,36 @@
     from cc_token
     where id = #{id,jdbcType=INTEGER}
   </select>
+
+
+
+
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
     <!--@mbg.generated-->
     delete from cc_token
     where id = #{id,jdbcType=INTEGER}
   </delete>
+
+
+
+
+
+
   <insert id="insert" keyColumn="id" keyProperty="id" parameterType="com.ceshi.entity.CcToken" useGeneratedKeys="true">
     <!--@mbg.generated-->
-    insert into cc_token (token, system_code, creation_time, 
+    insert into cc_token (userId_Token,token, system_code, creation_time,
       `delete`)
-    values (#{token,jdbcType=VARCHAR}, #{systemCode,jdbcType=VARCHAR}, #{creationTime,jdbcType=TIMESTAMP}, 
+    values (#{userIdToken,jdbcType=VARCHAR}, #{token,jdbcType=VARCHAR}, #{systemCode,jdbcType=VARCHAR}, #{creationTime,jdbcType=TIMESTAMP},
       #{delete,jdbcType=VARCHAR})
   </insert>
+
+
+
+
+
+
+
+
   <insert id="insertSelective" keyColumn="id" keyProperty="id" parameterType="com.ceshi.entity.CcToken" useGeneratedKeys="true">
     <!--@mbg.generated-->
     insert into cc_token
