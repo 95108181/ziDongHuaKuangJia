@@ -9,6 +9,10 @@ import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
+
+
+
+
 /**
  * 收藏视频
  */
@@ -61,9 +65,13 @@ public class FavoriteVideos {
         String rsultBody = response.body().string();
         LogPrinting.log("response数据",rsultBody);
 
-        Assert.assertNotNull(rsultBody);
+        Assert.assertNotNull(rsultBody.replace("\"", ""));
+        Assert.assertEquals(rsultBody.replace("\"", ""), "true");
 
 
         return null;
     }
+
+
+
 }

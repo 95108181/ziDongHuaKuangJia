@@ -1,9 +1,18 @@
 package test;
 
 import com.beust.jcommander.internal.Lists;
+import com.ceshi.util.SendHttps;
+import org.springframework.web.multipart.MultipartFile;
 import org.testng.TestNG;/**/
+import test.service.servicePhone.BaseService;
+import test.util.OssUtil;
+
 import java.io.File;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class TestngRun {
     /**
@@ -16,7 +25,7 @@ public class TestngRun {
         //本地地址
 //        suites.add(System.getProperty("user.dir")+ File.separator+"src"+ File.separator+"main"+ File.separator+"resources"+ File.separator+"testng.xml");
         //线上地址
-        suites.add(System.getProperty("user.dir")+ File.separator+"testng.xml");
+       suites.add(System.getProperty("user.dir")+ File.separator+"testng.xml");
         testng.setTestSuites(suites);
         //执行测试代码
         testng.run();
@@ -27,12 +36,15 @@ public class TestngRun {
      * @param args
      */
     public static void main(String[] args) {
-        TestNG testng = new TestNG();
-        List suites = Lists.newArrayList();
-        //path to xml..
-        suites.add("F:\\IDEAproject\\cheShideom\\src\\main\\resources\\testng.xml");
-        testng.setTestSuites(suites);
-        testng.run();
+//        TestNG testng = new TestNG();
+//        List suites = Lists.newArrayList();
+//        //path to xml..
+//        suites.add("F:\\IDEAproject\\cheShideom\\src\\main\\resources\\testng.xml");
+//        testng.setTestSuites(suites);
+//        testng.run();
+
+
+
     }
 
 

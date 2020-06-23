@@ -48,8 +48,8 @@ public class Share {
                 .addHeader("timezone", "8")
                 .addHeader("lang", "CN")
                 .addHeader("uuid", "11111111111111111111")
-                .addHeader("token", "NGZlMTJhMmEtYzI1ZS00ZWQxLTg3NDQtNWRlZGE0ODQzYzVk")
-                .addHeader("userId", "115364")
+                .addHeader("token", token)
+                .addHeader("userId", userId)
                 .addHeader("Content-Type", "application/json")
                 .build();
 
@@ -63,7 +63,8 @@ public class Share {
         String rsultBody = response.body().string();
         LogPrinting.log("response数据",rsultBody);
 
-        Assert.assertNotNull(rsultBody);
+        Assert.assertNotNull(rsultBody.replace("\"", ""));
+        Assert.assertEquals(rsultBody.replace("\"", ""), "true");
 
 
         return null;

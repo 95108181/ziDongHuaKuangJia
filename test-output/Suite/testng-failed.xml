@@ -6,11 +6,12 @@
   </listeners>
   <test thread-count="5" name="TestNG1(failed)">
     <classes>
-      <class name="test.controller.TestOwner">
+      <class name="test.controller.TestCCapp">
         <methods>
-          <include name="leaderboardList"/>
+          <include name="favoriteVideos"/>
+          <include name="fabulous"/>
         </methods>
-      </class> <!-- test.controller.TestOwner -->
+      </class> <!-- test.controller.TestCCapp -->
     </classes>
   </test> <!-- TestNG1(failed) -->
 </suite> <!-- Failed suite [Suite] -->

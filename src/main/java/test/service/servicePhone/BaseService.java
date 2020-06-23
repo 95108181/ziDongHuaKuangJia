@@ -162,7 +162,7 @@ public class BaseService {
     }
 
     //本地文件转为MultipartFile类型(文件路径)
-    static MultipartFile getMulFileByPath(String picPath) {
+    public static MultipartFile getMulFileByPath(String picPath) {
         FileItem fileItem = createFileItem(picPath);
         MultipartFile mfile = new CommonsMultipartFile(fileItem);
         return mfile;

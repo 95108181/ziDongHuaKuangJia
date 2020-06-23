@@ -66,8 +66,7 @@ public class VideoUpload {
         LogPrinting.log("response数据",rsultBody);
 //        JSONObject joRsultBody = JSONObject.parseObject(rsultBody);
 //        String data= JSON.toJSONString(joRsultBody.getJSONObject("id"));
-//        Assert.assertNotNull(data);
-
+        Assert.assertNotNull(rsultBody.substring(7,39).replace("\"", ""));
         return null;
     }
 }

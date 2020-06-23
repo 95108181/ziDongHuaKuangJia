@@ -1,381 +1,485 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="6" passed="6">
+<testng-results skipped="0" failed="2" ignored="0" total="6" passed="4">
   <reporter-output>
     <line>
-      <![CDATA[06-18 19:13:userId]]>
+      <![CDATA[06-23 11:50:userId]]>
     </line>
     <line>
-      <![CDATA[06-18 19:13:115364]]>
+      <![CDATA[06-23 11:50:115364]]>
     </line>
     <line>
-      <![CDATA[06-18 19:13:token]]>
+      <![CDATA[06-23 11:50:token]]>
     </line>
     <line>
-      <![CDATA[06-18 19:13:NGZlMTJhMmEtYzI1ZS00ZWQxLTg3NDQtNWRlZGE0ODQzYzVk]]>
+      <![CDATA[06-23 11:50:NmQ1YTFmYmEtMTJjNi00YzM0LTg3ZTUtNDc0NjE5MjhmMzI2]]>
     </line>
     <line>
-      <![CDATA[06-18 19:13:VideoId]]>
+      <![CDATA[06-23 11:50:VideoId]]>
     </line>
     <line>
-      <![CDATA[06-18 19:13:8a83869872c6bb820172c6da8eb60002]]>
+      <![CDATA[06-23 11:50:8a83864c72df0a710172df3c95420001]]>
     </line>
     <line>
-      <![CDATA[06-18 19:13:request数据]]>
+      <![CDATA[06-23 11:50:request数据]]>
     </line>
     <line>
-      <![CDATA[06-18 19:13:Request{method=POST, url=https://cpv.ccdev.lerjin.com/behavior/event, tag=null}]]>
+      <![CDATA[06-23 11:50:Request{method=POST, url=https://cpv.ccdev.lerjin.com/behavior/event, tag=null}]]>
     </line>
     <line>
-      <![CDATA[06-18 19:13:response数据]]>
+      <![CDATA[06-23 11:50:response数据]]>
     </line>
     <line>
-      <![CDATA[06-18 19:13:true]]>
+      <![CDATA[06-23 11:50:{code:10002,lang:CN,message:Incorrect parameters,debug:Can't repeat favorite,name:PARAMETER_ERROR}]]>
     </line>
     <line>
-      <![CDATA[06-18 19:13:userId]]>
+      <![CDATA[06-23 11:50:userId]]>
     </line>
     <line>
-      <![CDATA[06-18 19:13:115364]]>
+      <![CDATA[06-23 11:50:115364]]>
     </line>
     <line>
-      <![CDATA[06-18 19:13:token]]>
+      <![CDATA[06-23 11:50:token]]>
     </line>
     <line>
-      <![CDATA[06-18 19:13:NGZlMTJhMmEtYzI1ZS00ZWQxLTg3NDQtNWRlZGE0ODQzYzVk]]>
+      <![CDATA[06-23 11:50:NmQ1YTFmYmEtMTJjNi00YzM0LTg3ZTUtNDc0NjE5MjhmMzI2]]>
     </line>
     <line>
-      <![CDATA[06-18 19:13:VideoId]]>
+      <![CDATA[06-23 11:50:VideoId]]>
     </line>
     <line>
-      <![CDATA[06-18 19:13:8a83869872c6bb820172c6da8eb60002]]>
+      <![CDATA[06-23 11:50:8a83864c72df0a710172df3c95420001]]>
     </line>
     <line>
-      <![CDATA[06-18 19:13:request数据]]>
+      <![CDATA[06-23 11:50:request数据]]>
     </line>
     <line>
-      <![CDATA[06-18 19:13:Request{method=POST, url=https://cpv.ccdev.lerjin.com/behavior/event, tag=null}]]>
+      <![CDATA[06-23 11:50:Request{method=POST, url=https://cpv.ccdev.lerjin.com/behavior/event, tag=null}]]>
     </line>
     <line>
-      <![CDATA[06-18 19:13:response数据]]>
+      <![CDATA[06-23 11:50:response数据]]>
     </line>
     <line>
-      <![CDATA[06-18 19:13:{code:10002,lang:CN,message:Incorrect parameters,debug:Can't repeat clap,name:PARAMETER_ERROR}]]>
+      <![CDATA[06-23 11:50:{code:10002,lang:CN,message:Incorrect parameters,debug:Can't repeat clap,name:PARAMETER_ERROR}]]>
     </line>
     <line>
-      <![CDATA[06-18 19:13:userId]]>
+      <![CDATA[06-23 11:50:userId]]>
     </line>
     <line>
-      <![CDATA[06-18 19:13:115364]]>
+      <![CDATA[06-23 11:50:115364]]>
     </line>
     <line>
-      <![CDATA[06-18 19:13:token]]>
+      <![CDATA[06-23 11:50:token]]>
     </line>
     <line>
-      <![CDATA[06-18 19:13:NGZlMTJhMmEtYzI1ZS00ZWQxLTg3NDQtNWRlZGE0ODQzYzVk]]>
+      <![CDATA[06-23 11:50:NmQ1YTFmYmEtMTJjNi00YzM0LTg3ZTUtNDc0NjE5MjhmMzI2]]>
     </line>
     <line>
-      <![CDATA[06-18 19:13:VideoId]]>
+      <![CDATA[06-23 11:50:VideoId]]>
     </line>
     <line>
-      <![CDATA[06-18 19:13:8a83869872c6bb820172c6da8eb60002]]>
+      <![CDATA[06-23 11:50:8a83864c72df0a710172df3c95420001]]>
     </line>
     <line>
-      <![CDATA[06-18 19:13:request数据]]>
+      <![CDATA[06-23 11:50:request数据]]>
     </line>
     <line>
-      <![CDATA[06-18 19:13:Request{method=POST, url=https://cpv.ccdev.lerjin.com/behavior/event, tag=null}]]>
+      <![CDATA[06-23 11:50:Request{method=POST, url=https://cpv.ccdev.lerjin.com/behavior/event, tag=null}]]>
     </line>
     <line>
-      <![CDATA[06-18 19:13:response数据]]>
+      <![CDATA[06-23 11:50:response数据]]>
     </line>
     <line>
-      <![CDATA[06-18 19:13:true]]>
+      <![CDATA[06-23 11:50:true]]>
     </line>
     <line>
-      <![CDATA[06-18 19:13:userId]]>
+      <![CDATA[06-23 11:50:userId]]>
     </line>
     <line>
-      <![CDATA[06-18 19:13:115364]]>
+      <![CDATA[06-23 11:50:115364]]>
     </line>
     <line>
-      <![CDATA[06-18 19:13:token]]>
+      <![CDATA[06-23 11:50:token]]>
     </line>
     <line>
-      <![CDATA[06-18 19:13:NGZlMTJhMmEtYzI1ZS00ZWQxLTg3NDQtNWRlZGE0ODQzYzVk]]>
+      <![CDATA[06-23 11:50:NmQ1YTFmYmEtMTJjNi00YzM0LTg3ZTUtNDc0NjE5MjhmMzI2]]>
     </line>
     <line>
-      <![CDATA[06-18 19:13:VideoId]]>
+      <![CDATA[06-23 11:50:VideoId]]>
     </line>
     <line>
-      <![CDATA[06-18 19:13:8a83869872c6bb820172c6da8eb60002]]>
+      <![CDATA[06-23 11:50:8a83864c72df0a710172df3c95420001]]>
     </line>
     <line>
-      <![CDATA[06-18 19:13:request数据]]>
+      <![CDATA[06-23 11:50:request数据]]>
     </line>
     <line>
-      <![CDATA[06-18 19:13:Request{method=POST, url=https://cpv.ccdev.lerjin.com/behavior/event, tag=null}]]>
+      <![CDATA[06-23 11:50:Request{method=POST, url=https://cpv.ccdev.lerjin.com/behavior/event, tag=null}]]>
     </line>
     <line>
-      <![CDATA[06-18 19:13:response数据]]>
+      <![CDATA[06-23 11:50:response数据]]>
     </line>
     <line>
-      <![CDATA[06-18 19:13:true]]>
+      <![CDATA[06-23 11:50:true]]>
     </line>
     <line>
-      <![CDATA[06-18 19:13:userId]]>
+      <![CDATA[06-23 11:50:userId]]>
     </line>
     <line>
-      <![CDATA[06-18 19:13:115364]]>
+      <![CDATA[06-23 11:50:115364]]>
     </line>
     <line>
-      <![CDATA[06-18 19:13:token]]>
+      <![CDATA[06-23 11:50:token]]>
     </line>
     <line>
-      <![CDATA[06-18 19:13:NGZlMTJhMmEtYzI1ZS00ZWQxLTg3NDQtNWRlZGE0ODQzYzVk]]>
+      <![CDATA[06-23 11:50:NmQ1YTFmYmEtMTJjNi00YzM0LTg3ZTUtNDc0NjE5MjhmMzI2]]>
     </line>
     <line>
-      <![CDATA[06-18 19:13:VideoId]]>
+      <![CDATA[06-23 11:50:VideoId]]>
     </line>
     <line>
-      <![CDATA[06-18 19:13:8a83869872c6bb820172c6da8eb60002]]>
+      <![CDATA[06-23 11:50:8a83864c72df0a710172df3c95420001]]>
     </line>
     <line>
-      <![CDATA[06-18 19:13:request数据]]>
+      <![CDATA[06-23 11:50:request数据]]>
     </line>
     <line>
-      <![CDATA[06-18 19:13:Request{method=POST, url=https://cpv.ccdev.lerjin.com/behavior/event, tag=null}]]>
+      <![CDATA[06-23 11:50:Request{method=POST, url=https://cpv.ccdev.lerjin.com/behavior/event, tag=null}]]>
     </line>
     <line>
-      <![CDATA[06-18 19:13:response数据]]>
+      <![CDATA[06-23 11:50:response数据]]>
     </line>
     <line>
-      <![CDATA[06-18 19:13:true]]>
+      <![CDATA[06-23 11:50:true]]>
     </line>
     <line>
-      <![CDATA[06-18 19:13:userId]]>
+      <![CDATA[06-23 11:50:userId]]>
     </line>
     <line>
-      <![CDATA[06-18 19:13:115364]]>
+      <![CDATA[06-23 11:50:115364]]>
     </line>
     <line>
-      <![CDATA[06-18 19:13:token]]>
+      <![CDATA[06-23 11:50:token]]>
     </line>
     <line>
-      <![CDATA[06-18 19:13:NGZlMTJhMmEtYzI1ZS00ZWQxLTg3NDQtNWRlZGE0ODQzYzVk]]>
+      <![CDATA[06-23 11:50:NmQ1YTFmYmEtMTJjNi00YzM0LTg3ZTUtNDc0NjE5MjhmMzI2]]>
     </line>
     <line>
-      <![CDATA[06-18 19:13:request数据]]>
+      <![CDATA[06-23 11:50:request数据]]>
     </line>
     <line>
-      <![CDATA[06-18 19:13:Request{method=POST, url=https://ugc.ccdev.lerjin.com/video/upload, tag=null}]]>
+      <![CDATA[06-23 11:50:Request{method=POST, url=https://ugc.ccdev.lerjin.com/video/upload, tag=null}]]>
     </line>
     <line>
-      <![CDATA[06-18 19:13:response数据]]>
+      <![CDATA[06-23 11:50:response数据]]>
     </line>
     <line>
-      <![CDATA[06-18 19:13:{id:8a83869872c6bb820172c7220370000c,userOpenId:115364,videoTitle:视频上传测试06181913,videoDescribe:ldaskdlaskjldkjksald,videoRemoteStorageUrl:null,imgPreviewRemoteStorageUrl:null,downloadVideoUrl:null,duration:null,bitRate:null,width:null,height:null,size:null,countryCode2:CN,area:CN,status:0,funny:0,notFunny:0,auditOpinion:null,isPushFeeds:null,createTime:2020-06-18 11:13:14,authorMobile:17323226097,authorClapCode:4454207817,authorEmail:null,authorName:wangqi2,authorType:3,authorAvatar:avatar/20200323/c905a779b4dd5e77.jpg,authorCallingCode:86,clapNum:0,favoriteNum:0,shareNum:0,commentsNum:0,viewNum:0,fullViewNum:0,deleted:0,coinValue:0,isMaxCoins:false,clapMoment:null}]]>
+      <![CDATA[06-23 11:50:{id:8a83864c72df0a710172df4c1f1d0003,userOpenId:115364,videoTitle:视频上传测试06231150,videoDescribe:ldaskdlaskjldkjksald,videoRemoteStorageUrl:null,imgPreviewRemoteStorageUrl:null,downloadVideoUrl:null,duration:null,bitRate:null,width:null,height:null,size:null,countryCode2:CN,area:CN,status:0,funny:0,notFunny:0,auditOpinion:null,isPushFeeds:null,createTime:2020-06-23 03:50:07,authorMobile:17323226097,authorClapCode:4454207817,authorEmail:null,authorName:wangqi2,authorType:3,authorAvatar:avatar/20200323/c905a779b4dd5e77.jpg,authorCallingCode:86,clapNum:0,favoriteNum:0,shareNum:0,commentsNum:0,viewNum:0,fullViewNum:0,deleted:0,coinValue:0,isMaxCoins:false,clapMoment:null}]]>
     </line>
   </reporter-output>
-  <suite name="Suite" duration-ms="9017" started-at="2020-06-18T11:13:06Z" finished-at="2020-06-18T11:13:15Z">
+  <suite name="Suite" duration-ms="7783" started-at="2020-06-23T03:50:00Z" finished-at="2020-06-23T03:50:07Z">
     <groups>
     </groups>
-    <test name="TestNG1" duration-ms="9017" started-at="2020-06-18T11:13:06Z" finished-at="2020-06-18T11:13:15Z">
+    <test name="TestNG1" duration-ms="7783" started-at="2020-06-23T03:50:00Z" finished-at="2020-06-23T03:50:07Z">
       <class name="test.controller.TestCCapp">
-        <test-method status="PASS" signature="fabulous()[pri:0, instance:test.controller.TestCCapp@673fdbce]" name="fabulous" duration-ms="3408" started-at="2020-06-18T11:13:06Z" description="视频点赞" finished-at="2020-06-18T11:13:10Z">
+        <test-method status="FAIL" signature="fabulous()[pri:0, instance:test.controller.TestCCapp@78540902]" name="fabulous" duration-ms="2211" started-at="2020-06-23T03:50:00Z" description="视频点赞" finished-at="2020-06-23T03:50:02Z">
+          <exception class="org.junit.ComparisonFailure">
+            <message>
+              <![CDATA[expected:<[{code:10002,lang:CN,message:Incorrect parameters,debug:Can't repeat favorite,name:PARAMETER_ERROR}]> but was:<[true]>]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.junit.ComparisonFailure: expected:<[{code:10002,lang:CN,message:Incorrect parameters,debug:Can't repeat favorite,name:PARAMETER_ERROR}]> but was:<[true]>
+at org.junit.Assert.assertEquals(Assert.java:115)
+at org.junit.Assert.assertEquals(Assert.java:144)
+at test.service.serviceCCapp.Fabulous.fabulous(Fabulous.java:67)
+at test.controller.TestCCapp.fabulous(TestCCapp.java:20)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.lang.reflect.Method.invoke(Method.java:498)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at test.TestngRun.run(TestngRun.java:31)
+at com.ceshi.scheduled.SchedulingTest.dezhouAutomation(SchedulingTest.java:235)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.lang.reflect.Method.invoke(Method.java:498)
+at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:84)
+at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+at org.springframework.scheduling.concurrent.ReschedulingRunnable.run(ReschedulingRunnable.java:93)
+at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+at java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:266)
+at java.util.concurrent.FutureTask.run(FutureTask.java)
+at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+at java.lang.Thread.run(Thread.java:748)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.junit.ComparisonFailure -->
           <reporter-output>
             <line>
-              <![CDATA[06-18 19:13:userId]]>
+              <![CDATA[06-23 11:50:userId]]>
             </line>
             <line>
-              <![CDATA[06-18 19:13:115364]]>
+              <![CDATA[06-23 11:50:115364]]>
             </line>
             <line>
-              <![CDATA[06-18 19:13:token]]>
+              <![CDATA[06-23 11:50:token]]>
             </line>
             <line>
-              <![CDATA[06-18 19:13:NGZlMTJhMmEtYzI1ZS00ZWQxLTg3NDQtNWRlZGE0ODQzYzVk]]>
+              <![CDATA[06-23 11:50:NmQ1YTFmYmEtMTJjNi00YzM0LTg3ZTUtNDc0NjE5MjhmMzI2]]>
             </line>
             <line>
-              <![CDATA[06-18 19:13:VideoId]]>
+              <![CDATA[06-23 11:50:VideoId]]>
             </line>
             <line>
-              <![CDATA[06-18 19:13:8a83869872c6bb820172c6da8eb60002]]>
+              <![CDATA[06-23 11:50:8a83864c72df0a710172df3c95420001]]>
             </line>
             <line>
-              <![CDATA[06-18 19:13:request数据]]>
+              <![CDATA[06-23 11:50:request数据]]>
             </line>
             <line>
-              <![CDATA[06-18 19:13:Request{method=POST, url=https://cpv.ccdev.lerjin.com/behavior/event, tag=null}]]>
+              <![CDATA[06-23 11:50:Request{method=POST, url=https://cpv.ccdev.lerjin.com/behavior/event, tag=null}]]>
             </line>
             <line>
-              <![CDATA[06-18 19:13:response数据]]>
+              <![CDATA[06-23 11:50:response数据]]>
             </line>
             <line>
-              <![CDATA[06-18 19:13:true]]>
+              <![CDATA[06-23 11:50:{code:10002,lang:CN,message:Incorrect parameters,debug:Can't repeat favorite,name:PARAMETER_ERROR}]]>
             </line>
           </reporter-output>
         </test-method> <!-- fabulous -->
-        <test-method status="PASS" signature="favoriteVideos()[pri:0, instance:test.controller.TestCCapp@673fdbce]" name="favoriteVideos" duration-ms="1539" started-at="2020-06-18T11:13:10Z" description="视频收藏" finished-at="2020-06-18T11:13:11Z">
+        <test-method status="FAIL" signature="favoriteVideos()[pri:0, instance:test.controller.TestCCapp@78540902]" name="favoriteVideos" duration-ms="620" started-at="2020-06-23T03:50:02Z" description="视频收藏" finished-at="2020-06-23T03:50:02Z">
+          <exception class="org.junit.ComparisonFailure">
+            <message>
+              <![CDATA[expected:<[{code:10002,lang:CN,message:Incorrect parameters,debug:Can't repeat clap,name:PARAMETER_ERROR}]> but was:<[true]>]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.junit.ComparisonFailure: expected:<[{code:10002,lang:CN,message:Incorrect parameters,debug:Can't repeat clap,name:PARAMETER_ERROR}]> but was:<[true]>
+at org.junit.Assert.assertEquals(Assert.java:115)
+at org.junit.Assert.assertEquals(Assert.java:144)
+at test.service.serviceCCapp.FavoriteVideos.favoriteVideos(FavoriteVideos.java:69)
+at test.controller.TestCCapp.favoriteVideos(TestCCapp.java:15)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.lang.reflect.Method.invoke(Method.java:498)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at test.TestngRun.run(TestngRun.java:31)
+at com.ceshi.scheduled.SchedulingTest.dezhouAutomation(SchedulingTest.java:235)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.lang.reflect.Method.invoke(Method.java:498)
+at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:84)
+at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+at org.springframework.scheduling.concurrent.ReschedulingRunnable.run(ReschedulingRunnable.java:93)
+at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+at java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:266)
+at java.util.concurrent.FutureTask.run(FutureTask.java)
+at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+at java.lang.Thread.run(Thread.java:748)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.junit.ComparisonFailure -->
           <reporter-output>
             <line>
-              <![CDATA[06-18 19:13:userId]]>
+              <![CDATA[06-23 11:50:userId]]>
             </line>
             <line>
-              <![CDATA[06-18 19:13:115364]]>
+              <![CDATA[06-23 11:50:115364]]>
             </line>
             <line>
-              <![CDATA[06-18 19:13:token]]>
+              <![CDATA[06-23 11:50:token]]>
             </line>
             <line>
-              <![CDATA[06-18 19:13:NGZlMTJhMmEtYzI1ZS00ZWQxLTg3NDQtNWRlZGE0ODQzYzVk]]>
+              <![CDATA[06-23 11:50:NmQ1YTFmYmEtMTJjNi00YzM0LTg3ZTUtNDc0NjE5MjhmMzI2]]>
             </line>
             <line>
-              <![CDATA[06-18 19:13:VideoId]]>
+              <![CDATA[06-23 11:50:VideoId]]>
             </line>
             <line>
-              <![CDATA[06-18 19:13:8a83869872c6bb820172c6da8eb60002]]>
+              <![CDATA[06-23 11:50:8a83864c72df0a710172df3c95420001]]>
             </line>
             <line>
-              <![CDATA[06-18 19:13:request数据]]>
+              <![CDATA[06-23 11:50:request数据]]>
             </line>
             <line>
-              <![CDATA[06-18 19:13:Request{method=POST, url=https://cpv.ccdev.lerjin.com/behavior/event, tag=null}]]>
+              <![CDATA[06-23 11:50:Request{method=POST, url=https://cpv.ccdev.lerjin.com/behavior/event, tag=null}]]>
             </line>
             <line>
-              <![CDATA[06-18 19:13:response数据]]>
+              <![CDATA[06-23 11:50:response数据]]>
             </line>
             <line>
-              <![CDATA[06-18 19:13:{code:10002,lang:CN,message:Incorrect parameters,debug:Can't repeat clap,name:PARAMETER_ERROR}]]>
+              <![CDATA[06-23 11:50:{code:10002,lang:CN,message:Incorrect parameters,debug:Can't repeat clap,name:PARAMETER_ERROR}]]>
             </line>
           </reporter-output>
         </test-method> <!-- favoriteVideos -->
-        <test-method status="PASS" signature="fullplay()[pri:0, instance:test.controller.TestCCapp@673fdbce]" name="fullplay" duration-ms="618" started-at="2020-06-18T11:13:11Z" description="视频完播" finished-at="2020-06-18T11:13:12Z">
+        <test-method status="PASS" signature="fullplay()[pri:0, instance:test.controller.TestCCapp@78540902]" name="fullplay" duration-ms="1605" started-at="2020-06-23T03:50:02Z" description="视频完播" finished-at="2020-06-23T03:50:04Z">
           <reporter-output>
             <line>
-              <![CDATA[06-18 19:13:userId]]>
+              <![CDATA[06-23 11:50:userId]]>
             </line>
             <line>
-              <![CDATA[06-18 19:13:115364]]>
+              <![CDATA[06-23 11:50:115364]]>
             </line>
             <line>
-              <![CDATA[06-18 19:13:token]]>
+              <![CDATA[06-23 11:50:token]]>
             </line>
             <line>
-              <![CDATA[06-18 19:13:NGZlMTJhMmEtYzI1ZS00ZWQxLTg3NDQtNWRlZGE0ODQzYzVk]]>
+              <![CDATA[06-23 11:50:NmQ1YTFmYmEtMTJjNi00YzM0LTg3ZTUtNDc0NjE5MjhmMzI2]]>
             </line>
             <line>
-              <![CDATA[06-18 19:13:VideoId]]>
+              <![CDATA[06-23 11:50:VideoId]]>
             </line>
             <line>
-              <![CDATA[06-18 19:13:8a83869872c6bb820172c6da8eb60002]]>
+              <![CDATA[06-23 11:50:8a83864c72df0a710172df3c95420001]]>
             </line>
             <line>
-              <![CDATA[06-18 19:13:request数据]]>
+              <![CDATA[06-23 11:50:request数据]]>
             </line>
             <line>
-              <![CDATA[06-18 19:13:Request{method=POST, url=https://cpv.ccdev.lerjin.com/behavior/event, tag=null}]]>
+              <![CDATA[06-23 11:50:Request{method=POST, url=https://cpv.ccdev.lerjin.com/behavior/event, tag=null}]]>
             </line>
             <line>
-              <![CDATA[06-18 19:13:response数据]]>
+              <![CDATA[06-23 11:50:response数据]]>
             </line>
             <line>
-              <![CDATA[06-18 19:13:true]]>
+              <![CDATA[06-23 11:50:true]]>
             </line>
           </reporter-output>
         </test-method> <!-- fullplay -->
-        <test-method status="PASS" signature="share()[pri:0, instance:test.controller.TestCCapp@673fdbce]" name="share" duration-ms="566" started-at="2020-06-18T11:13:12Z" description="视频分享" finished-at="2020-06-18T11:13:13Z">
+        <test-method status="PASS" signature="share()[pri:0, instance:test.controller.TestCCapp@78540902]" name="share" duration-ms="735" started-at="2020-06-23T03:50:04Z" description="视频分享" finished-at="2020-06-23T03:50:05Z">
           <reporter-output>
             <line>
-              <![CDATA[06-18 19:13:userId]]>
+              <![CDATA[06-23 11:50:userId]]>
             </line>
             <line>
-              <![CDATA[06-18 19:13:115364]]>
+              <![CDATA[06-23 11:50:115364]]>
             </line>
             <line>
-              <![CDATA[06-18 19:13:token]]>
+              <![CDATA[06-23 11:50:token]]>
             </line>
             <line>
-              <![CDATA[06-18 19:13:NGZlMTJhMmEtYzI1ZS00ZWQxLTg3NDQtNWRlZGE0ODQzYzVk]]>
+              <![CDATA[06-23 11:50:NmQ1YTFmYmEtMTJjNi00YzM0LTg3ZTUtNDc0NjE5MjhmMzI2]]>
             </line>
             <line>
-              <![CDATA[06-18 19:13:VideoId]]>
+              <![CDATA[06-23 11:50:VideoId]]>
             </line>
             <line>
-              <![CDATA[06-18 19:13:8a83869872c6bb820172c6da8eb60002]]>
+              <![CDATA[06-23 11:50:8a83864c72df0a710172df3c95420001]]>
             </line>
             <line>
-              <![CDATA[06-18 19:13:request数据]]>
+              <![CDATA[06-23 11:50:request数据]]>
             </line>
             <line>
-              <![CDATA[06-18 19:13:Request{method=POST, url=https://cpv.ccdev.lerjin.com/behavior/event, tag=null}]]>
+              <![CDATA[06-23 11:50:Request{method=POST, url=https://cpv.ccdev.lerjin.com/behavior/event, tag=null}]]>
             </line>
             <line>
-              <![CDATA[06-18 19:13:response数据]]>
+              <![CDATA[06-23 11:50:response数据]]>
             </line>
             <line>
-              <![CDATA[06-18 19:13:true]]>
+              <![CDATA[06-23 11:50:true]]>
             </line>
           </reporter-output>
         </test-method> <!-- share -->
-        <test-method status="PASS" signature="videoPlayback()[pri:0, instance:test.controller.TestCCapp@673fdbce]" name="videoPlayback" duration-ms="1085" started-at="2020-06-18T11:13:13Z" description="视频播放" finished-at="2020-06-18T11:13:14Z">
+        <test-method status="PASS" signature="videoPlayback()[pri:0, instance:test.controller.TestCCapp@78540902]" name="videoPlayback" duration-ms="805" started-at="2020-06-23T03:50:05Z" description="视频播放" finished-at="2020-06-23T03:50:06Z">
           <reporter-output>
             <line>
-              <![CDATA[06-18 19:13:userId]]>
+              <![CDATA[06-23 11:50:userId]]>
             </line>
             <line>
-              <![CDATA[06-18 19:13:115364]]>
+              <![CDATA[06-23 11:50:115364]]>
             </line>
             <line>
-              <![CDATA[06-18 19:13:token]]>
+              <![CDATA[06-23 11:50:token]]>
             </line>
             <line>
-              <![CDATA[06-18 19:13:NGZlMTJhMmEtYzI1ZS00ZWQxLTg3NDQtNWRlZGE0ODQzYzVk]]>
+              <![CDATA[06-23 11:50:NmQ1YTFmYmEtMTJjNi00YzM0LTg3ZTUtNDc0NjE5MjhmMzI2]]>
             </line>
             <line>
-              <![CDATA[06-18 19:13:VideoId]]>
+              <![CDATA[06-23 11:50:VideoId]]>
             </line>
             <line>
-              <![CDATA[06-18 19:13:8a83869872c6bb820172c6da8eb60002]]>
+              <![CDATA[06-23 11:50:8a83864c72df0a710172df3c95420001]]>
             </line>
             <line>
-              <![CDATA[06-18 19:13:request数据]]>
+              <![CDATA[06-23 11:50:request数据]]>
             </line>
             <line>
-              <![CDATA[06-18 19:13:Request{method=POST, url=https://cpv.ccdev.lerjin.com/behavior/event, tag=null}]]>
+              <![CDATA[06-23 11:50:Request{method=POST, url=https://cpv.ccdev.lerjin.com/behavior/event, tag=null}]]>
             </line>
             <line>
-              <![CDATA[06-18 19:13:response数据]]>
+              <![CDATA[06-23 11:50:response数据]]>
             </line>
             <line>
-              <![CDATA[06-18 19:13:true]]>
+              <![CDATA[06-23 11:50:true]]>
             </line>
           </reporter-output>
         </test-method> <!-- videoPlayback -->
-        <test-method status="PASS" signature="videoUpload()[pri:0, instance:test.controller.TestCCapp@673fdbce]" name="videoUpload" duration-ms="1658" started-at="2020-06-18T11:13:14Z" description="上传视频" finished-at="2020-06-18T11:13:15Z">
+        <test-method status="PASS" signature="videoUpload()[pri:0, instance:test.controller.TestCCapp@78540902]" name="videoUpload" duration-ms="1774" started-at="2020-06-23T03:50:06Z" description="上传视频" finished-at="2020-06-23T03:50:07Z">
           <reporter-output>
             <line>
-              <![CDATA[06-18 19:13:userId]]>
+              <![CDATA[06-23 11:50:userId]]>
             </line>
             <line>
-              <![CDATA[06-18 19:13:115364]]>
+              <![CDATA[06-23 11:50:115364]]>
             </line>
             <line>
-              <![CDATA[06-18 19:13:token]]>
+              <![CDATA[06-23 11:50:token]]>
             </line>
             <line>
-              <![CDATA[06-18 19:13:NGZlMTJhMmEtYzI1ZS00ZWQxLTg3NDQtNWRlZGE0ODQzYzVk]]>
+              <![CDATA[06-23 11:50:NmQ1YTFmYmEtMTJjNi00YzM0LTg3ZTUtNDc0NjE5MjhmMzI2]]>
             </line>
             <line>
-              <![CDATA[06-18 19:13:request数据]]>
+              <![CDATA[06-23 11:50:request数据]]>
             </line>
             <line>
-              <![CDATA[06-18 19:13:Request{method=POST, url=https://ugc.ccdev.lerjin.com/video/upload, tag=null}]]>
+              <![CDATA[06-23 11:50:Request{method=POST, url=https://ugc.ccdev.lerjin.com/video/upload, tag=null}]]>
             </line>
             <line>
-              <![CDATA[06-18 19:13:response数据]]>
+              <![CDATA[06-23 11:50:response数据]]>
             </line>
             <line>
-              <![CDATA[06-18 19:13:{id:8a83869872c6bb820172c7220370000c,userOpenId:115364,videoTitle:视频上传测试06181913,videoDescribe:ldaskdlaskjldkjksald,videoRemoteStorageUrl:null,imgPreviewRemoteStorageUrl:null,downloadVideoUrl:null,duration:null,bitRate:null,width:null,height:null,size:null,countryCode2:CN,area:CN,status:0,funny:0,notFunny:0,auditOpinion:null,isPushFeeds:null,createTime:2020-06-18 11:13:14,authorMobile:17323226097,authorClapCode:4454207817,authorEmail:null,authorName:wangqi2,authorType:3,authorAvatar:avatar/20200323/c905a779b4dd5e77.jpg,authorCallingCode:86,clapNum:0,favoriteNum:0,shareNum:0,commentsNum:0,viewNum:0,fullViewNum:0,deleted:0,coinValue:0,isMaxCoins:false,clapMoment:null}]]>
+              <![CDATA[06-23 11:50:{id:8a83864c72df0a710172df4c1f1d0003,userOpenId:115364,videoTitle:视频上传测试06231150,videoDescribe:ldaskdlaskjldkjksald,videoRemoteStorageUrl:null,imgPreviewRemoteStorageUrl:null,downloadVideoUrl:null,duration:null,bitRate:null,width:null,height:null,size:null,countryCode2:CN,area:CN,status:0,funny:0,notFunny:0,auditOpinion:null,isPushFeeds:null,createTime:2020-06-23 03:50:07,authorMobile:17323226097,authorClapCode:4454207817,authorEmail:null,authorName:wangqi2,authorType:3,authorAvatar:avatar/20200323/c905a779b4dd5e77.jpg,authorCallingCode:86,clapNum:0,favoriteNum:0,shareNum:0,commentsNum:0,viewNum:0,fullViewNum:0,deleted:0,coinValue:0,isMaxCoins:false,clapMoment:null}]]>
             </line>
           </reporter-output>
         </test-method> <!-- videoUpload -->

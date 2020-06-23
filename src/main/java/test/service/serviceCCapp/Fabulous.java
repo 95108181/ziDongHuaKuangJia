@@ -63,7 +63,8 @@ public class Fabulous {
         String rsultBody = response.body().string();
         LogPrinting.log("response数据",rsultBody);
 
-        Assert.assertNotNull(rsultBody);
+        Assert.assertNotNull(rsultBody.replace("\"", ""));
+        Assert.assertEquals(rsultBody.replace("\"", ""), "true");
 
 
         return null;

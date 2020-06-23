@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>TestNG1</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>6/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>4/2/0</td>
 </tr><tr>
-<td>Started on:</td><td>Thu Jun 18 19:13:06 CST 2020</td>
+<td>Started on:</td><td>Tue Jun 23 11:50:00 CST 2020</td>
 </tr>
-<tr><td>Total time:</td><td>9 seconds (9017 ms)</td>
+<tr><td>Total time:</td><td>7 seconds (7783 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,6 +67,182 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='test.controller.TestCCapp.fabulous()'><b>fabulous</b><br>Test class: test.controller.TestCCapp<br>Test method: 视频点赞<br/>
+<a href="#Output-873104432" onClick='toggleBox("Output-873104432", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-873104432" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-873104432">
+06-23 11:50:userId<br/>
+06-23 11:50:115364<br/>
+06-23 11:50:token<br/>
+06-23 11:50:NmQ1YTFmYmEtMTJjNi00YzM0LTg3ZTUtNDc0NjE5MjhmMzI2<br/>
+06-23 11:50:VideoId<br/>
+06-23 11:50:8a83864c72df0a710172df3c95420001<br/>
+06-23 11:50:request数据<br/>
+06-23 11:50:Request{method=POST, url=https://cpv.ccdev.lerjin.com/behavior/event, tag=null}<br/>
+06-23 11:50:response数据<br/>
+06-23 11:50:{code:10002,lang:CN,message:Incorrect parameters,debug:Can't repeat favorite,name:PARAMETER_ERROR}<br/>
+</div>
+</td>
+<td><div><pre>org.junit.ComparisonFailure: expected:&lt;[{code:10002,lang:CN,message:Incorrect parameters,debug:Can&apos;t repeat favorite,name:PARAMETER_ERROR}]&gt; but was:&lt;[true]&gt;
+	at org.junit.Assert.assertEquals(Assert.java:115)
+	at org.junit.Assert.assertEquals(Assert.java:144)
+	at test.service.serviceCCapp.Fabulous.fabulous(Fabulous.java:67)
+	at test.controller.TestCCapp.fabulous(TestCCapp.java:20)
+	at test.TestngRun.run(TestngRun.java:31)
+	at com.ceshi.scheduled.SchedulingTest.dezhouAutomation(SchedulingTest.java:235)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:84)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at org.springframework.scheduling.concurrent.ReschedulingRunnable.run(ReschedulingRunnable.java:93)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:266)
+	at java.util.concurrent.FutureTask.run(FutureTask.java)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+... Removed 26 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace873104432", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace873104432'><pre>org.junit.ComparisonFailure: expected:&lt;[{code:10002,lang:CN,message:Incorrect parameters,debug:Can&apos;t repeat favorite,name:PARAMETER_ERROR}]&gt; but was:&lt;[true]&gt;
+	at org.junit.Assert.assertEquals(Assert.java:115)
+	at org.junit.Assert.assertEquals(Assert.java:144)
+	at test.service.serviceCCapp.Fabulous.fabulous(Fabulous.java:67)
+	at test.controller.TestCCapp.fabulous(TestCCapp.java:20)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at test.TestngRun.run(TestngRun.java:31)
+	at com.ceshi.scheduled.SchedulingTest.dezhouAutomation(SchedulingTest.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:84)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at org.springframework.scheduling.concurrent.ReschedulingRunnable.run(ReschedulingRunnable.java:93)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:266)
+	at java.util.concurrent.FutureTask.run(FutureTask.java)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+</pre></div></td>
+<td>2</td>
+<td>test.controller.TestCCapp@78540902</td></tr>
+<tr>
+<td title='test.controller.TestCCapp.favoriteVideos()'><b>favoriteVideos</b><br>Test class: test.controller.TestCCapp<br>Test method: 视频收藏<br/>
+<a href="#Output-263730355" onClick='toggleBox("Output-263730355", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-263730355" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-263730355">
+06-23 11:50:userId<br/>
+06-23 11:50:115364<br/>
+06-23 11:50:token<br/>
+06-23 11:50:NmQ1YTFmYmEtMTJjNi00YzM0LTg3ZTUtNDc0NjE5MjhmMzI2<br/>
+06-23 11:50:VideoId<br/>
+06-23 11:50:8a83864c72df0a710172df3c95420001<br/>
+06-23 11:50:request数据<br/>
+06-23 11:50:Request{method=POST, url=https://cpv.ccdev.lerjin.com/behavior/event, tag=null}<br/>
+06-23 11:50:response数据<br/>
+06-23 11:50:{code:10002,lang:CN,message:Incorrect parameters,debug:Can't repeat clap,name:PARAMETER_ERROR}<br/>
+</div>
+</td>
+<td><div><pre>org.junit.ComparisonFailure: expected:&lt;[{code:10002,lang:CN,message:Incorrect parameters,debug:Can&apos;t repeat clap,name:PARAMETER_ERROR}]&gt; but was:&lt;[true]&gt;
+	at org.junit.Assert.assertEquals(Assert.java:115)
+	at org.junit.Assert.assertEquals(Assert.java:144)
+	at test.service.serviceCCapp.FavoriteVideos.favoriteVideos(FavoriteVideos.java:69)
+	at test.controller.TestCCapp.favoriteVideos(TestCCapp.java:15)
+	at test.TestngRun.run(TestngRun.java:31)
+	at com.ceshi.scheduled.SchedulingTest.dezhouAutomation(SchedulingTest.java:235)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:84)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at org.springframework.scheduling.concurrent.ReschedulingRunnable.run(ReschedulingRunnable.java:93)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:266)
+	at java.util.concurrent.FutureTask.run(FutureTask.java)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+... Removed 26 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace263730355", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace263730355'><pre>org.junit.ComparisonFailure: expected:&lt;[{code:10002,lang:CN,message:Incorrect parameters,debug:Can&apos;t repeat clap,name:PARAMETER_ERROR}]&gt; but was:&lt;[true]&gt;
+	at org.junit.Assert.assertEquals(Assert.java:115)
+	at org.junit.Assert.assertEquals(Assert.java:144)
+	at test.service.serviceCCapp.FavoriteVideos.favoriteVideos(FavoriteVideos.java:69)
+	at test.controller.TestCCapp.favoriteVideos(TestCCapp.java:15)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at test.TestngRun.run(TestngRun.java:31)
+	at com.ceshi.scheduled.SchedulingTest.dezhouAutomation(SchedulingTest.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:84)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at org.springframework.scheduling.concurrent.ReschedulingRunnable.run(ReschedulingRunnable.java:93)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:266)
+	at java.util.concurrent.FutureTask.run(FutureTask.java)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+</pre></div></td>
+<td>0</td>
+<td>test.controller.TestCCapp@78540902</td></tr>
+</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -75,129 +251,87 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='test.controller.TestCCapp.fabulous()'><b>fabulous</b><br>Test class: test.controller.TestCCapp<br>Test method: 视频点赞<br/>
-<a href="#Output-40191541" onClick='toggleBox("Output-40191541", this, "Show output", "Hide output");'>Show output</a>
+<td title='test.controller.TestCCapp.fullplay()'><b>fullplay</b><br>Test class: test.controller.TestCCapp<br>Test method: 视频完播<br/>
+<a href="#Output-562712599" onClick='toggleBox("Output-562712599", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-40191541" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-40191541">
-06-18 19:13:userId<br/>
-06-18 19:13:115364<br/>
-06-18 19:13:token<br/>
-06-18 19:13:NGZlMTJhMmEtYzI1ZS00ZWQxLTg3NDQtNWRlZGE0ODQzYzVk<br/>
-06-18 19:13:VideoId<br/>
-06-18 19:13:8a83869872c6bb820172c6da8eb60002<br/>
-06-18 19:13:request数据<br/>
-06-18 19:13:Request{method=POST, url=https://cpv.ccdev.lerjin.com/behavior/event, tag=null}<br/>
-06-18 19:13:response数据<br/>
-06-18 19:13:true<br/>
-</div>
-</td>
-<td></td>
-<td>3</td>
-<td>test.controller.TestCCapp@673fdbce</td></tr>
-<tr>
-<td title='test.controller.TestCCapp.favoriteVideos()'><b>favoriteVideos</b><br>Test class: test.controller.TestCCapp<br>Test method: 视频收藏<br/>
-<a href="#Output-1500379239" onClick='toggleBox("Output-1500379239", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-1500379239" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1500379239">
-06-18 19:13:userId<br/>
-06-18 19:13:115364<br/>
-06-18 19:13:token<br/>
-06-18 19:13:NGZlMTJhMmEtYzI1ZS00ZWQxLTg3NDQtNWRlZGE0ODQzYzVk<br/>
-06-18 19:13:VideoId<br/>
-06-18 19:13:8a83869872c6bb820172c6da8eb60002<br/>
-06-18 19:13:request数据<br/>
-06-18 19:13:Request{method=POST, url=https://cpv.ccdev.lerjin.com/behavior/event, tag=null}<br/>
-06-18 19:13:response数据<br/>
-06-18 19:13:{code:10002,lang:CN,message:Incorrect parameters,debug:Can't repeat clap,name:PARAMETER_ERROR}<br/>
+<a href="#Output-562712599" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-562712599">
+06-23 11:50:userId<br/>
+06-23 11:50:115364<br/>
+06-23 11:50:token<br/>
+06-23 11:50:NmQ1YTFmYmEtMTJjNi00YzM0LTg3ZTUtNDc0NjE5MjhmMzI2<br/>
+06-23 11:50:VideoId<br/>
+06-23 11:50:8a83864c72df0a710172df3c95420001<br/>
+06-23 11:50:request数据<br/>
+06-23 11:50:Request{method=POST, url=https://cpv.ccdev.lerjin.com/behavior/event, tag=null}<br/>
+06-23 11:50:response数据<br/>
+06-23 11:50:true<br/>
 </div>
 </td>
 <td></td>
 <td>1</td>
-<td>test.controller.TestCCapp@673fdbce</td></tr>
-<tr>
-<td title='test.controller.TestCCapp.fullplay()'><b>fullplay</b><br>Test class: test.controller.TestCCapp<br>Test method: 视频完播<br/>
-<a href="#Output-2094115865" onClick='toggleBox("Output-2094115865", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-2094115865" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-2094115865">
-06-18 19:13:userId<br/>
-06-18 19:13:115364<br/>
-06-18 19:13:token<br/>
-06-18 19:13:NGZlMTJhMmEtYzI1ZS00ZWQxLTg3NDQtNWRlZGE0ODQzYzVk<br/>
-06-18 19:13:VideoId<br/>
-06-18 19:13:8a83869872c6bb820172c6da8eb60002<br/>
-06-18 19:13:request数据<br/>
-06-18 19:13:Request{method=POST, url=https://cpv.ccdev.lerjin.com/behavior/event, tag=null}<br/>
-06-18 19:13:response数据<br/>
-06-18 19:13:true<br/>
-</div>
-</td>
-<td></td>
-<td>0</td>
-<td>test.controller.TestCCapp@673fdbce</td></tr>
+<td>test.controller.TestCCapp@78540902</td></tr>
 <tr>
 <td title='test.controller.TestCCapp.share()'><b>share</b><br>Test class: test.controller.TestCCapp<br>Test method: 视频分享<br/>
-<a href="#Output-1855734078" onClick='toggleBox("Output-1855734078", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-1118324074" onClick='toggleBox("Output-1118324074", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-1855734078" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1855734078">
-06-18 19:13:userId<br/>
-06-18 19:13:115364<br/>
-06-18 19:13:token<br/>
-06-18 19:13:NGZlMTJhMmEtYzI1ZS00ZWQxLTg3NDQtNWRlZGE0ODQzYzVk<br/>
-06-18 19:13:VideoId<br/>
-06-18 19:13:8a83869872c6bb820172c6da8eb60002<br/>
-06-18 19:13:request数据<br/>
-06-18 19:13:Request{method=POST, url=https://cpv.ccdev.lerjin.com/behavior/event, tag=null}<br/>
-06-18 19:13:response数据<br/>
-06-18 19:13:true<br/>
+<a href="#Output-1118324074" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1118324074">
+06-23 11:50:userId<br/>
+06-23 11:50:115364<br/>
+06-23 11:50:token<br/>
+06-23 11:50:NmQ1YTFmYmEtMTJjNi00YzM0LTg3ZTUtNDc0NjE5MjhmMzI2<br/>
+06-23 11:50:VideoId<br/>
+06-23 11:50:8a83864c72df0a710172df3c95420001<br/>
+06-23 11:50:request数据<br/>
+06-23 11:50:Request{method=POST, url=https://cpv.ccdev.lerjin.com/behavior/event, tag=null}<br/>
+06-23 11:50:response数据<br/>
+06-23 11:50:true<br/>
 </div>
 </td>
 <td></td>
 <td>0</td>
-<td>test.controller.TestCCapp@673fdbce</td></tr>
+<td>test.controller.TestCCapp@78540902</td></tr>
 <tr>
 <td title='test.controller.TestCCapp.videoPlayback()'><b>videoPlayback</b><br>Test class: test.controller.TestCCapp<br>Test method: 视频播放<br/>
-<a href="#Output-972843820" onClick='toggleBox("Output-972843820", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-390973169" onClick='toggleBox("Output-390973169", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-972843820" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-972843820">
-06-18 19:13:userId<br/>
-06-18 19:13:115364<br/>
-06-18 19:13:token<br/>
-06-18 19:13:NGZlMTJhMmEtYzI1ZS00ZWQxLTg3NDQtNWRlZGE0ODQzYzVk<br/>
-06-18 19:13:VideoId<br/>
-06-18 19:13:8a83869872c6bb820172c6da8eb60002<br/>
-06-18 19:13:request数据<br/>
-06-18 19:13:Request{method=POST, url=https://cpv.ccdev.lerjin.com/behavior/event, tag=null}<br/>
-06-18 19:13:response数据<br/>
-06-18 19:13:true<br/>
+<a href="#Output-390973169" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-390973169">
+06-23 11:50:userId<br/>
+06-23 11:50:115364<br/>
+06-23 11:50:token<br/>
+06-23 11:50:NmQ1YTFmYmEtMTJjNi00YzM0LTg3ZTUtNDc0NjE5MjhmMzI2<br/>
+06-23 11:50:VideoId<br/>
+06-23 11:50:8a83864c72df0a710172df3c95420001<br/>
+06-23 11:50:request数据<br/>
+06-23 11:50:Request{method=POST, url=https://cpv.ccdev.lerjin.com/behavior/event, tag=null}<br/>
+06-23 11:50:response数据<br/>
+06-23 11:50:true<br/>
 </div>
 </td>
 <td></td>
-<td>1</td>
-<td>test.controller.TestCCapp@673fdbce</td></tr>
+<td>0</td>
+<td>test.controller.TestCCapp@78540902</td></tr>
 <tr>
 <td title='test.controller.TestCCapp.videoUpload()'><b>videoUpload</b><br>Test class: test.controller.TestCCapp<br>Test method: 上传视频<br/>
-<a href="#Output-1107772887" onClick='toggleBox("Output-1107772887", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-422485889" onClick='toggleBox("Output-422485889", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-1107772887" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1107772887">
-06-18 19:13:userId<br/>
-06-18 19:13:115364<br/>
-06-18 19:13:token<br/>
-06-18 19:13:NGZlMTJhMmEtYzI1ZS00ZWQxLTg3NDQtNWRlZGE0ODQzYzVk<br/>
-06-18 19:13:request数据<br/>
-06-18 19:13:Request{method=POST, url=https://ugc.ccdev.lerjin.com/video/upload, tag=null}<br/>
-06-18 19:13:response数据<br/>
-06-18 19:13:{id:8a83869872c6bb820172c7220370000c,userOpenId:115364,videoTitle:视频上传测试06181913,videoDescribe:ldaskdlaskjldkjksald,videoRemoteStorageUrl:null,imgPreviewRemoteStorageUrl:null,downloadVideoUrl:null,duration:null,bitRate:null,width:null,height:null,size:null,countryCode2:CN,area:CN,status:0,funny:0,notFunny:0,auditOpinion:null,isPushFeeds:null,createTime:2020-06-18 11:13:14,authorMobile:17323226097,authorClapCode:4454207817,authorEmail:null,authorName:wangqi2,authorType:3,authorAvatar:avatar/20200323/c905a779b4dd5e77.jpg,authorCallingCode:86,clapNum:0,favoriteNum:0,shareNum:0,commentsNum:0,viewNum:0,fullViewNum:0,deleted:0,coinValue:0,isMaxCoins:false,clapMoment:null}<br/>
+<a href="#Output-422485889" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-422485889">
+06-23 11:50:userId<br/>
+06-23 11:50:115364<br/>
+06-23 11:50:token<br/>
+06-23 11:50:NmQ1YTFmYmEtMTJjNi00YzM0LTg3ZTUtNDc0NjE5MjhmMzI2<br/>
+06-23 11:50:request数据<br/>
+06-23 11:50:Request{method=POST, url=https://ugc.ccdev.lerjin.com/video/upload, tag=null}<br/>
+06-23 11:50:response数据<br/>
+06-23 11:50:{id:8a83864c72df0a710172df4c1f1d0003,userOpenId:115364,videoTitle:视频上传测试06231150,videoDescribe:ldaskdlaskjldkjksald,videoRemoteStorageUrl:null,imgPreviewRemoteStorageUrl:null,downloadVideoUrl:null,duration:null,bitRate:null,width:null,height:null,size:null,countryCode2:CN,area:CN,status:0,funny:0,notFunny:0,auditOpinion:null,isPushFeeds:null,createTime:2020-06-23 03:50:07,authorMobile:17323226097,authorClapCode:4454207817,authorEmail:null,authorName:wangqi2,authorType:3,authorAvatar:avatar/20200323/c905a779b4dd5e77.jpg,authorCallingCode:86,clapNum:0,favoriteNum:0,shareNum:0,commentsNum:0,viewNum:0,fullViewNum:0,deleted:0,coinValue:0,isMaxCoins:false,clapMoment:null}<br/>
 </div>
 </td>
 <td></td>
 <td>1</td>
-<td>test.controller.TestCCapp@673fdbce</td></tr>
+<td>test.controller.TestCCapp@78540902</td></tr>
 </table><p>
 </body>
 </html>
