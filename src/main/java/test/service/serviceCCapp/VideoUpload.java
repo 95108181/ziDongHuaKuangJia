@@ -1,14 +1,10 @@
 package test.service.serviceCCapp;
 
-import com.alibaba.fastjson.JSON;
-import com.alibaba.fastjson.JSONObject;
 import com.ceshi.entity.CcToken;
 import okhttp3.*;
 import org.testng.Assert;
-import org.testng.Reporter;
 import test.util.CcTokenDB;
 import test.util.LogPrinting;
-
 import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
@@ -39,13 +35,23 @@ public class VideoUpload {
         OkHttpClient client = new OkHttpClient().newBuilder()
                 .build();
         MediaType mediaType = MediaType.parse("text/plain");
+        //测试环境
+//        RequestBody body = new MultipartBody.Builder().setType(MultipartBody.FORM)
+//                .addFormDataPart("videoTitle", "视频上传测试"+strDate)
+//                .addFormDataPart("videoDescribe", "ldaskdlaskjldkjksald")
+//                .addFormDataPart("file",System.getProperty("user.dir")+ File.separator+"src"+ File.separator+"main"+ File.separator+"resources"+ File.separator+"ceshishiping.mp4",
+//                        RequestBody.create(MediaType.parse("application/octet-stream"),
+//                                new File(System.getProperty("user.dir")+ File.separator+"src"+ File.separator+"main"+ File.separator+"resources"+ File.separator+"ceshishiping.mp4")))
+//                .build();
+        //线上环境
         RequestBody body = new MultipartBody.Builder().setType(MultipartBody.FORM)
                 .addFormDataPart("videoTitle", "视频上传测试"+strDate)
                 .addFormDataPart("videoDescribe", "ldaskdlaskjldkjksald")
-                .addFormDataPart("file",System.getProperty("user.dir")+ File.separator+"src"+ File.separator+"main"+ File.separator+"resources"+ File.separator+"ceshishiping.mp4",
+                .addFormDataPart("file",System.getProperty("user.dir")+ File.separator+"ceshishiping.mp4",
                         RequestBody.create(MediaType.parse("application/octet-stream"),
-                                new File(System.getProperty("user.dir")+ File.separator+"src"+ File.separator+"main"+ File.separator+"resources"+ File.separator+"ceshishiping.mp4")))
+                                new File(System.getProperty("user.dir")+ File.separator+"ceshishiping.mp4")))
                 .build();
+
         Request request = new Request.Builder()
                 .url("https://ugc.ccdev.lerjin.com/video/upload")
                 .method("POST", body)

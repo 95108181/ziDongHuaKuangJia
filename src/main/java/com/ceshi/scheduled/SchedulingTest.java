@@ -62,8 +62,9 @@ public class SchedulingTest {
      * @throws InterruptedException
      */
 //    @Scheduled(cron = "30 10 * * * ?") // 每小时的10分30秒触发任务
-    @Scheduled(cron = "0 */6 * * * ?")
+    @Scheduled(cron = "0 0/30 * * * ?")
     public String getVerificationCode() throws IOException, InterruptedException {
+        logger.info("定时获取自动化tcoken和userID,VideoId值");
 
         //获取验证码
         OkHttpClient client = new OkHttpClient().newBuilder().build();
@@ -138,60 +139,69 @@ public class SchedulingTest {
         logger.info("去掉双引号的strToken：" + strToken);
 
 
-        OkHttpClient Videoclient = new OkHttpClient().newBuilder()
-                .build();
-        MediaType VideomediaType = MediaType.parse("text/plain");
-        //线下
-        RequestBody Videobody = new MultipartBody.Builder().setType(MultipartBody.FORM)
-                .addFormDataPart("videoTitle", "视频上传测试")
-                .addFormDataPart("videoDescribe", "ldaskdlaskjldkjksald")
-                .addFormDataPart("file", System.getProperty("user.dir")+ File.separator+"src"+ File.separator+"main"+ File.separator+"resources"+ File.separator+"ceshishiping.mp4",
-                        RequestBody.create(MediaType.parse("application/octet-stream"),
-                                new File(System.getProperty("user.dir")+ File.separator+"src"+ File.separator+"main"+ File.separator+"resources"+ File.separator+"ceshishiping.mp4")))
-                .build();
-
-        //线上
+//        OkHttpClient Videoclient = new OkHttpClient().newBuilder()
+//                .build();
+//        MediaType VideomediaType = MediaType.parse("text/plain");
+//        //线下
+////        RequestBody Videobody = new MultipartBody.Builder().setType(MultipartBody.FORM)
+////                .addFormDataPart("videoTitle", "视频上传测试")
+////                .addFormDataPart("videoDescribe", "ldaskdlaskjldkjksald")
+////                .addFormDataPart("file", System.getProperty("user.dir")+ File.separator+"src"+ File.separator+"main"+ File.separator+"resources"+ File.separator+"ceshishiping.mp4",
+////                        RequestBody.create(MediaType.parse("application/octet-stream"),
+////                                new File(System.getProperty("user.dir")+ File.separator+"src"+ File.separator+"main"+ File.separator+"resources"+ File.separator+"ceshishiping.mp4")))
+////                .build();
+//
+//        //线上
 //        RequestBody Videobody = new MultipartBody.Builder().setType(MultipartBody.FORM)
 //                .addFormDataPart("videoTitle", "视频上传测试")
 //                .addFormDataPart("videoDescribe", "ldaskdlaskjldkjksald")
-//                .addFormDataPart("file", System.getProperty("user.dir")+ File.separator+"ceshishiping.mp4l",
+//                .addFormDataPart("file", System.getProperty("user.dir") + File.separator + "ceshishiping.mp4",
 //                        RequestBody.create(MediaType.parse("application/octet-stream"),
-//                                new File(System.getProperty("user.dir")+ File.separator+"ceshishiping.mp4l")))
+//                                new File(System.getProperty("user.dir") + File.separator + "ceshishiping.mp4")))
 //                .build();
+//
+//        Request Videorequest = new Request.Builder()
+//                .url("https://ugc.ccdev.lerjin.com/video/upload")
+//                .method("POST", Videobody)
+//                .addHeader("token", strToken)
+//                .addHeader("lang", "CN")
+//                .addHeader("userId", strUserid)
+//                .addHeader("module", "ugc")
+//                .build();
+//        LogPrinting.log("request数据", Videorequest);
+//        Response Videoresponse = Videoclient.newCall(Videorequest).execute();
+//
+//        // 获取头部
+//        Headers VideorsultHeaders = Videoresponse.headers();
+//        // 获取身体信息
+//        String VideorsultBody = Videoresponse.body().string();
+//        logger.info("视频上传返回参数：" + VideorsultBody);
+//
+//
+//        String VideoId = VideorsultBody.substring(7, 39);
+//        System.out.println(VideoId);
+//
+//        String strVideoId = VideoId.replace("\"", "");
+//        logger.info("视频ID：" + strVideoId);
 
-        Request Videorequest = new Request.Builder()
-                .url("https://ugc.ccdev.lerjin.com/video/upload")
-                .method("POST", Videobody)
-                .addHeader("token", strToken)
-                .addHeader("lang", "CN")
-                .addHeader("userId", strUserid)
-                .addHeader("module", "ugc")
-                .build();
-        LogPrinting.log("request数据", Videorequest);
-        Response Videoresponse = Videoclient.newCall(Videorequest).execute();
-
-        // 获取头部
-        Headers VideorsultHeaders = Videoresponse.headers();
-        // 获取身体信息
-        String VideorsultBody = Videoresponse.body().string();
-        logger.info("视频上传返回参数：" + VideorsultBody);
+        String strVideoId = "8a8386e6731a7a69017321f5b2900044";
 
 
-        String VideoId = VideorsultBody.substring(7, 39);
-        System.out.println(VideoId);
+        //把tcoken和userID,VideoId值存入数据库
+        if (strUserid != null && strUserid.length() != 0 && strToken != null && strToken.length() != 0
+                && strVideoId != null && strVideoId.length() != 0) {
 
-        String strVideoId = VideoId.replace("\"", "");
-        logger.info("视频ID：" + strVideoId);
+            CcToken ctcoken = new CcToken();
+            ctcoken.setCreationTime(new Date());
+            ctcoken.setSystemCode("CCapp");
+            ctcoken.setUserIdToken(strUserid);
+            ctcoken.setToken(strToken);
+            ctcoken.setVideoId(strVideoId);
+            ccTokenMapper.insert(ctcoken);
 
 
-        //把tcoken和userID值存入数据库
-        CcToken ctcoken = new CcToken();
-        ctcoken.setCreationTime(new Date());
-        ctcoken.setSystemCode("CCapp");
-        ctcoken.setUserIdToken(strUserid);
-        ctcoken.setToken(strToken);
-        ctcoken.setVideoId(strVideoId);
-        ccTokenMapper.insert(ctcoken);
+        }
+
         return null;
     }
 
@@ -229,24 +239,25 @@ public class SchedulingTest {
      * @throws IOException
      * @throws InterruptedException
      */
-    @Scheduled(cron = "0 */3 * * * ?")
+//    @Scheduled(cron = "0 */3 * * * ?")
+    @Scheduled(cron = "0 0 10 ? * MON-FRI")
     public String dezhouAutomation() throws Exception {
-        logger.info("自动化执行的测试任务");
+        logger.info("定时执行自动化执行的测试任务");
         TestngRun.run();
 
 
         // 钉钉的webhook
-        String dingDingToken="https://oapi.dingtalk.com/robot/send?access_token=b398045b402d44fd72cbffde505ccaab96080cb3e82e9dfd24bdb4ae587f1e25";
+        String dingDingToken = "https://oapi.dingtalk.com/robot/send?access_token=8babd17179a1ef7d4c881aa3429de3c48f10a9c7a2c1d687cab712c976c42e96";
         //获取当前时间转换为字符串
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         String strDate = sdf.format(new Date());
         // 请求的JSON数据，这里我用map在工具类里转成json格式
-        Map<String,Object> json=new HashMap();
-        Map<String,Object> text=new HashMap();
-        json.put("msgtype","markdown");
-        text.put("title","测试报告");
-        text.put("text","#### 测试 \n 测试case推送(试运行) \n ###### ["+strDate+"测试报告点击查看](http://47.105.49.229:8080/user/loading) \n ###### 账号:admin 密码：123456 \n");
-        json.put("markdown",text);
+        Map<String, Object> json = new HashMap();
+        Map<String, Object> text = new HashMap();
+        json.put("msgtype", "markdown");
+        text.put("title", "测试报告");
+        text.put("text", "#### 测试 \n 测试case推送(试运行) \n ###### [" + strDate + "测试报告点击查看](http://47.105.49.229:8080/user/loading) \n ###### 账号:admin 密码：123456 \n");
+        json.put("markdown", text);
         // 发送post请求
         String response = SendHttps.sendPostByMap(dingDingToken, json);
         System.out.println(response);

@@ -35,6 +35,11 @@ public class TestCCapp {
         FullPlay.fullPlay();
     }
 
+    @Test(priority = 0, description = "feed流请求主页")
+    public static void feedStream() throws Exception {
+        FeedStream.feedStream();
+    }
+
 
 
 }
